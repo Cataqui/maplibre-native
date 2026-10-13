@@ -1,0 +1,578 @@
+Prepared Noto map glyph source notices
+
+Glyph manifest SHA256: 336ee7e3d0257e1ffe141e1731f64bf80703e714bd28681c95d7949594c76bc7
+Archive: https://github.com/openmaptiles/fonts/releases/download/v2.0/noto-sans.zip
+Archive SHA256: d117316544b43a5dde7ee761b36e17701e9f85574e181d76a74814240fdbaf34
+
+The following original notices are retained from the published source-family font files named in the actual prepared PBF headers. Those files are pinned to OpenMapTiles source commit a4f9e7cf18aa382945c0a912f3022ba94a0b1d52. This provenance does not claim that the 2022 release archive was regenerated from that 2017 source commit.
+
+----------------------------------------------------------------
+Noto Naskh Arabic Bold
+Source: https://raw.githubusercontent.com/openmaptiles/fonts/a4f9e7cf18aa382945c0a912f3022ba94a0b1d52/noto-sans/NotoNaskhArabic-Bold.ttf
+Original font SHA256: aa3ce60f191d1c7d84a273d49883dd9b3e158b79a2b4ac1420cae10636bbbbaf
+
+Copyright 2014 Google Inc. All Rights Reserved.
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.
+
+http://scripts.sil.org/OFL
+
+----------------------------------------------------------------
+Noto Naskh Arabic Regular
+Source: https://raw.githubusercontent.com/openmaptiles/fonts/a4f9e7cf18aa382945c0a912f3022ba94a0b1d52/noto-sans/NotoNaskhArabic-Regular.ttf
+Original font SHA256: d42ab8a21585ca002cc9dc7f05145b3a432acf80b3dcf0d35a022e9f8a45a77a
+
+Copyright 2014 Google Inc. All Rights Reserved.
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.
+
+http://scripts.sil.org/OFL
+
+----------------------------------------------------------------
+Noto Sans Armenian Bold
+Source: https://raw.githubusercontent.com/openmaptiles/fonts/a4f9e7cf18aa382945c0a912f3022ba94a0b1d52/noto-sans/NotoSansArmenian-Bold.ttf
+Original font SHA256: c7cdfa7d1056c676c0fd52773087ac3151c9d161f3a4cc4423cbfec3a6152042
+
+Copyright 2014 Google Inc. All Rights Reserved.
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.
+
+http://scripts.sil.org/OFL
+
+----------------------------------------------------------------
+Noto Sans Armenian Regular
+Source: https://raw.githubusercontent.com/openmaptiles/fonts/a4f9e7cf18aa382945c0a912f3022ba94a0b1d52/noto-sans/NotoSansArmenian-Regular.ttf
+Original font SHA256: 3428ae5e9bd4432b2371e6ede55dfe68de56aa9ed5aeca31751c10945b458b01
+
+Copyright 2014 Google Inc. All Rights Reserved.
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.
+
+http://scripts.sil.org/OFL
+
+----------------------------------------------------------------
+Noto Sans Balinese Regular
+Source: https://raw.githubusercontent.com/openmaptiles/fonts/a4f9e7cf18aa382945c0a912f3022ba94a0b1d52/noto-sans/NotoSansBalinese-Regular.ttf
+Original font SHA256: 7e17cb03597adde450d41e823417cdfcf9049c77342348f5f2f4ccb1868ec3d1
+
+Copyright 2013 Google Inc. All Rights Reserved.
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.
+
+http://scripts.sil.org/OFL
+
+----------------------------------------------------------------
+Noto Sans Bengali Bold
+Source: https://raw.githubusercontent.com/openmaptiles/fonts/a4f9e7cf18aa382945c0a912f3022ba94a0b1d52/noto-sans/NotoSansBengali-Bold.ttf
+Original font SHA256: 566b80a2c5de1476e7da30043d23d57f43ba2d1179a30621e4b27c7bde7f96ca
+
+Copyright 2013 Google Inc. All Rights Reserved.
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.
+
+http://scripts.sil.org/OFL
+
+----------------------------------------------------------------
+Noto Sans Bengali Regular
+Source: https://raw.githubusercontent.com/openmaptiles/fonts/a4f9e7cf18aa382945c0a912f3022ba94a0b1d52/noto-sans/NotoSansBengali-Regular.ttf
+Original font SHA256: 582998fe05dc49509fdf9a2383fb36d495a2eeb164a70dfb20b5d127e3e44f44
+
+Copyright 2013 Google Inc. All Rights Reserved.
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.
+
+http://scripts.sil.org/OFL
+
+----------------------------------------------------------------
+Noto Sans Bold
+Source: https://raw.githubusercontent.com/openmaptiles/fonts/a4f9e7cf18aa382945c0a912f3022ba94a0b1d52/noto-sans/NotoSans-Bold.ttf
+Original font SHA256: c6e5c368da9713feab735c545d7a497bffa052adbd6a084675ddad0253b818f8
+
+Copyright 2012 Google Inc. All Rights Reserved.
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.
+
+http://scripts.sil.org/OFL
+
+----------------------------------------------------------------
+Noto Sans CJK TC Bold
+Source: https://raw.githubusercontent.com/openmaptiles/fonts/a4f9e7cf18aa382945c0a912f3022ba94a0b1d52/noto-sans/NotoSansCJKtc-Bold.otf
+Original font SHA256: 977833121efae44b1c2115282724383b3201bdc104064d7bb2c1c92da928aafc
+
+Copyright © 2014, 2015 Adobe Systems Incorporated (http://www.adobe.com/).
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.
+
+http://scripts.sil.org/OFL
+
+----------------------------------------------------------------
+Noto Sans CJK TC Regular
+Source: https://raw.githubusercontent.com/openmaptiles/fonts/a4f9e7cf18aa382945c0a912f3022ba94a0b1d52/noto-sans/NotoSansCJKtc-Regular.otf
+Original font SHA256: f57e46120a3dd025ac993801981849622405d1359b32093b1f046490f7885711
+
+Copyright © 2014, 2015 Adobe Systems Incorporated (http://www.adobe.com/).
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.
+
+http://scripts.sil.org/OFL
+
+----------------------------------------------------------------
+Noto Sans Devanagari Bold
+Source: https://raw.githubusercontent.com/openmaptiles/fonts/a4f9e7cf18aa382945c0a912f3022ba94a0b1d52/noto-sans/NotoSansDevanagari-Bold.ttf
+Original font SHA256: 08a37d656cd14282875724800d3b29f335665f9a8156ef9dbf68128bfae709e9
+
+Copyright 2012 Google Inc. All Rights Reserved.
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.
+
+http://scripts.sil.org/OFL
+
+----------------------------------------------------------------
+Noto Sans Devanagari Regular
+Source: https://raw.githubusercontent.com/openmaptiles/fonts/a4f9e7cf18aa382945c0a912f3022ba94a0b1d52/noto-sans/NotoSansDevanagari-Regular.ttf
+Original font SHA256: b1dffa1fccb30dc45287111834a9db15c652b05d4d67201abe73e67717017590
+
+Copyright 2012 Google Inc. All Rights Reserved.
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.
+
+http://scripts.sil.org/OFL
+
+----------------------------------------------------------------
+Noto Sans Ethiopic Bold
+Source: https://raw.githubusercontent.com/openmaptiles/fonts/a4f9e7cf18aa382945c0a912f3022ba94a0b1d52/noto-sans/NotoSansEthiopic-Bold.ttf
+Original font SHA256: 6650fe3fdfcb46410f8290913ffeead53c47b2c276926364de32b21103093739
+
+Copyright 2012 Google Inc. All Rights Reserved.
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.
+
+http://scripts.sil.org/OFL
+
+----------------------------------------------------------------
+Noto Sans Ethiopic Regular
+Source: https://raw.githubusercontent.com/openmaptiles/fonts/a4f9e7cf18aa382945c0a912f3022ba94a0b1d52/noto-sans/NotoSansEthiopic-Regular.ttf
+Original font SHA256: 7b6b7a95754494dea9dcd9aaff64c6462b5ff0da504f3d257e934343c5aa3dd3
+
+Copyright 2012 Google Inc. All Rights Reserved.
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.
+
+http://scripts.sil.org/OFL
+
+----------------------------------------------------------------
+Noto Sans Georgian Bold
+Source: https://raw.githubusercontent.com/openmaptiles/fonts/a4f9e7cf18aa382945c0a912f3022ba94a0b1d52/noto-sans/NotoSansGeorgian-Bold.ttf
+Original font SHA256: 2c1550976dd388e954dcd30923f31521e84b5190fc02112e7513eae2c6e49c2a
+
+Copyright 2012 Google Inc. All Rights Reserved.
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.
+
+http://scripts.sil.org/OFL
+
+----------------------------------------------------------------
+Noto Sans Georgian Regular
+Source: https://raw.githubusercontent.com/openmaptiles/fonts/a4f9e7cf18aa382945c0a912f3022ba94a0b1d52/noto-sans/NotoSansGeorgian-Regular.ttf
+Original font SHA256: ea6d7f9694a5bc6c01bcefc2e0a3abbc67c8ad6b165797e68b64951a436da5de
+
+Copyright 2012 Google Inc. All Rights Reserved.
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.
+
+http://scripts.sil.org/OFL
+
+----------------------------------------------------------------
+Noto Sans Gujarati Bold
+Source: https://raw.githubusercontent.com/openmaptiles/fonts/a4f9e7cf18aa382945c0a912f3022ba94a0b1d52/noto-sans/NotoSansGujarati-Bold.ttf
+Original font SHA256: df50242eceb8e36d17693bfc26a54eba2274964c2a12feeff6d2d9774d19892b
+
+Copyright 2013 Google Inc. All Rights Reserved.
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.
+
+http://scripts.sil.org/OFL
+
+----------------------------------------------------------------
+Noto Sans Gujarati Regular
+Source: https://raw.githubusercontent.com/openmaptiles/fonts/a4f9e7cf18aa382945c0a912f3022ba94a0b1d52/noto-sans/NotoSansGujarati-Regular.ttf
+Original font SHA256: c9114781246e64ec044a93f3fa84cb6cffd3911da801497d9ba61cc6eb508701
+
+Copyright 2013 Google Inc. All Rights Reserved.
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.
+
+http://scripts.sil.org/OFL
+
+----------------------------------------------------------------
+Noto Sans Gurmukhi Bold
+Source: https://raw.githubusercontent.com/openmaptiles/fonts/a4f9e7cf18aa382945c0a912f3022ba94a0b1d52/noto-sans/NotoSansGurmukhi-Bold.ttf
+Original font SHA256: 00bbbb75f7ab6d6406fa0e1462cc60a2c40413cfa693104acd221489ceb7e270
+
+Copyright 2013 Google Inc. All Rights Reserved.
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.
+
+http://scripts.sil.org/OFL
+
+----------------------------------------------------------------
+Noto Sans Gurmukhi Regular
+Source: https://raw.githubusercontent.com/openmaptiles/fonts/a4f9e7cf18aa382945c0a912f3022ba94a0b1d52/noto-sans/NotoSansGurmukhi-Regular.ttf
+Original font SHA256: 51820e8c432fd05f1fe5615faa75a761520bef01152c884d6f6f9cfa3a9caa17
+
+Copyright 2013 Google Inc. All Rights Reserved.
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.
+
+http://scripts.sil.org/OFL
+
+----------------------------------------------------------------
+Noto Sans Hebrew Bold
+Source: https://raw.githubusercontent.com/openmaptiles/fonts/a4f9e7cf18aa382945c0a912f3022ba94a0b1d52/noto-sans/NotoSansHebrew-Bold.ttf
+Original font SHA256: 342aa0f194ba76b8fddb69c08c74d109f8d9a99db44d4850ee936cea0f84aa8f
+
+Copyright 2012 Google Inc. All Rights Reserved.
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.
+
+http://scripts.sil.org/OFL
+
+----------------------------------------------------------------
+Noto Sans Hebrew Regular
+Source: https://raw.githubusercontent.com/openmaptiles/fonts/a4f9e7cf18aa382945c0a912f3022ba94a0b1d52/noto-sans/NotoSansHebrew-Regular.ttf
+Original font SHA256: f9ced0325880ab81fdaca60595c96dbd99cf9ef6fad67540ce14d68993c7493c
+
+Copyright 2012 Google Inc. All Rights Reserved.
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.
+
+http://scripts.sil.org/OFL
+
+----------------------------------------------------------------
+Noto Sans Javanese Regular
+Source: https://raw.githubusercontent.com/openmaptiles/fonts/a4f9e7cf18aa382945c0a912f3022ba94a0b1d52/noto-sans/NotoSansJavanese-Regular.ttf
+Original font SHA256: 4dd440b8f640cfd9f85b36eed5f982f84e264bf000726687a0a29dc90340809c
+
+Copyright 2013 Google Inc. All Rights Reserved.
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.
+
+http://scripts.sil.org/OFL
+
+----------------------------------------------------------------
+Noto Sans Kannada Bold
+Source: https://raw.githubusercontent.com/openmaptiles/fonts/a4f9e7cf18aa382945c0a912f3022ba94a0b1d52/noto-sans/NotoSansKannada-Bold.ttf
+Original font SHA256: ba9c79a51cd1f54bbf634ca2e648adce588ccf0a33077c1ce43bdfcb5b1b3b9a
+
+Copyright 2013 Google Inc. All Rights Reserved.
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.
+
+http://scripts.sil.org/OFL
+
+----------------------------------------------------------------
+Noto Sans Kannada Regular
+Source: https://raw.githubusercontent.com/openmaptiles/fonts/a4f9e7cf18aa382945c0a912f3022ba94a0b1d52/noto-sans/NotoSansKannada-Regular.ttf
+Original font SHA256: 333ad7ed3c5feb093193322fa2557e7880c528959cc8925d4c72cfd405f8cbbc
+
+Copyright 2013 Google Inc. All Rights Reserved.
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.
+
+http://scripts.sil.org/OFL
+
+----------------------------------------------------------------
+Noto Sans Khmer Bold
+Source: https://raw.githubusercontent.com/openmaptiles/fonts/a4f9e7cf18aa382945c0a912f3022ba94a0b1d52/noto-sans/NotoSansKhmer-Bold.ttf
+Original font SHA256: 5685f635c34c9782c6c0ae7c4cb17cd751bbe085bac6f289795b5c62a7f031b4
+
+Copyright 2012 Google Inc. All Rights Reserved.
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.
+
+http://scripts.sil.org/OFL
+
+----------------------------------------------------------------
+Noto Sans Khmer Regular
+Source: https://raw.githubusercontent.com/openmaptiles/fonts/a4f9e7cf18aa382945c0a912f3022ba94a0b1d52/noto-sans/NotoSansKhmer-Regular.ttf
+Original font SHA256: f9625c328c0d81f07f7546e764ac446ccc5a69f86a015dc2dfd4f0a004d4de20
+
+Copyright 2012 Google Inc. All Rights Reserved.
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.
+
+http://scripts.sil.org/OFL
+
+----------------------------------------------------------------
+Noto Sans Lao Bold
+Source: https://raw.githubusercontent.com/openmaptiles/fonts/a4f9e7cf18aa382945c0a912f3022ba94a0b1d52/noto-sans/NotoSansLao-Bold.ttf
+Original font SHA256: 1cf30eefb40dc294977e02a8eea8836bf0f3d2ec0fb6bb17453fb2b889924315
+
+Copyright 2012 Google Inc. All Rights Reserved.
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.
+
+http://scripts.sil.org/OFL
+
+----------------------------------------------------------------
+Noto Sans Lao Regular
+Source: https://raw.githubusercontent.com/openmaptiles/fonts/a4f9e7cf18aa382945c0a912f3022ba94a0b1d52/noto-sans/NotoSansLao-Regular.ttf
+Original font SHA256: 93f2f6af90ed01f00575d3bbdfd0551eef70a6896599e372885bcc372ca53050
+
+Copyright 2012 Google Inc. All Rights Reserved.
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.
+
+http://scripts.sil.org/OFL
+
+----------------------------------------------------------------
+Noto Sans Mongolian Regular
+Source: https://raw.githubusercontent.com/openmaptiles/fonts/a4f9e7cf18aa382945c0a912f3022ba94a0b1d52/noto-sans/NotoSansMongolian-Regular.ttf
+Original font SHA256: 82b5916a72f3f8dfb915f0da176da216c2346c1dfcd54728cfa1d64bc7557d3e
+
+Copyright 2013 Google Inc. All Rights Reserved.
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.
+
+http://scripts.sil.org/OFL
+
+----------------------------------------------------------------
+Noto Sans Myanmar Bold
+Source: https://raw.githubusercontent.com/openmaptiles/fonts/a4f9e7cf18aa382945c0a912f3022ba94a0b1d52/noto-sans/NotoSansMyanmar-Bold.ttf
+Original font SHA256: 341884f17f898ba2a57dd6a9fa90eff63b5fbe86d356f2b6b5148d52d5321c90
+
+Copyright 2013 Google Inc. All Rights Reserved.
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.
+
+http://scripts.sil.org/OFL
+
+----------------------------------------------------------------
+Noto Sans Myanmar Regular
+Source: https://raw.githubusercontent.com/openmaptiles/fonts/a4f9e7cf18aa382945c0a912f3022ba94a0b1d52/noto-sans/NotoSansMyanmar-Regular.ttf
+Original font SHA256: 9dc532dae8cba5b6c735c7d3657a0cdcc250cf367751d387e231358ef6038507
+
+Copyright 2013 Google Inc. All Rights Reserved.
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.
+
+http://scripts.sil.org/OFL
+
+----------------------------------------------------------------
+Noto Sans Oriya Bold
+Source: https://raw.githubusercontent.com/openmaptiles/fonts/a4f9e7cf18aa382945c0a912f3022ba94a0b1d52/noto-sans/NotoSansOriya-Bold.ttf
+Original font SHA256: 1848f9f025e0d9fb29fa17b057b12731c5fe2227bcee0f9e5efaff68e6ef0cc6
+
+Copyright 2015 Google Inc. All Rights Reserved.
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.
+
+http://scripts.sil.org/OFL
+
+----------------------------------------------------------------
+Noto Sans Oriya Regular
+Source: https://raw.githubusercontent.com/openmaptiles/fonts/a4f9e7cf18aa382945c0a912f3022ba94a0b1d52/noto-sans/NotoSansOriya-Regular.ttf
+Original font SHA256: b3474944dd081f1aa0969a9af65a17e47dc606ad607f79914ca6bb089bd40422
+
+Copyright 2015 Google Inc. All Rights Reserved.
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.
+
+http://scripts.sil.org/OFL
+
+----------------------------------------------------------------
+Noto Sans Regular
+Source: https://raw.githubusercontent.com/openmaptiles/fonts/a4f9e7cf18aa382945c0a912f3022ba94a0b1d52/noto-sans/NotoSans-Regular.ttf
+Original font SHA256: 371924e7480d3d01807fdc1bd30442d0a6651e6b5ea546482f5883d613cf0419
+
+Copyright 2012 Google Inc. All Rights Reserved.
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.
+
+http://scripts.sil.org/OFL
+
+----------------------------------------------------------------
+Noto Sans Sinhala Bold
+Source: https://raw.githubusercontent.com/openmaptiles/fonts/a4f9e7cf18aa382945c0a912f3022ba94a0b1d52/noto-sans/NotoSansSinhala-Bold.ttf
+Original font SHA256: 7d0d939929ed3015b4410e6f19f30e6d93ecb2f2cac49023c7724a33c7cf3e5d
+
+Copyright 2014 Google Inc. All Rights Reserved.
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.
+
+http://scripts.sil.org/OFL
+
+----------------------------------------------------------------
+Noto Sans Sinhala Regular
+Source: https://raw.githubusercontent.com/openmaptiles/fonts/a4f9e7cf18aa382945c0a912f3022ba94a0b1d52/noto-sans/NotoSansSinhala-Regular.ttf
+Original font SHA256: c796634c9acf09b53d82c82830e4a8f2fc2121a4795d250270b64c1208d5ef24
+
+Copyright 2014 Google Inc. All Rights Reserved.
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.
+
+http://scripts.sil.org/OFL
+
+----------------------------------------------------------------
+Noto Sans Tamil Bold
+Source: https://raw.githubusercontent.com/openmaptiles/fonts/a4f9e7cf18aa382945c0a912f3022ba94a0b1d52/noto-sans/NotoSansTamil-Bold.ttf
+Original font SHA256: a9f4412f6a52e332e5000967892c4680e55a04bfba9a28ff7f312b4cf99904fe
+
+Copyright 2012 Google Inc. All Rights Reserved.
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.
+
+http://scripts.sil.org/OFL
+
+----------------------------------------------------------------
+Noto Sans Tamil Regular
+Source: https://raw.githubusercontent.com/openmaptiles/fonts/a4f9e7cf18aa382945c0a912f3022ba94a0b1d52/noto-sans/NotoSansTamil-Regular.ttf
+Original font SHA256: 85c2b36e95bdc0138eb58460551cefaa43315a9921fec67c89ebb670f57c0e52
+
+Copyright 2012 Google Inc. All Rights Reserved.
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.
+
+http://scripts.sil.org/OFL
+
+----------------------------------------------------------------
+Noto Sans Thai Bold
+Source: https://raw.githubusercontent.com/openmaptiles/fonts/a4f9e7cf18aa382945c0a912f3022ba94a0b1d52/noto-sans/NotoSansThai-Bold.ttf
+Original font SHA256: 1c48f445882945a2b0656dd02a0a0c6395d2e94688c1e42c7f7948300c76793c
+
+Copyright 2011 Google Inc. All Rights Reserved.
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.
+
+http://scripts.sil.org/OFL
+
+----------------------------------------------------------------
+Noto Sans Thai Regular
+Source: https://raw.githubusercontent.com/openmaptiles/fonts/a4f9e7cf18aa382945c0a912f3022ba94a0b1d52/noto-sans/NotoSansThai-Regular.ttf
+Original font SHA256: 62bf2314dbbfc0fb82f1bda7ebde475ce953927511f152c89e86ba505e123588
+
+Copyright 2011 Google Inc. All Rights Reserved.
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.
+
+http://scripts.sil.org/OFL
+
+----------------------------------------------------------------
+Noto Sans Tibetan Bold
+Source: https://raw.githubusercontent.com/openmaptiles/fonts/a4f9e7cf18aa382945c0a912f3022ba94a0b1d52/noto-sans/NotoSansTibetan-Bold.ttf
+Original font SHA256: 5683e96d9d2a7986b8165e9e5b20367257b7f4fc6948d37751ca9f83456de27a
+
+Copyright 2015 Google Inc. All Rights Reserved.
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.
+
+http://scripts.sil.org/OFL
+
+----------------------------------------------------------------
+Noto Sans Tibetan Regular
+Source: https://raw.githubusercontent.com/openmaptiles/fonts/a4f9e7cf18aa382945c0a912f3022ba94a0b1d52/noto-sans/NotoSansTibetan-Regular.ttf
+Original font SHA256: ed7809eb77df99d06d5b19e070a8271b5332988d46ecd86fd82f5162c20cbab8
+
+Copyright 2015 Google Inc. All Rights Reserved.
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.
+
+http://scripts.sil.org/OFL
+
+================================================================
+Original source-family SIL Open Font License1.1
+Source: https://raw.githubusercontent.com/openmaptiles/fonts/a4f9e7cf18aa382945c0a912f3022ba94a0b1d52/noto-sans/LICENSE
+License SHA256: 6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2
+
+This Font Software is licensed under the SIL Open Font License,
+Version 1.1.
+
+This license is copied below, and is also available with a FAQ at:
+http://scripts.sil.org/OFL
+
+-----------------------------------------------------------
+SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
+-----------------------------------------------------------
+
+PREAMBLE
+The goals of the Open Font License (OFL) are to stimulate worldwide
+development of collaborative font projects, to support the font
+creation efforts of academic and linguistic communities, and to
+provide a free and open framework in which fonts may be shared and
+improved in partnership with others.
+
+The OFL allows the licensed fonts to be used, studied, modified and
+redistributed freely as long as they are not sold by themselves. The
+fonts, including any derivative works, can be bundled, embedded,
+redistributed and/or sold with any software provided that any reserved
+names are not used by derivative works. The fonts and derivatives,
+however, cannot be released under any other type of license. The
+requirement for fonts to remain under this license does not apply to
+any document created using the fonts or their derivatives.
+
+DEFINITIONS
+"Font Software" refers to the set of files released by the Copyright
+Holder(s) under this license and clearly marked as such. This may
+include source files, build scripts and documentation.
+
+"Reserved Font Name" refers to any names specified as such after the
+copyright statement(s).
+
+"Original Version" refers to the collection of Font Software
+components as distributed by the Copyright Holder(s).
+
+"Modified Version" refers to any derivative made by adding to,
+deleting, or substituting -- in part or in whole -- any of the
+components of the Original Version, by changing formats or by porting
+the Font Software to a new environment.
+
+"Author" refers to any designer, engineer, programmer, technical
+writer or other person who contributed to the Font Software.
+
+PERMISSION & CONDITIONS
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of the Font Software, to use, study, copy, merge, embed,
+modify, redistribute, and sell modified and unmodified copies of the
+Font Software, subject to the following conditions:
+
+1) Neither the Font Software nor any of its individual components, in
+Original or Modified Versions, may be sold by itself.
+
+2) Original or Modified Versions of the Font Software may be bundled,
+redistributed and/or sold with any software, provided that each copy
+contains the above copyright notice and this license. These can be
+included either as stand-alone text files, human-readable headers or
+in the appropriate machine-readable metadata fields within text or
+binary files as long as those fields can be easily viewed by the user.
+
+3) No Modified Version of the Font Software may use the Reserved Font
+Name(s) unless explicit written permission is granted by the
+corresponding Copyright Holder. This restriction only applies to the
+primary font name as presented to the users.
+
+4) The name(s) of the Copyright Holder(s) or the Author(s) of the Font
+Software shall not be used to promote, endorse or advertise any
+Modified Version, except to acknowledge the contribution(s) of the
+Copyright Holder(s) and the Author(s) or with their explicit written
+permission.
+
+5) The Font Software, modified or unmodified, in part or in whole,
+must be distributed entirely under this license, and must not be
+distributed under any other license. The requirement for fonts to
+remain under this license does not apply to any document created using
+the Font Software.
+
+TERMINATION
+This license becomes null and void if any of the above conditions are
+not met.
+
+DISCLAIMER
+THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
+OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
+DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
+OTHER DEALINGS IN THE FONT SOFTWARE.

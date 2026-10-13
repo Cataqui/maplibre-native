@@ -1,0 +1,64 @@
+name: Cataqui native version benchmark
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        type: choice
+        description: Pilot endpoint or complete fixed version sweep
+        options: [pilot, sweep]
+        default: pilot
+permissions:
+  contents: read
+jobs:
+  inventory:
+    runs-on: ubuntu-24.04
+    outputs:
+      groups: ${{ steps.groups.outputs.value }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - id: groups
+        env:
+          MODE: ${{ inputs.mode }}
+        run: |
+          python3 - <<'PY'
+          import json, os
+          groups=json.load(open('benchmark/cataqui/groups.json'))
+          selected=['pilot'] if os.environ['MODE']=='pilot' else [x for x in groups if x.startswith('sweep-')]
+          with open(os.environ['GITHUB_OUTPUT'],'a') as output:
+              output.write('value='+json.dumps(selected)+'\n')
+          PY
+  compare:
+    needs: inventory
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        group: ${{ fromJSON(needs.inventory.outputs.groups) }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 1
+          persist-credentials: false
+      - name: Fetch the fixed upstream history
+        run: |
+          git fetch --depth=1 origin 20d120303397d4cce27918768ffe626863e533fb
+          git fetch --depth=300 https://github.com/maplibre/maplibre-native.git 49537ef244ba08d730cf707c67f16da06956f3ee
+      - name: Build the benchmark environment
+        run: docker build -f benchmark/cataqui/runner.Dockerfile -t cataqui-native-benchmark .
+      - name: Measure paired baseline and candidate runs
+        env:
+          GROUP: ${{ matrix.group }}
+        run: |
+          mkdir -p results
+          docker run --rm --cpus=2 --memory=8g --mount "type=bind,source=$PWD,target=/repository,readonly" --mount "type=bind,source=$PWD/results,target=/results" cataqui-native-benchmark --group "$GROUP" --output /results --blocks 4
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: native-versions-${{ matrix.group }}
+          path: results/
+          retention-days: 3
+          if-no-files-found: error

@@ -1,0 +1,1859 @@
+{
+  "archive": "https://build.protomaps.com/20261013.pmtiles",
+  "scenarios": [
+    {
+      "id": "sao-paulo-dense",
+      "center": [
+        -46.6333,
+        -23.5505
+      ],
+      "zoom": 13.5,
+      "width": 328,
+      "height": 720
+    },
+    {
+      "id": "rio-coast",
+      "center": [
+        -43.1822,
+        -22.9068
+      ],
+      "zoom": 13.5,
+      "width": 328,
+      "height": 720
+    },
+    {
+      "id": "sorocaba",
+      "center": [
+        -47.4581,
+        -23.5015
+      ],
+      "zoom": 12.5,
+      "width": 328,
+      "height": 720
+    },
+    {
+      "id": "brazil-wide",
+      "center": [
+        -52,
+        -14
+      ],
+      "zoom": 5.5,
+      "width": 720,
+      "height": 328
+    }
+  ],
+  "resources": [
+    {
+      "path": "tiles/12/1515/2321.mvt",
+      "bytes": 35911,
+      "sha256": "4fffa06022004bb2bdeaaccb68f16f662137418b7cd5de711fc6f59127fc0e66",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1515/2322.mvt",
+      "bytes": 55348,
+      "sha256": "f71c699b0daaf198dd2565b55179e1ad8c934e1372ce223e6be6e2cb50eac589",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1515/2323.mvt",
+      "bytes": 120947,
+      "sha256": "cb7df0ef9a709d4b67b8d21e354847046ae5db23d505935ae101bc48baa5b157",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1515/2324.mvt",
+      "bytes": 114654,
+      "sha256": "ca0c77a6b19f0bc15507103eb748f41aab70ed9bd448936f559d08e472b95a30",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1515/2325.mvt",
+      "bytes": 92851,
+      "sha256": "934234f40e7722527cddb0a53a1e7f8b5366ad873997338f673b8867e04f1c8f",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1516/2321.mvt",
+      "bytes": 55590,
+      "sha256": "b9c297e382911adc09c7e254fb4772b257da3a57af1577142154a653edaf9fee",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1516/2322.mvt",
+      "bytes": 78892,
+      "sha256": "62ac45470242157b9933c7361aae113c79660d5c97b8c3015bf2a0d60bbf67a4",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1516/2323.mvt",
+      "bytes": 130297,
+      "sha256": "ac5c9d03b74934b9b5739b4c02a1ea3567b269ecb679d26dc5a7141a46a60cde",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1516/2324.mvt",
+      "bytes": 123501,
+      "sha256": "101aaf1a76d0023e5f9bb77ce398a560e963e159a745579afb3d19d8235af0a5",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1516/2325.mvt",
+      "bytes": 87483,
+      "sha256": "b0e9379789a9843d88b0bd239302ebd3b0fc2508644ed7f8138ae25833308a43",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1517/2321.mvt",
+      "bytes": 41423,
+      "sha256": "cc53440af0c7e49e3427ae7597cce75ceae99ed0577945d2e2ed99450c4901a0",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1517/2322.mvt",
+      "bytes": 71564,
+      "sha256": "ed3d021122e1d4abc8bd5821c14a7fc860634e64f31fe2b2dc6b7332cded7b7c",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1517/2323.mvt",
+      "bytes": 145750,
+      "sha256": "23cd91b31ce9c42d090da5c0f2ad73447d59857fde30879a40a968da5b5f27db",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1517/2324.mvt",
+      "bytes": 122731,
+      "sha256": "c6b8efa744297ef7f15a87ec9ffa123c03108f54aa5376f194fcaeab43a954a4",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1517/2325.mvt",
+      "bytes": 109524,
+      "sha256": "2f8b7621e1e576177d8e214a0c3633e0dad3f77009b1a480e5c01a9564d7eb1f",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1518/2321.mvt",
+      "bytes": 24790,
+      "sha256": "2bd6d836caf2f72728d27fc076b75a17a1854d002f0e3669b82bae304bac73a5",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1518/2322.mvt",
+      "bytes": 105224,
+      "sha256": "dbfb3772e3b154a773acc4c7f7380481cc03ddd542af8691bdffd463ff7ecce4",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1518/2323.mvt",
+      "bytes": 115581,
+      "sha256": "c13a2ddd71fbbd59642ef78a4044bb999aa8d5086c2b3433ea1f458113684115",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1518/2324.mvt",
+      "bytes": 120472,
+      "sha256": "f824952eb5c70a44cd62accaed67c3d808b3620b3bd7c16c67121cff26a83131",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1518/2325.mvt",
+      "bytes": 143646,
+      "sha256": "b6390b1b717f9b858fa59aa2e48a2b6e40af08717bce814537a0903332ca66ea",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1519/2321.mvt",
+      "bytes": 28332,
+      "sha256": "ef07a425b3de6d90709db347e560e3cd07d179714e2213212bced5d28ee17eee",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1519/2322.mvt",
+      "bytes": 92226,
+      "sha256": "6a32967555b4f65335ebf41cc4615cd0b6f33938132ccd1517b01cbb442f933f",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1519/2323.mvt",
+      "bytes": 110689,
+      "sha256": "0cbe0314a5ae2c9eda87e7923fb5b808b91618684e354640df2d215d721e411e",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1519/2324.mvt",
+      "bytes": 91577,
+      "sha256": "8559ae95c0464063081b5a0b1455bbbe628770289148a93517e5148a323f48c4",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1519/2325.mvt",
+      "bytes": 94853,
+      "sha256": "46b6b8d557c8c01866abd4546a9a968cb47e8102ad96af9354f224ff308db3c0",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3032/4645.mvt",
+      "bytes": 48558,
+      "sha256": "2a20682b4fa4618eba48d98da2249e35ac5b2ec55dde7e029e4e009bd7356e1c",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3032/4646.mvt",
+      "bytes": 64592,
+      "sha256": "c4539b08b2e9c2cf68ac590e09c54fb26f9c3c38e4b655298fbea01c7b9ae8c9",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3032/4647.mvt",
+      "bytes": 80140,
+      "sha256": "4051c9b223221deaffabd2f060f0a18d00a6d2d570436e370a9a46cd097bd2a6",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3032/4648.mvt",
+      "bytes": 76247,
+      "sha256": "dcd9e66d4ba29883625312898f5fc7de409fca6c0bdf76386960f4e1d873a7ba",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3032/4649.mvt",
+      "bytes": 77371,
+      "sha256": "c0125e1c4ba344c3ae8f448dff3cc503a4f354bbd2b356717b92abf31cad8f24",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3033/4645.mvt",
+      "bytes": 58286,
+      "sha256": "a9c1c248fb773fb17aadee4e5b3df0656a750f9d72d52972b5742a102a364def",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3033/4646.mvt",
+      "bytes": 78070,
+      "sha256": "b32ccc40c92f47cca74a615237964d586f7577cedd245b05367ad0ab6df74f83",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3033/4647.mvt",
+      "bytes": 99240,
+      "sha256": "0e495404132f3d4f0c29a913b83443b67c32f024da92db538b240db59137914a",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3033/4648.mvt",
+      "bytes": 82698,
+      "sha256": "7ab05b1dae62515ac5c877e4a98361722b0cf791437acad207905f38f42d94e6",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3033/4649.mvt",
+      "bytes": 56709,
+      "sha256": "7b2433c4897e0ccc029dc21e554e7e6d932db80249fc9c814bc9bf0c7f0bf7de",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3034/4645.mvt",
+      "bytes": 49506,
+      "sha256": "383f359a2943b476d0ab18494d6bc1e70e1aceb4187c57b3c6675907a33d631e",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3034/4646.mvt",
+      "bytes": 83612,
+      "sha256": "0c1250dddab0f3c287d158babb29a1f3c18fa400a2e7444656136433bb4bed4f",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3034/4647.mvt",
+      "bytes": 145135,
+      "sha256": "5d7de5c48cc54a1ec18e82bbc41f8d3b9a851d58c37ef6bd3ec9a08d7b0b25ec",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3034/4648.mvt",
+      "bytes": 104818,
+      "sha256": "7c18c0ced51535dc1efbfd4c215da7fbb4a852513b8a93723980cc54f8ba6070",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3034/4649.mvt",
+      "bytes": 81505,
+      "sha256": "185b99c42c8a2f9f59c9a008f3776c1181e1b69d1d8d929bf709e76ae5fe5a51",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3035/4645.mvt",
+      "bytes": 59754,
+      "sha256": "fe73d7626c8047b8ae7eedd28ee15830d10d7ac4e1db9f2981b8fee21bea2b3c",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3035/4646.mvt",
+      "bytes": 95612,
+      "sha256": "2ca5d76820bdf4767abb440a9a4e4b55c5d009220e23249f7c2a53ed0c0c8b07",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3035/4647.mvt",
+      "bytes": 108078,
+      "sha256": "cf24ee43d45abbdf30176b36bec3002723a4b74a383ba4089fb84e29ff800283",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3035/4648.mvt",
+      "bytes": 86389,
+      "sha256": "a0c670e5fdd7dbfe7e1d597bcfc87016061c9053c2215b8b2575c92c114aa357",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3035/4649.mvt",
+      "bytes": 55577,
+      "sha256": "c521c4649706769f92d89883e88f84ac07b517ceb4bab7e13c2a833cb88d5834",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3036/4645.mvt",
+      "bytes": 66224,
+      "sha256": "3f09c41b854498f6a45fe467095580a03ef5ee5912f5cdf38a355345f9b02b3c",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3036/4646.mvt",
+      "bytes": 75161,
+      "sha256": "ce7d6d666a239befb9e29cb04be210fdd93140f88c897201e1fae47ab5633108",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3036/4647.mvt",
+      "bytes": 83635,
+      "sha256": "9a0dabf284c944c91e5c0e14bca0dbb7a8c94821edab97180d672c93c55e75c3",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3036/4648.mvt",
+      "bytes": 67556,
+      "sha256": "ec7721153b92229d32d31bc433694d0dd82dd58f1ec7c1c6b7d6e56d3242a9b3",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3036/4649.mvt",
+      "bytes": 63954,
+      "sha256": "6f1177dffd1e63f89eccea77e09d1a159335659d4687dc9087822a7a3a098805",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/14/6067/9293.mvt",
+      "bytes": 55263,
+      "sha256": "34a5ffe97929c313cfd5c74047125057319ea7544f9835acedd2f8ef5eb8331c",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/14/6067/9294.mvt",
+      "bytes": 138818,
+      "sha256": "4a3fd66dc87e94349c47be5e7ca92acb8390e7e234c3c816524d6f5477acc69e",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/14/6067/9295.mvt",
+      "bytes": 125740,
+      "sha256": "9e9562a4c47c3bb21bc755fb663e908c2d4e3e9c8d6cf18b120599d1bcfa310b",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/14/6067/9296.mvt",
+      "bytes": 103090,
+      "sha256": "c252319cd2efb9ef34cc0ebd88b16afcbe4741c6c1f34d3a730bb2d9f71a44e3",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/14/6067/9297.mvt",
+      "bytes": 67243,
+      "sha256": "55134e9a50329f66a55d33325ec6f0d0c2ba4b5a48ab5e5f7c5541bee4cf92d6",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/14/6068/9293.mvt",
+      "bytes": 58755,
+      "sha256": "09c0403ff6db030df8c9484625439699baf49e6a9249c11a61ab27a4366aced0",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/14/6068/9294.mvt",
+      "bytes": 139628,
+      "sha256": "0844e7b407117ce4aadc32cea0bdd3ecf275f4b37d6311f089925e77d1469214",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/14/6068/9295.mvt",
+      "bytes": 142905,
+      "sha256": "ba95f0805d0aad6f524c6c3b7fcfc16ff803055679c9610834d9787ccd01601e",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/14/6068/9296.mvt",
+      "bytes": 121246,
+      "sha256": "c72fefb3aa50c9914beb8da4bcc95340bd02a984d0b04c5c9c39b569c2e7b9bd",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/14/6068/9297.mvt",
+      "bytes": 106088,
+      "sha256": "a0541491ef84c61b4b88b6f12317da3c4642f5baac129062d3ca6cd11697e153",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/14/6069/9293.mvt",
+      "bytes": 61757,
+      "sha256": "089e7547b2acce37e65aa256c9b1a300dfa34ecb1559cb1d693bb361e8de8af1",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/14/6069/9294.mvt",
+      "bytes": 129174,
+      "sha256": "51e1c48e7a0b1a4ce651556de53063e4b5140c4aafb9c9014795148547f86473",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/14/6069/9295.mvt",
+      "bytes": 153265,
+      "sha256": "5a9a9f50bd3f3eaa0c4ceefe95532b46cf2a2893e3150531994aef49641bda94",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/14/6069/9296.mvt",
+      "bytes": 136678,
+      "sha256": "02e3802535ead5576b4f616b390fc3bdcb39105e49775ae68334165da2f6e28d",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/14/6069/9297.mvt",
+      "bytes": 133783,
+      "sha256": "e1742058d044606cfd442b06e11a825c9315d75964a01cbb45ca152f08b4e780",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/14/6070/9293.mvt",
+      "bytes": 91050,
+      "sha256": "62ce71633bc2ccbc88418ea8c4427b617add86c8df592ec2affb2475c17d5f91",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/14/6070/9294.mvt",
+      "bytes": 116078,
+      "sha256": "5aa03bb8669cd0838170a96e04e839e479a53b1e9a07c3a6a3ea3af60ac76a9d",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/14/6070/9295.mvt",
+      "bytes": 99122,
+      "sha256": "3fe3eb796591d42dfec79b8a9db2184c827a9cb954c60f43894b96cda05fb310",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/14/6070/9296.mvt",
+      "bytes": 116320,
+      "sha256": "7d4db8a70116c68d6579c10af659991f74a5f08633c49b28f2ebc0931713dce9",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/14/6070/9297.mvt",
+      "bytes": 107132,
+      "sha256": "08e3b38fdece1f93e960c757c17f710caa262b077b05df69be3ea5b61eb9d5e2",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/14/6071/9293.mvt",
+      "bytes": 112837,
+      "sha256": "5093b7d3594ec0de229f529110d372f9ee0afe19247c6013db2285055f612223",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/14/6071/9294.mvt",
+      "bytes": 87142,
+      "sha256": "07b0d150b4a84a13127a7bef36cd5361597d2150d840999fd9d5499d61c9d7de",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/14/6071/9295.mvt",
+      "bytes": 112506,
+      "sha256": "0f4403f1bde6ead384026b5f0352fe4bec4ab0292558d4d700786cd009ad3123",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/14/6071/9296.mvt",
+      "bytes": 94536,
+      "sha256": "91fdf4894512be2e922636bcb3e1957288b97dcf224d86ddd9310e5cd8169945",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/14/6071/9297.mvt",
+      "bytes": 82659,
+      "sha256": "90fc37e3a55b28f0cf07bbe8f26d5c44dfd6ae1f5cbd1847aedbc40074c72ca8",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1554/2313.mvt",
+      "bytes": 56252,
+      "sha256": "b3456a77d727a43233e77c3c7e24f17a2b92fef771504bc314f0312fca190ed9",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1554/2314.mvt",
+      "bytes": 115084,
+      "sha256": "8216b67a24de855c4eb72e264d487ec6ca2618fc5cdb88f8464e58672b2ae783",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1554/2315.mvt",
+      "bytes": 103589,
+      "sha256": "c7ff49f707ab7f94abed32da9a0735d5ac764cd27cfd8715f29a06b0e403effa",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1554/2316.mvt",
+      "bytes": 96871,
+      "sha256": "cb2bc4ba96549bcc5489720c2bd78d6ebfc681a562fd7f9b555fc7edf1524d76",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1554/2317.mvt",
+      "bytes": 22557,
+      "sha256": "ecd180ebab8d8d7df5e881ae288a1a10a4da5574080400e5777bbccf4dcad683",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1555/2313.mvt",
+      "bytes": 50102,
+      "sha256": "0e6fbc668cedac2bc315e4a5148bd9bccb0ad39640251661e8886424c307741c",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1555/2314.mvt",
+      "bytes": 76790,
+      "sha256": "374fb11ef13b5f1cfac24b4228b7327b30bbbaa1ca3620cb4f5b901cfbc28524",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1555/2315.mvt",
+      "bytes": 111393,
+      "sha256": "afa9ccc8c1a7e76ade04aa374f3216ae14c7e600b628e465db61792008220047",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1555/2316.mvt",
+      "bytes": 70802,
+      "sha256": "726394e628c20ca12e55964d506c682930cbe4929552a3106e7da97ffd58243a",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1555/2317.mvt",
+      "bytes": 22011,
+      "sha256": "002c9d024cc29920e72f4b06eb6b40b5d119c2a25e97f0be60bd12421299cd78",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1556/2313.mvt",
+      "bytes": 12444,
+      "sha256": "5368c30feea97b19af84505e0013a5033d6bf29a8b08b04db159dd38cc4117ac",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1556/2314.mvt",
+      "bytes": 43147,
+      "sha256": "5cd86ffde24bb55fc1e8afcfbd63aefa188c009c4bdf706566753c99db3c655e",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1556/2315.mvt",
+      "bytes": 87681,
+      "sha256": "cfe19504561383a1d2581c6d5671a7b1cb755d9cfde76acceef72431c11db5f9",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1556/2316.mvt",
+      "bytes": 106665,
+      "sha256": "22cad0a0f93d13481f46fbbde4041a81b9a2ba9495bccd31396c2258a78b7481",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1556/2317.mvt",
+      "bytes": 2972,
+      "sha256": "32ca773f02b68279d1c9e7ce95c044f61829bf6dec36955799d3aca7ac34f789",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1557/2313.mvt",
+      "bytes": 11919,
+      "sha256": "7f4d795072eb289d214bbfa01b2cda255ccd8c7a7cdb23e1f776e9a57e167448",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1557/2314.mvt",
+      "bytes": 26509,
+      "sha256": "848684926e184a03ea5fcb510c36986d227d15952ab700176766d324bcf959a5",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1557/2315.mvt",
+      "bytes": 95058,
+      "sha256": "dcf68236b9c6da0ae2b93292991df003dd5394f9e980f94bcd20156036d4ff50",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1557/2316.mvt",
+      "bytes": 30525,
+      "sha256": "f5e43241ea638b63c3ea158a9b193da14ba19221afde76c08d1e5f0240b53a3e",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1557/2317.mvt",
+      "bytes": 699,
+      "sha256": "4a47893388cbdb82758720507464dc02266e54106ed25e2d2028824d51573229",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1558/2313.mvt",
+      "bytes": 10870,
+      "sha256": "233f46a652eb9b98c301f92312b3c5ee773b64d9f6ac09e7cd24e6d8c72c5d6a",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1558/2314.mvt",
+      "bytes": 77737,
+      "sha256": "222395bc3eebfdef349ef3002f98be262270cf49d55907bac20f17b5030b97d5",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1558/2315.mvt",
+      "bytes": 98521,
+      "sha256": "ecbc551c41b792fa55d289a1ef94cd3422afeae304685891a033fb6b5f758173",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1558/2316.mvt",
+      "bytes": 48249,
+      "sha256": "fabf861814d4aad1a8e9502371459fa34c441972207b312502bb76d0da48e968",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1558/2317.mvt",
+      "bytes": 75,
+      "sha256": "5ab9c27e4fe3be813096852c82b578f9cb36c3e539331138e9cac01cfea0e623",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3111/4629.mvt",
+      "bytes": 36444,
+      "sha256": "7ed3731004394ffe051b0f5ce4c6ab2d6caab66970a23ef3b6bb32de57514ec8",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3111/4630.mvt",
+      "bytes": 70619,
+      "sha256": "266606e1b6053336872fbc5a8b650dd794f6d4eb51408f26dbabb1a985077f4f",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3111/4631.mvt",
+      "bytes": 69619,
+      "sha256": "447da7ed9d5ec3e61db4dff3472d0e0b60c096db7180e680ce01a9d0d78da5b5",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3111/4632.mvt",
+      "bytes": 44154,
+      "sha256": "845523e0f466181389daa34e5f4b7b1e089c08cc662a6ef44c5065ba35ee897a",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3111/4633.mvt",
+      "bytes": 37433,
+      "sha256": "23397b4621a9681f010fae1740edd7bd80d0dfa567fb2845d67361dc0bafc678",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3112/4629.mvt",
+      "bytes": 40022,
+      "sha256": "4919dec1c011fbef358c0922e799e1a83fe2fe790dd8a5d8688734c1f7473320",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3112/4630.mvt",
+      "bytes": 43565,
+      "sha256": "6844721a3feb92b722a8a7bd3741fb6763795dc86122ac8d74baa86b08b10c40",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3112/4631.mvt",
+      "bytes": 92874,
+      "sha256": "1e285d0d007bb5b64c75fe26d4741bdb69fa5df7592b95624e08612cbaf75a31",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3112/4632.mvt",
+      "bytes": 62030,
+      "sha256": "5b355dccfae463eb1b451c74f870452c6844c9b7b857fd101d724383e44cf4da",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3112/4633.mvt",
+      "bytes": 65063,
+      "sha256": "a9c635d215fbe3535487f7c1a4c0131adee3c9b34317ae2717d1f3f451f83589",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3113/4629.mvt",
+      "bytes": 30428,
+      "sha256": "63f237675e4658480d5f869eb2c998e5c654626cae0dc9ae6c90fcf584c7ea80",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3113/4630.mvt",
+      "bytes": 806,
+      "sha256": "ba3431a678d34d0c14f225115db5e38401b196b7e004519e30f0bc0505d07946",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3113/4631.mvt",
+      "bytes": 78503,
+      "sha256": "9bd582ab96bdc5c86fea8701504c9f2843b7fb7ff20bcaa857338a19c0fb6a40",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3113/4632.mvt",
+      "bytes": 98960,
+      "sha256": "5aa7079e6980bdb6f44f4cb0613b5c4363abe588fd6f5bbdea79be4494b09d90",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3113/4633.mvt",
+      "bytes": 50223,
+      "sha256": "bd7e8ba16f609935b78011fbe7411e8efd78438a8e4330e587eee5e05e4db5ad",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3114/4629.mvt",
+      "bytes": 3975,
+      "sha256": "71ae60e983b68f96e5dd3a561ede1a566670b50f5b4020d072cd4986719596c3",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3114/4630.mvt",
+      "bytes": 11568,
+      "sha256": "57759bdc6865916954b3c115497b058d275f3e7142954d8633d5dda5c53ee393",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3114/4631.mvt",
+      "bytes": 44725,
+      "sha256": "fb01aa0daf68a4de02002bec37e35d352649b3fabeeca076fe8db294de0369a6",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3114/4632.mvt",
+      "bytes": 15147,
+      "sha256": "1bb8cddc7371cc1422a70cbb07f47284f9fa7f734e6a0834df1db9baec61e895",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3114/4633.mvt",
+      "bytes": 809,
+      "sha256": "042bda8ced88076538710c75a18001f0fdcfb47410ab8021926e082d98a043dd",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3115/4629.mvt",
+      "bytes": 22779,
+      "sha256": "a1d509fb0c9510d0b83213dc62063c90240bef2eda9fec808a4913d8da9e9abf",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3115/4630.mvt",
+      "bytes": 59411,
+      "sha256": "fc4ecdacc8fd57099639c31d06cc6a77d2b9962e0d5d76d1587aea3a309159a5",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3115/4631.mvt",
+      "bytes": 63044,
+      "sha256": "d71199bc43b2ee1b0d3308574aa5a2cf45d8ec876844eea57aae18ff1b72b285",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3115/4632.mvt",
+      "bytes": 34191,
+      "sha256": "e4ef1ac3973e9a889e86c1bc1e3ea059c8b68d58f5d6fbe5f14222821397b8e4",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3115/4633.mvt",
+      "bytes": 1602,
+      "sha256": "abb6e694225672d844a09c0180021a8f37e2cb8ba1494c6697c2ad3a2498b223",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/14/6224/9261.mvt",
+      "bytes": 44829,
+      "sha256": "822a7b9e0dc3b3df9d72889a1246613e2627a384ea95ab8e63f9fbd2700cb591",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/14/6224/9262.mvt",
+      "bytes": 43098,
+      "sha256": "deecb8818589057f8aa4c5d1277e11c1b90a769c2efbb459a3b491b23186815d",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/14/6224/9263.mvt",
+      "bytes": 65485,
+      "sha256": "81d6119ebfe6ee4b4e49e6c0bdd90772c3b888e9fc7b35e196af332fe79ab1d4",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/14/6224/9264.mvt",
+      "bytes": 56870,
+      "sha256": "509d36296057fab044cfef71002eeec2b63d99f317ba1236709188b939565e61",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/14/6224/9265.mvt",
+      "bytes": 12243,
+      "sha256": "3859a3555851551f9669b479f185755feca7be1aad55bd86440111ba93d0d42a",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/14/6225/9261.mvt",
+      "bytes": 18688,
+      "sha256": "a762a89ec2c7c671a62134d2f5fa95a1c6e9a2ba35424cb3a151bae2ad228e0d",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/14/6225/9262.mvt",
+      "bytes": 23497,
+      "sha256": "0012992cdb6e4fa7cdbfb27a58871228e91f1e414b30ad06afd0dbc3d0484eaf",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/14/6225/9263.mvt",
+      "bytes": 84436,
+      "sha256": "0d3a366cd6b71adfbb622bfcb1ed2a5bc725f354b282f5057fc9a12aa28c310d",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/14/6225/9264.mvt",
+      "bytes": 58121,
+      "sha256": "ba466a6913c988adcc7346faf82c4abb67829b03069f28eb8fd3ecdcacf55043",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/14/6225/9265.mvt",
+      "bytes": 37759,
+      "sha256": "8490c1d2a6bb74bf1a1ecb1201ef222363942eb5638c45ef3717c7cbf5984a7b",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/14/6226/9261.mvt",
+      "bytes": 489,
+      "sha256": "1697033585ebba6553717d5211ea53ab2572e64faa05f87c13803507dcdf6b35",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/14/6226/9262.mvt",
+      "bytes": 24628,
+      "sha256": "d93c6b29b081830bfd89fce12404c84845332f4efd07f6ec867759ea95e5781c",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/14/6226/9263.mvt",
+      "bytes": 138722,
+      "sha256": "ae0001bc047076f1e7845718d8b5682b21bc4b15cb51a90108d4226bf46bcb24",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/14/6226/9264.mvt",
+      "bytes": 93009,
+      "sha256": "c59ef2a15b4b7ad0cb65743052767ce2bace139e2a20ee2ff9a62d9696af70dd",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/14/6226/9265.mvt",
+      "bytes": 154499,
+      "sha256": "5704c8e883793b186875bb9a8a821dfab69e3b35f224bc716b19b3cf6d5f3363",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/14/6227/9261.mvt",
+      "bytes": 575,
+      "sha256": "54e7f6e6229b2fe42f64a6595a071daad2475dd0331dabdcad2ef586b5bee4da",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/14/6227/9262.mvt",
+      "bytes": 4398,
+      "sha256": "7deab344d917908ae42d69ac61b52f0c01361f1aac04b1a34549d0d4f0c95d57",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/14/6227/9263.mvt",
+      "bytes": 56962,
+      "sha256": "76a417d74ab7c4d049974302cd1c87d2ffa8e2b9741f0f2306f57f604a396d57",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/14/6227/9264.mvt",
+      "bytes": 30748,
+      "sha256": "74b9a54aef2ea14498a67401d6f83f3fef62799f6c48c31bd6e475518f07591e",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/14/6227/9265.mvt",
+      "bytes": 37958,
+      "sha256": "536a20ac47468c256abcbd235e3d92569456ae09ab2f579cef7ad199ce5a1797",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/14/6228/9261.mvt",
+      "bytes": 3739,
+      "sha256": "3d73e98a76303f62bc66335b69826146480904d8a767e900879f41cc7d6a17a0",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/14/6228/9262.mvt",
+      "bytes": 3388,
+      "sha256": "6c36cd8c295c237b4cb53551fae63896f0567122796efbddaf0231c23c542804",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/14/6228/9263.mvt",
+      "bytes": 8705,
+      "sha256": "7a866a16e42c69c9c47a0f97bae51d3045a35daf9b8551d4510f550abb860e5b",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/14/6228/9264.mvt",
+      "bytes": 1314,
+      "sha256": "42d4cfcf571ab86542c320ec7d6a76edf7700ef5aa162838f23a437535eadf74",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/14/6228/9265.mvt",
+      "bytes": 3325,
+      "sha256": "0186ad79db67a10b90be6997ab5e94a066d9c162d27f1eff41b3e94fbb0d9f06",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/11/752/1159.mvt",
+      "bytes": 37952,
+      "sha256": "33af89c33e9f0531106188006a5df3f19069d4ffe93130d562491f484c2e3d24",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/11/752/1160.mvt",
+      "bytes": 38546,
+      "sha256": "454a7e7eacbbb40a4a5ccee2fe109d84cebe147408cb2d57fd19d0e6a5c9170f",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/11/752/1161.mvt",
+      "bytes": 26559,
+      "sha256": "5696e200eb954fea44916fcfa0ec142bff68294e4955059d5c67bfaf642779f9",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/11/752/1162.mvt",
+      "bytes": 93769,
+      "sha256": "3bbf96135fc24674ad50821a08f4ac2bf9fd012af851d1d6ba9652ef489ac846",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/11/752/1163.mvt",
+      "bytes": 28493,
+      "sha256": "939b63fae08bbfd98876060ab835b557f94679da8ee0d3af35e717c8233af77d",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/11/753/1159.mvt",
+      "bytes": 54238,
+      "sha256": "1f6120dc1e133e288acca35e365a3aad0af715ee38567f8d64259dcc25f29ee7",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/11/753/1160.mvt",
+      "bytes": 65781,
+      "sha256": "399903b5f42cc60d90c84b9a65593e5bef4496eb1b6282bddfb0ffaa8e1e0bf5",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/11/753/1161.mvt",
+      "bytes": 84968,
+      "sha256": "80e36580cf8dde564529c1d58d587b19672fc42750da522c5e1cea9393876221",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/11/753/1162.mvt",
+      "bytes": 60541,
+      "sha256": "480a0cfe954e4019e5bb25f9fa81bb8b662ab17e8eeead50d34453806eba922f",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/11/753/1163.mvt",
+      "bytes": 25793,
+      "sha256": "0ae86f60d9c4f3467b61276ab4d35543003c284efeb24d5791f2b2f2a72cc275",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/11/754/1159.mvt",
+      "bytes": 97935,
+      "sha256": "7d936cf31272784fb23b004b755a9f26c86fa6d7210eeb2ce09cfa1d39b84307",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/11/754/1160.mvt",
+      "bytes": 91900,
+      "sha256": "bebc6104d6fee0bd055912cca6c16a3167377aff603b0c80750e1dbb14d31608",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/11/754/1161.mvt",
+      "bytes": 110895,
+      "sha256": "546b5423e54c9eccb7366156d2b43a38860ed38d034b06146d1b7935c1975626",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/11/754/1162.mvt",
+      "bytes": 87669,
+      "sha256": "3954fdb49b2bfaa573d18a868e60f8d284cb65c0e60f45c1155e25f2224ec1e0",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/11/754/1163.mvt",
+      "bytes": 82449,
+      "sha256": "45147a249a9978c4b0fb28c734d435025fd32b8600db68b871c42b3e0ae31ceb",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/11/755/1159.mvt",
+      "bytes": 110992,
+      "sha256": "ea2c58b793b6edb6fe0f303c711f8d539f03934b182becab4a8cea2f57c876a8",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/11/755/1160.mvt",
+      "bytes": 85523,
+      "sha256": "982d45e78182a6b6b6b2a66424e1aa5f4e6190dce9e762672c39cf0b4e0035cb",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/11/755/1161.mvt",
+      "bytes": 110726,
+      "sha256": "f28353d30bccd5c8f5ac608106ef2252c258454f5cf0a3dbe91c63887b59117b",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/11/755/1162.mvt",
+      "bytes": 115386,
+      "sha256": "b57abfd1b749094d69319a97c5d20e24590c12514fba26fc909a79d61d79d8e0",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/11/755/1163.mvt",
+      "bytes": 78878,
+      "sha256": "3e1f101e4e1aefb01773209a9e67b933f472ee9bf2ece35c901e164a1e73bbec",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/11/756/1159.mvt",
+      "bytes": 89537,
+      "sha256": "245c6c81fc22970d43b2cbf4958c93369401a907968245c0f89eec6a0bc412d3",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/11/756/1160.mvt",
+      "bytes": 55642,
+      "sha256": "b702aa1052ff46347b10a95378084d442dce31c95de79eeb3533768200d222bd",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/11/756/1161.mvt",
+      "bytes": 91313,
+      "sha256": "5850a3750d8cfa72927e453572442c93e3f17927e0c191487eca14cd53d101e5",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/11/756/1162.mvt",
+      "bytes": 85603,
+      "sha256": "e13dc840fd8ce419f5e3080701c8b9f99a016f7401d15541b0510138e8a0da96",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/11/756/1163.mvt",
+      "bytes": 51250,
+      "sha256": "73d3a818e57539c646f8e0e5c47c1acf96c5d24dbee34d1a248fe3a4885e3612",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1506/2321.mvt",
+      "bytes": 30025,
+      "sha256": "f2bed30de97eeac253b71bcccacf69880c52d7215f4afa87c038578b72348dda",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1506/2322.mvt",
+      "bytes": 35992,
+      "sha256": "c86e6809e969ac1aa0e41b23842db5582efdf10dc84da5e932e0016bd9b4e9ff",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1506/2323.mvt",
+      "bytes": 51178,
+      "sha256": "affa41b31f27c398b96c29f2937a6228bf81f3c162dfcf64777fa6149afb1d2b",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1506/2324.mvt",
+      "bytes": 42808,
+      "sha256": "8bcd7f19e7eed757aefb10e871faf31e91d3ea67477df9dc26178e1718745137",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1506/2325.mvt",
+      "bytes": 21180,
+      "sha256": "c802649c788fc9db2b5a2032a6ff5887a5bfb940f84dcf3ee5f4f067f0d477c1",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1507/2321.mvt",
+      "bytes": 47143,
+      "sha256": "3e18f334713b8052f2ba3bdd74c6c3f5dedf5bcdd86bc3a9822d76dae6cb4704",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1507/2322.mvt",
+      "bytes": 90452,
+      "sha256": "cb6f1017c6e9e94704f3d65b343f5155c1c939b076186d6c35147aae74604e18",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1507/2323.mvt",
+      "bytes": 108809,
+      "sha256": "6086033712f69cc2c81c568521ee053ec62b24733d1b78455f9a2fc34ea7075d",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1507/2324.mvt",
+      "bytes": 44666,
+      "sha256": "d25500f9cbbf9a42b625addacb15f5128a6c6a3ff6fb30a228e6965e45b8f51f",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1507/2325.mvt",
+      "bytes": 35000,
+      "sha256": "e9d734d5701d6da7d559435c0ec54fbe7bab43b0c032a4727903829ca747c0c5",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1508/2321.mvt",
+      "bytes": 45963,
+      "sha256": "2340586e0ee9905c6523f92e2ecf92557a0e9710e632d042412c15ecfcd4f5ac",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1508/2322.mvt",
+      "bytes": 97969,
+      "sha256": "be641ca86b17774ee9bab1a841481d5f12908f41ef640cb00bec3f5e94abeed9",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1508/2323.mvt",
+      "bytes": 101457,
+      "sha256": "ddf775ffad079aa1e04c191e31e5eeb65ccc28c05f5068f61495ad57f31b17d5",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1508/2324.mvt",
+      "bytes": 38475,
+      "sha256": "dfa7d05c1752b495bbbe8c865dd9cf664fee592928cf9a60cff7fa4494643914",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1508/2325.mvt",
+      "bytes": 78717,
+      "sha256": "1e25d457b256294a661557002d49c090a3473bce57a425cd17fe04c05bdaa714",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1509/2321.mvt",
+      "bytes": 58104,
+      "sha256": "9f8071f0a2afa7bed128bc111da6d27a7df7fd988d49bd2cf9a170f6c1f163d3",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1509/2322.mvt",
+      "bytes": 69132,
+      "sha256": "1e4a5c4896cf2ce8a21677c7e90654b62b37e495ed4845c185e769e8afc1884a",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1509/2323.mvt",
+      "bytes": 44178,
+      "sha256": "6d52ce1fb729c569bb64820fa1e7f08ba53d028ba1e992d7d683d9b2d3c9b559",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1509/2324.mvt",
+      "bytes": 24562,
+      "sha256": "564d4c266d8598b3ab543b5a28344bfb61bf531429003b6545d7a533b653966e",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1509/2325.mvt",
+      "bytes": 55911,
+      "sha256": "64b851185ec7d451a7cb5cadfefa5b2823b8643efa8739d3452add90d394bfb9",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1510/2321.mvt",
+      "bytes": 46987,
+      "sha256": "0a94a2941c20952842fc7ec4702833ad2b04b11db7637427e7b20d5e1231e9df",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1510/2322.mvt",
+      "bytes": 73663,
+      "sha256": "298ffe3d0791604690909c99113830784bd101a1f2ce11a169567521ec1c0e63",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1510/2323.mvt",
+      "bytes": 52505,
+      "sha256": "d98ec6dae1968813813a5c02c3ebba03d2176afd1463edd03c15d0ce68a9f583",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1510/2324.mvt",
+      "bytes": 54823,
+      "sha256": "7648ff7dec5e9b6a8f19634923006a717f72769230f37a74280785ac2dd26cbf",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/12/1510/2325.mvt",
+      "bytes": 71893,
+      "sha256": "fc0580454b263676b8e36009ca83d6b299ef1717faa7284e46f20b7075a9d25b",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3014/4644.mvt",
+      "bytes": 24628,
+      "sha256": "64cd9e82ef30ebf3b4768be10df6999d6fc6222e1d9b4f1ea4eb8c79286e81ae",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3014/4645.mvt",
+      "bytes": 26580,
+      "sha256": "62773334ee7b98892a456bcf1d44a5d8933d7ea53b36f9b5ae48f2c1556098ca",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3014/4646.mvt",
+      "bytes": 41241,
+      "sha256": "85fd5d415079c80bb02c400674ec56806aec921856b0cd4a4395f2260597d9b9",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3014/4647.mvt",
+      "bytes": 21576,
+      "sha256": "be294700ddffb0a10674c75512e95c295a16601c44853149da434cf72415b1ea",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3014/4648.mvt",
+      "bytes": 24538,
+      "sha256": "7eb86d653c37eff688364403200220fbb74a5c6125330f332c7116dddaca8860",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3015/4644.mvt",
+      "bytes": 32576,
+      "sha256": "0f53be1df8b8bf4225e489bcb2cc757c3b66e55eab8f3d64c80e674ee776994e",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3015/4645.mvt",
+      "bytes": 69340,
+      "sha256": "bd09ef880cb95714189df7df0bd6ed6e774c856c15479655e1e7e28795cd55e3",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3015/4646.mvt",
+      "bytes": 80840,
+      "sha256": "7cc76b2aeb8a24bbf25e0dd7134dc844a28d8c47d1c90a0a10e0ddd7645e6b57",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3015/4647.mvt",
+      "bytes": 51327,
+      "sha256": "f76952a4dca37247967cd6e692b3308b51520c3fb32311a9be8b523ff11893a6",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3015/4648.mvt",
+      "bytes": 24202,
+      "sha256": "08bfaaca6b2210282e7a93215be8a8a91d31aa8e26d85584d33abb31239ae5e8",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3016/4644.mvt",
+      "bytes": 31938,
+      "sha256": "583c2b769818232fac9b0e34a60bfc335ae61c839094c236dcbe5b6b55dd1c0c",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3016/4645.mvt",
+      "bytes": 62152,
+      "sha256": "e7492964c681b23f4fbf49b4b24d978b2f7c3195e525d303c7905bbc1cb7d735",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3016/4646.mvt",
+      "bytes": 75312,
+      "sha256": "1bf7c46ce591a236129436c2c5da30b582c8b810de83cea49772e16b51a022c1",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3016/4647.mvt",
+      "bytes": 45788,
+      "sha256": "cdd4c490b051d7a3dae314600f937c9fe105b56d04fda1fa3259bcce301686e8",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3016/4648.mvt",
+      "bytes": 18377,
+      "sha256": "2598aafaf18544d4702e096198a562200c93aca84358d883330d73b4fd5226fb",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3017/4644.mvt",
+      "bytes": 37026,
+      "sha256": "0b8caeee83ee526bd4f01bbdbbd0949b606923ee1c2455693617dbb2620b113c",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3017/4645.mvt",
+      "bytes": 35320,
+      "sha256": "1d98ae49a0324308b697f9ca7be417807987c93e01ce0b589d015b7a38d4a42d",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3017/4646.mvt",
+      "bytes": 34897,
+      "sha256": "a6ca03b841003640f07c2265cca0d12274e63d663e0ad5e535a835ffc6a15614",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3017/4647.mvt",
+      "bytes": 20114,
+      "sha256": "160ecbe934e5079ff4c8078bde20926aa2692954824c1451f53fbd993aea2516",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3017/4648.mvt",
+      "bytes": 8199,
+      "sha256": "e77c78daf4369c47452ffdfef50fabcb1cf90233af7a47e41c03c5caac4f5a00",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3018/4644.mvt",
+      "bytes": 30728,
+      "sha256": "7eb3314004242991b01699f367bca9b22f86f451e5cc02dc0eeabee1d7efb73d",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3018/4645.mvt",
+      "bytes": 23318,
+      "sha256": "5332a463a74b4e87634b7b13d441cdfae1900b13681e3800cfd8300a527a60d6",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3018/4646.mvt",
+      "bytes": 22643,
+      "sha256": "15c027fc3c0d7a080b39d552b648a1c1b2099e32d40a7b5cf015aea0f18f1a32",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3018/4647.mvt",
+      "bytes": 12667,
+      "sha256": "2bb8a7f9101ec73d6336b482aea8773a6cbd93859566d8312916d6f275320e1d",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/13/3018/4648.mvt",
+      "bytes": 8950,
+      "sha256": "548b457d5142ba3e71f7625052b7659ad6ff8b76265e183b0daa201fb784beb0",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/4/3/6.mvt",
+      "bytes": 115802,
+      "sha256": "a64e205ecc6d2544c1222aa3848f6102c3a8ce4b996d59cadcdfdf556f49b31f",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/4/3/7.mvt",
+      "bytes": 29244,
+      "sha256": "1aa62255a9e08d6ddc22268375489f23269bdcf7d0aafad9b6bdb21e3341979f",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/4/3/8.mvt",
+      "bytes": 1296,
+      "sha256": "c9ab99bbd62769e5c64dee6c5e23dc83a358a1291bc7e6a3f82f0fc8723bcc0a",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/4/3/9.mvt",
+      "bytes": 416,
+      "sha256": "cf2090db0e22b98cb3cd8ec1eb7fd63008df0948bf16d548651608601f91f667",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/4/3/10.mvt",
+      "bytes": 78,
+      "sha256": "149a44a5542d2d81a5038db8800d46726d2abb0ec6fb019a74a1663eb0de6593",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/4/4/6.mvt",
+      "bytes": 74494,
+      "sha256": "ef68927ae5031e60062cc7a8d335fa989e1d8bddb18a662cf3fb0bf6c8a78624",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/4/4/7.mvt",
+      "bytes": 75992,
+      "sha256": "e847050bf527b1f55cb742b3cc926e4ae25632c2913ae65c8460da1bdba7120d",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/4/4/8.mvt",
+      "bytes": 38949,
+      "sha256": "e6efb05f9cf2e168c4de5d49f3c340944e637cd933450a9d78493233e7679f0f",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/4/4/9.mvt",
+      "bytes": 25437,
+      "sha256": "876b4558252c5db2e93286ebe822ca2864938a08bbab3711692cc8cc0e263710",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/4/4/10.mvt",
+      "bytes": 38085,
+      "sha256": "a2080f178f877a38df497f674e0e5bc031772366253e39061aa2762c0288b047",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/4/5/6.mvt",
+      "bytes": 11252,
+      "sha256": "0f0af6eba794ba5ec8ff42c94081fd757deb589de62594eeff31290b7bfac89c",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/4/5/7.mvt",
+      "bytes": 44964,
+      "sha256": "177001b7053b45e22ad7972a6649157ab24d4f963b167775665a69c00b734d23",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/4/5/8.mvt",
+      "bytes": 97614,
+      "sha256": "90019aabab9deafbd0f297efcfce16f5102d6f355ddd5e9a913c61ebcd527c39",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/4/5/9.mvt",
+      "bytes": 74447,
+      "sha256": "5ac8f95ec6106bf3ea96c9d11c75b0a0a952b23366a77e2d65b3dcff93503cb9",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/4/5/10.mvt",
+      "bytes": 13043,
+      "sha256": "3633454423057bcafe4d154e5d7d3a6fe45a48f62dcd8d7e4505f300d51d80d8",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/4/6/6.mvt",
+      "bytes": 1891,
+      "sha256": "32eef2d9a5f7460f132a42f37bbe03128373211f3b1de18ff5df7984cf5c6a80",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/4/6/7.mvt",
+      "bytes": 5596,
+      "sha256": "e245b17f2db2a5f890ed2c54a66162019b65dd37e5c5b231497e9b3887cdef94",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/4/6/8.mvt",
+      "bytes": 31807,
+      "sha256": "86ad5f0c380c74dfbcdb8d60e7ba14bc0dba84d0e38f6b70917e60148ab84067",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/4/6/9.mvt",
+      "bytes": 7415,
+      "sha256": "ac5d96620c2895cdedb5d3b4cd8e29792c50e2416e29ee33152411806a715a78",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/4/6/10.mvt",
+      "bytes": 3809,
+      "sha256": "5c8069b7590fbaff3c4b150dc6fedf7bb4389d7fbda827adddd783a3a0285c52",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/4/7/6.mvt",
+      "bytes": 45068,
+      "sha256": "5d81914e13631823ecd2d47a0d55c90a111c78396e747e69998e1681d0b712a0",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/4/7/7.mvt",
+      "bytes": 48300,
+      "sha256": "45768211d932fdea2d0473261d9d20c90a8eef33ded641ac5dc45f8d748d9e45",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/4/7/8.mvt",
+      "bytes": 3187,
+      "sha256": "31f314cd5035bce07bab5eba7eb0dddfe1125ca3287c32e5f2a6b61f09f09c35",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/4/7/9.mvt",
+      "bytes": 78,
+      "sha256": "149a44a5542d2d81a5038db8800d46726d2abb0ec6fb019a74a1663eb0de6593",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/4/7/10.mvt",
+      "bytes": 1093,
+      "sha256": "409f44094d01ab9d453a952c7fb15ef878ae27b5fcb4f7e2dda1adc31ab5e40b",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/5/9/15.mvt",
+      "bytes": 78090,
+      "sha256": "7d49fe51fc5095ce66b833aed9efc0a5bb97ed1f7937076f1c332be5fce5f49e",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/5/9/16.mvt",
+      "bytes": 44352,
+      "sha256": "415cc88d087f5ef56c8c420d9c5f8d435c14d99cd353ed1acdb7f6e0291480fb",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/5/9/17.mvt",
+      "bytes": 34610,
+      "sha256": "fe9f96e8944104fa9deea5457681d8584b5923c2520da3475bb928a147ad3584",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/5/9/18.mvt",
+      "bytes": 15815,
+      "sha256": "4785752cdbea2a31a8086081a73dd0caaa111a8eb590df2ba7a3d538d0f6e56c",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/5/9/19.mvt",
+      "bytes": 41466,
+      "sha256": "f7cfd8e4cd5887ac9d6f7f6a7f92c143628b32f0f1540dd5d784e4b82a8dee06",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/5/10/15.mvt",
+      "bytes": 55966,
+      "sha256": "7195ca70580d14dcbac6d23fedf552455aa5f5c4b4a4fc752c74badfc8ae6f0b",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/5/10/16.mvt",
+      "bytes": 33244,
+      "sha256": "1adb15135114b0049dbbf187c148939b5ad3de0e28c5b1b33caa802077843b5b",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/5/10/17.mvt",
+      "bytes": 67181,
+      "sha256": "39ba07b929e3af5da99d4d1fe259afccbd0edcd89dafcf6e960da0ac2d951bf0",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/5/10/18.mvt",
+      "bytes": 66743,
+      "sha256": "03646b27e68e917d40e90af2289073410c8c5971f4b72a8012dad5a15b0ae4df",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/5/10/19.mvt",
+      "bytes": 50832,
+      "sha256": "dd90ab7ddfd0ed4ee722c5e4564ad5ab1077db02f4473a71c5ad1e48af1a9db5",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/5/11/15.mvt",
+      "bytes": 18645,
+      "sha256": "1621207407e9cd5f7c39e0a8503bc4888015d31590c2353acd31147f129115a2",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/5/11/16.mvt",
+      "bytes": 56727,
+      "sha256": "754bb1c351c51db49095b96d415d85f7a7162999b58b98727abb4b7f11da1ccf",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/5/11/17.mvt",
+      "bytes": 73478,
+      "sha256": "ebae3c4d51a8f0380c26de9c869b7d907abd78d7f749f3c84ed3c18553e9c141",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/5/11/18.mvt",
+      "bytes": 57790,
+      "sha256": "db1593f20366b2f4a99f38c3777da1089fdfa072d2e5b3a12015f6b9934c228b",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/5/11/19.mvt",
+      "bytes": 8895,
+      "sha256": "ac4a46670ac8a04bcbfaa863f4678756cb52f965fe3d4a611af2439b3d586f8d",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/5/12/15.mvt",
+      "bytes": 881,
+      "sha256": "ceada1809e2478e93e9c8d55900cb0f40b185e64df21fa5f3ad4d55228b89f94",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/5/12/16.mvt",
+      "bytes": 35001,
+      "sha256": "9033e42510a128fee27c2e6c6c919e1800e9ce13c0f0976881940ef186523a9f",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/5/12/17.mvt",
+      "bytes": 39300,
+      "sha256": "03a096702481c48078687a2bb3843681251478a6637d568dce5db624e2c9cff2",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/5/12/18.mvt",
+      "bytes": 10737,
+      "sha256": "31fba3c147cf166e558ef12e577dff6f801d987e0bacd3a0537a4ac7f886309f",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/5/12/19.mvt",
+      "bytes": 78,
+      "sha256": "71b458bc261e1b9a056bfacc27b351551aeb1fae537681aed2e2e5cc1a5a2e39",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/5/13/15.mvt",
+      "bytes": 153,
+      "sha256": "8b2366ebaee2ff9ceb922b694b42fb05fbfef5c4543e4ef62183723f70c99b8a",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/5/13/16.mvt",
+      "bytes": 2495,
+      "sha256": "eb19be3a76f0a57f591c7240d50b8ac828833081a9ffe6fcc035fb6b391cdf3a",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/5/13/17.mvt",
+      "bytes": 939,
+      "sha256": "e71b84a291b0765f7681285ee5d74a1aa49b33ccb08b65b9fff266a27838adc8",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/5/13/18.mvt",
+      "bytes": 262,
+      "sha256": "bf56a21437957e948d3f40a7e893b0e642159299a58bad220141ce42c76364a0",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/5/13/19.mvt",
+      "bytes": 78,
+      "sha256": "71b458bc261e1b9a056bfacc27b351551aeb1fae537681aed2e2e5cc1a5a2e39",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/6/20/32.mvt",
+      "bytes": 23526,
+      "sha256": "2a2c1a212d37f342e5c9ddd8ced52427f3bb4e37ebdc04e97bb380bdf4e95b20",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/6/20/33.mvt",
+      "bytes": 31143,
+      "sha256": "6b6ba7a7172aaa2118fd175c000d662fc68059f2cbaa36f2349b0b24674abc1f",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/6/20/34.mvt",
+      "bytes": 41085,
+      "sha256": "364d0579a9df6e6efbdadc0661d9fd9d876a4926ebaaa308195be1b1d05f38bb",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/6/20/35.mvt",
+      "bytes": 44888,
+      "sha256": "fc0b5cfd80fde553261a7cbd4cfa78ec23cbf273508780df6c32ab47562ac98c",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/6/20/36.mvt",
+      "bytes": 46197,
+      "sha256": "0cc6a3b6538e3d6e1c8f6c2574cd48dda1485cff06dc7ec9b723f8df65f51503",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/6/21/32.mvt",
+      "bytes": 48690,
+      "sha256": "4e60f9edb42b11de19e00de1c3a81c48e911ec009dbb337601a66fcf9addacce",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/6/21/33.mvt",
+      "bytes": 26589,
+      "sha256": "2899a1fc2c6a3ec19714457391b4057c3de7d303d0fbcd89708c52630b244e75",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/6/21/34.mvt",
+      "bytes": 52172,
+      "sha256": "fc5ee17e7b4180702b09a6c79bb358a79f320e2adb709dfd3e0ac041c820ad45",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/6/21/35.mvt",
+      "bytes": 29731,
+      "sha256": "bb458e28cd3cacd3370cfc083b74949987e17dfa045ac595d8ef680cd6e15eef",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/6/21/36.mvt",
+      "bytes": 39820,
+      "sha256": "01b2d869785c2aa906844f2fc8f9cbd2380f9607851ee9bf0eb4ec64058658ef",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/6/22/32.mvt",
+      "bytes": 35803,
+      "sha256": "cdcad647fe0f83a919c92be2ca3bcf1f9fcd36bad6088082340ed6532fee0625",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/6/22/33.mvt",
+      "bytes": 31577,
+      "sha256": "3bb6b09ab7078abb2a93d7c64edfa19b9f7d0f25f061c7390ecc869d40754c08",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/6/22/34.mvt",
+      "bytes": 47484,
+      "sha256": "df22f1a58c50a586f4c1cd7af95e2797ea3b3eba7f073267af6f83a8339eb7f8",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/6/22/35.mvt",
+      "bytes": 37164,
+      "sha256": "ed7b961cbdbeeab034eee80d2b69018ac786cf9fdbc484ca164a255a442bc083",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/6/22/36.mvt",
+      "bytes": 58558,
+      "sha256": "3db7cdb0d7e421397e41822f231aaa2f7f3820ab29f42c3a3937a80e3c66e0b6",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/6/23/32.mvt",
+      "bytes": 46208,
+      "sha256": "c1efd51ffaa77744445af0d286d012cd1d73c24ead863ac5cc993c21f02bf7d2",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/6/23/33.mvt",
+      "bytes": 33659,
+      "sha256": "95a880277e7697cf5d17d55a7138a20bb2c9714238508578cdaec1b27560fe3a",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/6/23/34.mvt",
+      "bytes": 47908,
+      "sha256": "9b452a62efef6fdc9fea0e4572220dae62605864dc8db6b222a595f9b0489802",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/6/23/35.mvt",
+      "bytes": 60695,
+      "sha256": "26468580a4a8d505535d5e4e96b2f7feed3452e857e540a8851ac35bf07685a4",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/6/23/36.mvt",
+      "bytes": 64309,
+      "sha256": "18b7ce3d404c02d7a98523ce850acaf79c5db2190b739a28dd3f225625c9278b",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/6/24/32.mvt",
+      "bytes": 31532,
+      "sha256": "9f5639b0424f8efd31ea46a56ce68467362ff6937cd39005dcabc33bab989357",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/6/24/33.mvt",
+      "bytes": 26578,
+      "sha256": "a01e1f77b3d7853ca026ddc4f7bc59ee3ae68bed8dd5b196860596e0520a1c3a",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/6/24/34.mvt",
+      "bytes": 38752,
+      "sha256": "c014446328add51d5fe66c65f5bdfc85ce0a9fe0b336fb32b9e03cc154b7b417",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/6/24/35.mvt",
+      "bytes": 52611,
+      "sha256": "b366fe01b686772e4158b7dedd7c76505962b40589619bae95c8a20da810be2f",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "tiles/6/24/36.mvt",
+      "bytes": 22109,
+      "sha256": "0fd14d651ef61be044e24b8a5983263fd9325f487a57c9a53c52f36a511749a2",
+      "source": "https://build.protomaps.com/20261013.pmtiles"
+    },
+    {
+      "path": "glyphs/Noto Sans Bold/0-255.pbf",
+      "bytes": 81170,
+      "sha256": "f60ce4cb899455c2203bd8293b550394ade53ffce8032bf9cc7f59255e49259c",
+      "source": "https://github.com/openmaptiles/fonts/releases/download/v2.0/noto-sans.zip#Noto Sans Bold/0-255.pbf"
+    },
+    {
+      "path": "glyphs/Noto Sans Regular/0-255.pbf",
+      "bytes": 76580,
+      "sha256": "ef1f38a3f1978591e846e9eaddf8a54f7047f546fc6aaed7872cc53151a5de78",
+      "source": "https://github.com/openmaptiles/fonts/releases/download/v2.0/noto-sans.zip#Noto Sans Regular/0-255.pbf"
+    }
+  ]
+}
