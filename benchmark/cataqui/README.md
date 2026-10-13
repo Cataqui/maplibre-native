@@ -10,6 +10,8 @@ The fixtures contain real public Protomaps Brazil tiles, Cataquí's production b
 
 Eight cases cover São Paulo, Rio, Sorocaba and a broad Brazil view at two fractional densities. Each measured block covers fresh map construction/loading/placement/drawing, retained-map placement/drawing, two concurrent retained maps, GeoJSON changes, selection-filter redraws, viewport resizing and release. Resource lookup is offline and in memory. Raster bytes and visible reference IDs are recorded; repeated unchanged maps must produce identical pixels. API, R2, HTTP, geographic import and image encoding time are outside these native-engine timings.
 
+The `cold` phase creates a map inside an already running Node process, after the preceding case's maps have been released. It does not measure process or container startup. A display retained by newer upstream versions can improve this phase; the same improvement may be smaller when other production maps already keep the display alive. Evaluate retained-map phases separately rather than projecting the aggregate score onto request latency.
+
 The runner fixes Linux x64, Ubuntu 24.04, Node 24.20.0 / ABI 137, portable x86-64 compiler flags, OpenGL/Mesa llvmpipe, two software-rendering threads, two vCPUs and 8 GiB RAM. Standard GitHub runners are a performance proxy for the configured Cloudflare container size, not measurements on Cloudflare hardware.
 
 Each group builds a baseline on the same runner and measures four control passes. Each candidate is measured in baseline/candidate/candidate/baseline order. Warm-up blocks are excluded. Keep raw samples and control variability; do not select a winner from one noisy median or compare absolute timings from different runners.
