@@ -47,6 +47,7 @@ public:
     static void Release(const Nan::FunctionCallbackInfo<v8::Value>&);
     static void Cancel(const Nan::FunctionCallbackInfo<v8::Value>&);
     static void AddSource(const Nan::FunctionCallbackInfo<v8::Value>&);
+    static void SetGeoJSONSourceData(const Nan::FunctionCallbackInfo<v8::Value>&);
     static void RemoveSource(const Nan::FunctionCallbackInfo<v8::Value>&);
     static void AddLayer(const Nan::FunctionCallbackInfo<v8::Value>&);
     static void RemoveLayer(const Nan::FunctionCallbackInfo<v8::Value>&);

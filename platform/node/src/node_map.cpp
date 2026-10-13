@@ -6,6 +6,8 @@
 #include <mbgl/renderer/renderer.hpp>
 #include <mbgl/gfx/headless_frontend.hpp>
 #include <mbgl/style/conversion/source.hpp>
+#include <mbgl/style/conversion/geojson.hpp>
+#include <mbgl/style/sources/geojson_source.hpp>
 #include <mbgl/style/conversion/layer.hpp>
 #include <mbgl/style/conversion/filter.hpp>
 #include <mbgl/style/conversion/light.hpp>
@@ -96,6 +98,7 @@ ParseError)JS")
     Nan::SetPrototypeMethod(tpl, "cancel", Cancel);
 
     Nan::SetPrototypeMethod(tpl, "addSource", AddSource);
+    Nan::SetPrototypeMethod(tpl, "setGeoJSONSourceData", SetGeoJSONSourceData);
     Nan::SetPrototypeMethod(tpl, "removeSource", RemoveSource);
     Nan::SetPrototypeMethod(tpl, "addLayer", AddLayer);
     Nan::SetPrototypeMethod(tpl, "removeLayer", RemoveLayer);
@@ -734,6 +737,51 @@ void NodeMap::AddSource(const Nan::FunctionCallbackInfo<v8::Value>& info) {
     }
 
     nodeMap->map->getStyle().addSource(std::move(*source));
+}
+
+void NodeMap::SetGeoJSONSourceData(const Nan::FunctionCallbackInfo<v8::Value>& info) {
+    auto nodeMap = Nan::ObjectWrap::Unwrap<NodeMap>(info.Holder());
+    if (!nodeMap->map) return Nan::ThrowError(releasedMessage());
+    if (nodeMap->req) return Nan::ThrowError("Map is currently processing a RenderRequest");
+    if (!nodeMap->loaded) return Nan::ThrowTypeError("Style is not loaded");
+    if (info.Length() != 2) return Nan::ThrowTypeError("Two arguments required");
+    if (!info[0]->IsString()) return Nan::ThrowTypeError("Source ID must be a string");
+    if (!info[1]->IsObject() || info[1]->IsArray()) {
+        return Nan::ThrowTypeError("GeoJSON must be an object");
+    }
+
+    try {
+        const Nan::Utf8String idBytes(info[0]);
+        if (idBytes.length() == 0) return Nan::ThrowTypeError("Source ID must not be empty");
+        const std::string sourceId(*idBytes, idBytes.length());
+
+        // Unlike tagged ConversionTraits::toGeoJSON, check MaybeLocal.
+        // A circular object or throwing getter keeps its JS exception pending.
+        Nan::JSON json;
+        v8::Local<v8::String> serialized;
+        if (!json.Stringify(info[1].As<v8::Object>()).ToLocal(&serialized)) return;
+        const Nan::Utf8String jsonBytes(serialized);
+        mbgl::style::conversion::Error error;
+        auto geoJSON = mbgl::style::conversion::parseGeoJSON(
+            std::string(*jsonBytes, jsonBytes.length()), error);
+        if (!geoJSON) return Nan::ThrowTypeError(error.message.c_str());
+
+        // Stringification can invoke user JS. Resolve the borrowed source only
+        // afterwards, and recheck the map in case that JS released it.
+        if (!nodeMap->map) return Nan::ThrowError(releasedMessage());
+        if (!nodeMap->loaded) return Nan::ThrowTypeError("Style is not loaded");
+        if (nodeMap->req) {
+            return Nan::ThrowError("Map is currently processing a RenderRequest");
+        }
+        auto* source = nodeMap->map->getStyle().getSource(sourceId);
+        if (!source) return Nan::ThrowTypeError("Source not found");
+        auto* geoJSONSource = source->as<mbgl::style::GeoJSONSource>();
+        if (!geoJSONSource) return Nan::ThrowTypeError("Source must be GeoJSON");
+        geoJSONSource->setGeoJSON(*geoJSON);
+    } catch (const std::exception& error) {
+        return Nan::ThrowError(error.what());
+    }
+    info.GetReturnValue().SetUndefined();
 }
 
 void NodeMap::RemoveSource(const Nan::FunctionCallbackInfo<v8::Value>& info) {

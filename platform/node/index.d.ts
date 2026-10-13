@@ -139,6 +139,12 @@ declare module '@maplibre/maplibre-gl-native' {
     addSource: (sourceId: string, source: object) => void;
 
     /**
+     * Replace all data of an existing GeoJSON source without replacing its layers.
+     * Call between render requests; await the next render callback for new pixels.
+     */
+    setGeoJSONSourceData: (sourceId: string, data: object) => void;
+
+    /**
      * Remove source from map's style
      */
     removeSource: (sourceId: string) => void;
