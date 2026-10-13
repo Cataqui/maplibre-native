@@ -21,6 +21,11 @@ def command(arguments, *, cwd=None, log=None, timeout=1800):
     else:
         subprocess.run(arguments, cwd=cwd, check=True, timeout=timeout)
 
+def _clone_repository(repository, source):
+    command(["git", "config", "--global", "--add", "safe.directory", str(repository)])
+    command(["git", "config", "--global", "--add", "safe.directory", str(repository / ".git")])
+    command(["git", "clone", "--shared", "--no-checkout", str(repository), str(source)])
+
 def build(sha, output):
     log = output / f"build-{sha[:12]}.log"
     command(["git", "checkout", "--force", "--detach", sha], cwd=SOURCE, log=log)
@@ -66,8 +71,8 @@ if __name__ == "__main__":
     arguments = parser.parse_args()
     output = Path(arguments.output)
     output.mkdir(parents=True, exist_ok=True)
-    command(["git", "config", "--global", "--add", "safe.directory", str(REPOSITORY)])
-    command(["git", "clone", "--shared", "--no-checkout", str(REPOSITORY), str(SOURCE)])
+    command(["python3", str(TOOLS / "test_run_versions.py")])
+    _clone_repository(REPOSITORY, SOURCE)
     display = subprocess.Popen(["Xvfb", ":99", "-screen", "0", "2048x4096x24", "-ac", "-nolisten", "tcp"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     try:
         for attempt in range(100):
