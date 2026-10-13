@@ -38,7 +38,7 @@ function _features(scene, displacement) {
             scene.center[0] + ((index % 8) - 3.5 + displacement) * scene.width / 12 * degreesPerPixel,
             scene.center[1] + (Math.floor(index / 8) - 5.5) * scene.height / 16 * degreesPerPixel * Math.cos(latitude),
         ] },
-        properties: { id: String(index), rank: index, fitSide: "both", name: names[index % names.length], icon: icons[index % icons.length].id },
+        properties: { id: String(index), rank: index, fitSide: index % 8 >= 5 ? "left" : index % 8 <= 2 ? "right" : "both", name: names[index % names.length], icon: icons[index % icons.length].id },
     })) };
 }
 function _style(scene) {
@@ -108,7 +108,7 @@ function _frame(key, scene, result) {
                 let start = performance.now();
                 map = _create(scene);
                 map.load(_style(scene));
-                for (const icon of icons) map.addImage(icon.id, Buffer.from(icon.pixels, "base64"), { width: icon.width, height: icon.height, pixelRatio: icon.density, sdf: false });
+                for (const icon of scene.zoom >= 11 ? icons : []) map.addImage(icon.id, Buffer.from(icon.pixels, "base64"), { width: icon.width, height: icon.height, pixelRatio: icon.density, sdf: false });
                 const cold = await _prepared(map, scene);
                 record.phases.cold = performance.now() - start;
                 start = performance.now();
@@ -116,6 +116,15 @@ function _frame(key, scene, result) {
                 const warm = await _prepared(map, scene);
                 record.phases.warm = performance.now() - start;
                 assert.equal(createHash("sha256").update(cold.bytes).digest("hex"), createHash("sha256").update(warm.bytes).digest("hex"));
+                const second = _create(scene);
+                try {
+                    second.load(_style(scene));
+                    for (const icon of scene.zoom >= 11 ? icons : []) second.addImage(icon.id, Buffer.from(icon.pixels, "base64"), { width: icon.width, height: icon.height, pixelRatio: icon.density, sdf: false });
+                    await _prepared(second, scene);
+                    start = performance.now();
+                    await Promise.all([_prepared(map, scene), _prepared(second, scene)]);
+                    record.phases.parallel = performance.now() - start;
+                } finally { second.release(); }
                 start = performance.now();
                 map.setGeoJSONSourceData("landmarks", _features(scene, 0.1));
                 const updated = await _prepared(map, scene);
