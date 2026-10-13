@@ -96,6 +96,7 @@ function _frame(key, scene, result, save = false) {
 (async () => {
     const samples = [];
     const frames = [];
+    const capturedFrames = [];
     const blocks = Number(values.blocks);
     assert.ok(Number.isInteger(blocks) && blocks >= 1 && blocks <= 100);
     for (let block = -1; block < blocks; block++) {
@@ -143,9 +144,9 @@ function _frame(key, scene, result, save = false) {
                 record.phases.release = performance.now() - start;
                 record.maxRssKiB = process.resourceUsage().maxRSS;
                 if (block === -1 && values.frames) {
-                    _frame(key + "-base", scene, warm, true);
-                    _frame(key + "-update", scene, updated, true);
-                    _frame(key + "-resize", resized, resizedResult, true);
+                    capturedFrames.push(_frame(key + "-base", scene, warm, true));
+                    capturedFrames.push(_frame(key + "-update", scene, updated, true));
+                    capturedFrames.push(_frame(key + "-resize", resized, resizedResult, true));
                 }
                 if (block === 0) {
                     frames.push(_frame(key + "-base", scene, warm));
@@ -156,6 +157,6 @@ function _frame(key, scene, result, save = false) {
             } finally { if (map) map.release(); }
         }
     }
-    fs.writeFileSync(values.output, JSON.stringify({ schemaVersion: 1, harnessSha256: createHash("sha256").update(fs.readFileSync(__filename)).digest("hex"), fixtureSha256: createHash("sha256").update(fs.readFileSync(path.join(fixtures, "manifest.json"))).update(fs.readFileSync(path.join(fixtures, "production-style.json"))).update(fs.readFileSync(path.join(fixtures, "icons.json"))).digest("hex"), platform: process.platform, arch: process.arch, node: process.version, abi: process.versions.modules, samples, frames, usedResources: [...usedResources].sort() }, null, 2) + "\n");
+    fs.writeFileSync(values.output, JSON.stringify({ schemaVersion: 1, harnessSha256: createHash("sha256").update(fs.readFileSync(__filename)).digest("hex"), fixtureSha256: createHash("sha256").update(fs.readFileSync(path.join(fixtures, "manifest.json"))).update(fs.readFileSync(path.join(fixtures, "production-style.json"))).update(fs.readFileSync(path.join(fixtures, "icons.json"))).digest("hex"), platform: process.platform, arch: process.arch, node: process.version, abi: process.versions.modules, samples, frames, capturedFrames, usedResources: [...usedResources].sort() }, null, 2) + "\n");
     console.log(JSON.stringify({ samples: samples.length, output: values.output }));
 })().catch(error => { console.error(error); process.exitCode = 1; });

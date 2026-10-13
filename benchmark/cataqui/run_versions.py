@@ -68,7 +68,7 @@ def measure(addon, output, name, blocks, frames=False):
         directory = output / (name + "-frames")
         notice = PngImagePlugin.PngInfo()
         notice.add_text("Attribution", "Map data: OpenStreetMap contributors, Protomaps. Cataqui style and controlled synthetic reference markers.")
-        for frame in metadata["frames"]:
+        for frame in metadata["capturedFrames"]:
             raw = directory / (frame["key"] + ".rgba")
             image = Image.frombytes("RGBA", (frame["width"], frame["height"]), raw.read_bytes())
             image.save(raw.with_suffix(".png"), pnginfo=notice)
@@ -92,7 +92,7 @@ if __name__ == "__main__":
             time.sleep(0.05)
         else: raise RuntimeError("Xvfb did not become ready")
         baseline = build(CAPABILITIES, output)
-        control_files = [measure(baseline, output, f"control-{i}", arguments.blocks) for i in range(4)]
+        control_files = [measure(baseline, output, f"control-{i}", arguments.blocks, frames=arguments.group == "finalists") for i in range(4)]
         groups = json.loads((TOOLS / "groups.json").read_text())
         candidates = groups[arguments.group]
         report = {"baseline": CAPABILITIES, "group": arguments.group, "controls": control_files, "candidates": [], "cpu": Path("/proc/cpuinfo").read_text().split("model name", 1)[-1].split("\n", 1)[0], "node": "v24.20.0", "limits": {"cpus": 2, "memoryGiB": 8}, "blocksPerPass": arguments.blocks}
