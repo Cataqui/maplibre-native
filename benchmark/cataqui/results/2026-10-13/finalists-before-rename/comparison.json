@@ -1,0 +1,1852 @@
+{
+  "controls": [
+    {
+      "group": "finalists-before-rename",
+      "cpu": "\t: AMD EPYC 7763 64-Core Processor",
+      "scoreRatio": 0.9661413114569589,
+      "confidence95": [
+        0.9604190337244655,
+        0.9912552580160859
+      ],
+      "worstCellRatio": 0.9967543384170516,
+      "cells": [
+        {
+          "case": "brazil-wide-1.333333",
+          "phase": "cold",
+          "ratio": 0.9880252759308442,
+          "confidence95": [
+            0.9755705374855967,
+            1.0076638200947796
+          ],
+          "referenceMedianMs": 71.27721650000149,
+          "candidateMedianMs": 70.4236914999965
+        },
+        {
+          "case": "brazil-wide-1.333333",
+          "phase": "filtered",
+          "ratio": 0.7941569479959066,
+          "confidence95": [
+            0.7795392062217088,
+            0.9906504581097297
+          ],
+          "referenceMedianMs": 6.101485999999568,
+          "candidateMedianMs": 4.845537499999409
+        },
+        {
+          "case": "brazil-wide-1.333333",
+          "phase": "parallel",
+          "ratio": 0.7862794120461136,
+          "confidence95": [
+            0.7634334657527813,
+            1.0971828407988968
+          ],
+          "referenceMedianMs": 12.641674000000421,
+          "candidateMedianMs": 9.939887999998973
+        },
+        {
+          "case": "brazil-wide-1.333333",
+          "phase": "resize",
+          "ratio": 0.8660644185038854,
+          "confidence95": [
+            0.7748161290815023,
+            0.987339705067208
+          ],
+          "referenceMedianMs": 5.836630499997227,
+          "candidateMedianMs": 5.05489800000214
+        },
+        {
+          "case": "brazil-wide-1.333333",
+          "phase": "update",
+          "ratio": 0.7978443704629729,
+          "confidence95": [
+            0.7696285601117817,
+            0.9771811287452399
+          ],
+          "referenceMedianMs": 6.50431799999842,
+          "candidateMedianMs": 5.189433499999723
+        },
+        {
+          "case": "brazil-wide-1.333333",
+          "phase": "warm",
+          "ratio": 0.80642437302417,
+          "confidence95": [
+            0.7821359800159787,
+            0.995116339776121
+          ],
+          "referenceMedianMs": 6.69914400000107,
+          "candidateMedianMs": 5.4023529999994935
+        },
+        {
+          "case": "brazil-wide-2.195122",
+          "phase": "cold",
+          "ratio": 0.9843249856057168,
+          "confidence95": [
+            0.9622151063101524,
+            1.0022161391315747
+          ],
+          "referenceMedianMs": 74.6817815000013,
+          "candidateMedianMs": 73.51114349999807
+        },
+        {
+          "case": "brazil-wide-2.195122",
+          "phase": "filtered",
+          "ratio": 0.9679477464551062,
+          "confidence95": [
+            0.9617252810263005,
+            0.98224096961503
+          ],
+          "referenceMedianMs": 8.412903000002188,
+          "candidateMedianMs": 8.14325049999752
+        },
+        {
+          "case": "brazil-wide-2.195122",
+          "phase": "parallel",
+          "ratio": 0.9893147038870281,
+          "confidence95": [
+            0.947856006045241,
+            1.0033937813203853
+          ],
+          "referenceMedianMs": 17.052358499999173,
+          "candidateMedianMs": 16.87014900000213
+        },
+        {
+          "case": "brazil-wide-2.195122",
+          "phase": "resize",
+          "ratio": 0.9712974026652496,
+          "confidence95": [
+            0.9580389314809297,
+            1.0243948855726792
+          ],
+          "referenceMedianMs": 9.305133499996373,
+          "candidateMedianMs": 9.03805199999988
+        },
+        {
+          "case": "brazil-wide-2.195122",
+          "phase": "update",
+          "ratio": 0.9841551384185444,
+          "confidence95": [
+            0.9707586063895304,
+            1.0143583525412274
+          ],
+          "referenceMedianMs": 8.742076999998972,
+          "candidateMedianMs": 8.603559999999561
+        },
+        {
+          "case": "brazil-wide-2.195122",
+          "phase": "warm",
+          "ratio": 0.9491987781491529,
+          "confidence95": [
+            0.7999959851929598,
+            1.1230127396511171
+          ],
+          "referenceMedianMs": 9.165438999998514,
+          "candidateMedianMs": 8.699823499999184
+        },
+        {
+          "case": "rio-coast-1.333333",
+          "phase": "cold",
+          "ratio": 0.9703568557423969,
+          "confidence95": [
+            0.9618419537811203,
+            0.9987379532172366
+          ],
+          "referenceMedianMs": 131.4556399999983,
+          "candidateMedianMs": 127.55888150000283
+        },
+        {
+          "case": "rio-coast-1.333333",
+          "phase": "filtered",
+          "ratio": 0.9751673590489759,
+          "confidence95": [
+            0.9676759048422101,
+            0.9844589476646485
+          ],
+          "referenceMedianMs": 31.2660864999998,
+          "candidateMedianMs": 30.489667000001646
+        },
+        {
+          "case": "rio-coast-1.333333",
+          "phase": "parallel",
+          "ratio": 0.9875364161474555,
+          "confidence95": [
+            0.9839771362855855,
+            0.9924815050113981
+          ],
+          "referenceMedianMs": 66.82303500000125,
+          "candidateMedianMs": 65.99018049999722
+        },
+        {
+          "case": "rio-coast-1.333333",
+          "phase": "resize",
+          "ratio": 0.9841965375005712,
+          "confidence95": [
+            0.9772479428879518,
+            0.9889261753639889
+          ],
+          "referenceMedianMs": 30.969479000003048,
+          "candidateMedianMs": 30.480053999999654
+        },
+        {
+          "case": "rio-coast-1.333333",
+          "phase": "update",
+          "ratio": 0.9845636371028338,
+          "confidence95": [
+            0.9797307408177335,
+            0.9924515289230463
+          ],
+          "referenceMedianMs": 38.29749300000003,
+          "candidateMedianMs": 37.70631900000035
+        },
+        {
+          "case": "rio-coast-1.333333",
+          "phase": "warm",
+          "ratio": 0.9815553574569991,
+          "confidence95": [
+            0.9730207599784962,
+            0.9903557598861507
+          ],
+          "referenceMedianMs": 36.67758799999956,
+          "candidateMedianMs": 36.00108300000011
+        },
+        {
+          "case": "rio-coast-2.195122",
+          "phase": "cold",
+          "ratio": 0.9679619219749215,
+          "confidence95": [
+            0.9559007024432716,
+            0.998111329729014
+          ],
+          "referenceMedianMs": 149.69841500000257,
+          "candidateMedianMs": 144.9023655000019
+        },
+        {
+          "case": "rio-coast-2.195122",
+          "phase": "filtered",
+          "ratio": 0.9905455572696665,
+          "confidence95": [
+            0.9845423312890078,
+            0.9963559517970738
+          ],
+          "referenceMedianMs": 45.61548600000151,
+          "candidateMedianMs": 45.18421699999817
+        },
+        {
+          "case": "rio-coast-2.195122",
+          "phase": "parallel",
+          "ratio": 0.991081175393791,
+          "confidence95": [
+            0.9882034704400265,
+            0.997384762801394
+          ],
+          "referenceMedianMs": 99.03227599999627,
+          "candidateMedianMs": 98.14902449999863
+        },
+        {
+          "case": "rio-coast-2.195122",
+          "phase": "resize",
+          "ratio": 0.988177040853992,
+          "confidence95": [
+            0.9682140830735678,
+            1.0175511907576773
+          ],
+          "referenceMedianMs": 46.50231749999875,
+          "candidateMedianMs": 45.95252250000158
+        },
+        {
+          "case": "rio-coast-2.195122",
+          "phase": "update",
+          "ratio": 0.988036571584833,
+          "confidence95": [
+            0.9811704988776929,
+            0.9962366554965346
+          ],
+          "referenceMedianMs": 54.50318900000002,
+          "candidateMedianMs": 53.851144000000204
+        },
+        {
+          "case": "rio-coast-2.195122",
+          "phase": "warm",
+          "ratio": 0.9865954478941902,
+          "confidence95": [
+            0.9839347357451044,
+            0.9945744022166944
+          ],
+          "referenceMedianMs": 52.7705434999998,
+          "candidateMedianMs": 52.063178000002154
+        },
+        {
+          "case": "sao-paulo-dense-1.333333",
+          "phase": "cold",
+          "ratio": 0.9915436591294718,
+          "confidence95": [
+            0.9661359721575302,
+            1.0069907965046672
+          ],
+          "referenceMedianMs": 161.15794300000198,
+          "candidateMedianMs": 159.7951365000008
+        },
+        {
+          "case": "sao-paulo-dense-1.333333",
+          "phase": "filtered",
+          "ratio": 0.988675252572671,
+          "confidence95": [
+            0.9788662056128219,
+            0.9936654550180704
+          ],
+          "referenceMedianMs": 42.72408750000068,
+          "candidateMedianMs": 42.240248000000065
+        },
+        {
+          "case": "sao-paulo-dense-1.333333",
+          "phase": "parallel",
+          "ratio": 0.9893733572166811,
+          "confidence95": [
+            0.982774761330511,
+            0.9960535602251381
+          ],
+          "referenceMedianMs": 89.64397500000268,
+          "candidateMedianMs": 88.69136050000088
+        },
+        {
+          "case": "sao-paulo-dense-1.333333",
+          "phase": "resize",
+          "ratio": 0.9846669018770802,
+          "confidence95": [
+            0.9813190166827395,
+            0.9916135932952974
+          ],
+          "referenceMedianMs": 42.763112500004354,
+          "candidateMedianMs": 42.10742150000033
+        },
+        {
+          "case": "sao-paulo-dense-1.333333",
+          "phase": "update",
+          "ratio": 0.9818951505369435,
+          "confidence95": [
+            0.944443208220689,
+            0.9955121475238674
+          ],
+          "referenceMedianMs": 50.36308100000042,
+          "candidateMedianMs": 49.451264999999694
+        },
+        {
+          "case": "sao-paulo-dense-1.333333",
+          "phase": "warm",
+          "ratio": 0.9932568412549159,
+          "confidence95": [
+            0.9863999093415742,
+            1.071578498786714
+          ],
+          "referenceMedianMs": 48.257502499998736,
+          "candidateMedianMs": 47.93209449999995
+        },
+        {
+          "case": "sao-paulo-dense-2.195122",
+          "phase": "cold",
+          "ratio": 0.9939711070609878,
+          "confidence95": [
+            0.9695130644044759,
+            1.012748133347549
+          ],
+          "referenceMedianMs": 179.46935050000093,
+          "candidateMedianMs": 178.38734900000236
+        },
+        {
+          "case": "sao-paulo-dense-2.195122",
+          "phase": "filtered",
+          "ratio": 0.9904113028376192,
+          "confidence95": [
+            0.9861742712851153,
+            0.9938916094651881
+          ],
+          "referenceMedianMs": 59.44921299999987,
+          "candidateMedianMs": 58.879172500001005
+        },
+        {
+          "case": "sao-paulo-dense-2.195122",
+          "phase": "parallel",
+          "ratio": 0.9914813538656815,
+          "confidence95": [
+            0.9884804288904704,
+            0.9954388664198531
+          ],
+          "referenceMedianMs": 126.27311699999882,
+          "candidateMedianMs": 125.19744099999843
+        },
+        {
+          "case": "sao-paulo-dense-2.195122",
+          "phase": "resize",
+          "ratio": 0.9952619002645179,
+          "confidence95": [
+            0.9883762048719738,
+            1.0068124790302966
+          ],
+          "referenceMedianMs": 60.21517400000084,
+          "candidateMedianMs": 59.92986849999943
+        },
+        {
+          "case": "sao-paulo-dense-2.195122",
+          "phase": "update",
+          "ratio": 0.9883320830611225,
+          "confidence95": [
+            0.9811892695787047,
+            0.9961418872076054
+          ],
+          "referenceMedianMs": 68.58306450000055,
+          "candidateMedianMs": 67.78284300000087
+        },
+        {
+          "case": "sao-paulo-dense-2.195122",
+          "phase": "warm",
+          "ratio": 0.9922587924856482,
+          "confidence95": [
+            0.9854556481441238,
+            1.0007654108370532
+          ],
+          "referenceMedianMs": 66.51998399999866,
+          "candidateMedianMs": 66.00503900000331
+        },
+        {
+          "case": "sorocaba-1.333333",
+          "phase": "cold",
+          "ratio": 0.9836755154845696,
+          "confidence95": [
+            0.9685525650648101,
+            1.0061583913424443
+          ],
+          "referenceMedianMs": 177.3580965000001,
+          "candidateMedianMs": 174.46281699999963
+        },
+        {
+          "case": "sorocaba-1.333333",
+          "phase": "filtered",
+          "ratio": 0.9882661926445258,
+          "confidence95": [
+            0.9843931517678857,
+            0.9913930597507851
+          ],
+          "referenceMedianMs": 59.93813249999948,
+          "candidateMedianMs": 59.2348299999976
+        },
+        {
+          "case": "sorocaba-1.333333",
+          "phase": "parallel",
+          "ratio": 0.9912995139747861,
+          "confidence95": [
+            0.9855664793108092,
+            0.9962659684989809
+          ],
+          "referenceMedianMs": 123.8026239999981,
+          "candidateMedianMs": 122.72548100000131
+        },
+        {
+          "case": "sorocaba-1.333333",
+          "phase": "resize",
+          "ratio": 0.9906499669738574,
+          "confidence95": [
+            0.986863971741876,
+            0.9961719490185397
+          ],
+          "referenceMedianMs": 60.32957300000271,
+          "candidateMedianMs": 59.7654894999996
+        },
+        {
+          "case": "sorocaba-1.333333",
+          "phase": "update",
+          "ratio": 0.988861322043564,
+          "confidence95": [
+            0.9788605177175994,
+            1.0572349429107257
+          ],
+          "referenceMedianMs": 67.46630999999616,
+          "candidateMedianMs": 66.71482449999712
+        },
+        {
+          "case": "sorocaba-1.333333",
+          "phase": "warm",
+          "ratio": 0.9958638283502098,
+          "confidence95": [
+            0.9909749110909238,
+            1.004165010056224
+          ],
+          "referenceMedianMs": 65.37591349999639,
+          "candidateMedianMs": 65.10550749999857
+        },
+        {
+          "case": "sorocaba-2.195122",
+          "phase": "cold",
+          "ratio": 0.9883131950803227,
+          "confidence95": [
+            0.9661089518292713,
+            1.0063095039216667
+          ],
+          "referenceMedianMs": 207.2880069999992,
+          "candidateMedianMs": 204.8654725000015
+        },
+        {
+          "case": "sorocaba-2.195122",
+          "phase": "filtered",
+          "ratio": 0.9967543384170516,
+          "confidence95": [
+            0.9913556029705617,
+            1.0002342235661688
+          ],
+          "referenceMedianMs": 88.32282499999928,
+          "candidateMedianMs": 88.03615899999932
+        },
+        {
+          "case": "sorocaba-2.195122",
+          "phase": "parallel",
+          "ratio": 0.9947576110816064,
+          "confidence95": [
+            0.9908122560438716,
+            0.998691867410954
+          ],
+          "referenceMedianMs": 183.1447485000008,
+          "candidateMedianMs": 182.1846325000024
+        },
+        {
+          "case": "sorocaba-2.195122",
+          "phase": "resize",
+          "ratio": 0.9959107224113359,
+          "confidence95": [
+            0.9934307157401476,
+            1.0003990856963025
+          ],
+          "referenceMedianMs": 90.17093900000145,
+          "candidateMedianMs": 89.80220499999996
+        },
+        {
+          "case": "sorocaba-2.195122",
+          "phase": "update",
+          "ratio": 0.9886354150823368,
+          "confidence95": [
+            0.9497997499984007,
+            0.9940472808251575
+          ],
+          "referenceMedianMs": 97.39704599999823,
+          "candidateMedianMs": 96.2901690000017
+        },
+        {
+          "case": "sorocaba-2.195122",
+          "phase": "warm",
+          "ratio": 0.9941534529679821,
+          "confidence95": [
+            0.9865963408858218,
+            1.0253175478865868
+          ],
+          "referenceMedianMs": 95.57821000000104,
+          "candidateMedianMs": 95.01940749999994
+        }
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "sha": "a34723ff4a53d9622f7e42fc3f10197d5acb94bd",
+      "group": "finalists-before-rename",
+      "status": "measured",
+      "scoreRatio": 0.9608941769443485,
+      "confidence95": [
+        0.9376035735504503,
+        0.9632578821127219
+      ],
+      "worstCellRatio": 1.004988009561491,
+      "cells": [
+        {
+          "case": "brazil-wide-1.333333",
+          "phase": "cold",
+          "ratio": 0.6128622155273581,
+          "confidence95": [
+            0.6069478824407782,
+            0.6186745324580349
+          ],
+          "referenceMedianMs": 70.6781890000002,
+          "candidateMedianMs": 43.31599150000147
+        },
+        {
+          "case": "brazil-wide-1.333333",
+          "phase": "filtered",
+          "ratio": 0.9891359333842695,
+          "confidence95": [
+            0.7906076524703017,
+            0.9963468538230066
+          ],
+          "referenceMedianMs": 4.828302500001882,
+          "candidateMedianMs": 4.775847500000964
+        },
+        {
+          "case": "brazil-wide-1.333333",
+          "phase": "parallel",
+          "ratio": 0.9846867467816066,
+          "confidence95": [
+            0.7781519949325935,
+            1.006330255693782
+          ],
+          "referenceMedianMs": 9.92823000000135,
+          "candidateMedianMs": 9.776196500000879
+        },
+        {
+          "case": "brazil-wide-1.333333",
+          "phase": "resize",
+          "ratio": 0.9958240678853004,
+          "confidence95": [
+            0.7955680513506198,
+            1.0108975286912572
+          ],
+          "referenceMedianMs": 5.053721999998743,
+          "candidateMedianMs": 5.032618000000184
+        },
+        {
+          "case": "brazil-wide-1.333333",
+          "phase": "update",
+          "ratio": 0.9810374268910135,
+          "confidence95": [
+            0.7892300700725968,
+            0.9911703233830251
+          ],
+          "referenceMedianMs": 5.159004500000265,
+          "candidateMedianMs": 5.061176499999419
+        },
+        {
+          "case": "brazil-wide-1.333333",
+          "phase": "warm",
+          "ratio": 0.9889222860018466,
+          "confidence95": [
+            0.7806180703048764,
+            1.0122231616215966
+          ],
+          "referenceMedianMs": 5.170606500003487,
+          "candidateMedianMs": 5.113327999999456
+        },
+        {
+          "case": "brazil-wide-2.195122",
+          "phase": "cold",
+          "ratio": 0.6296656543128281,
+          "confidence95": [
+            0.6115708716449105,
+            0.6343049360435663
+          ],
+          "referenceMedianMs": 74.37287499999911,
+          "candidateMedianMs": 46.83004500000061
+        },
+        {
+          "case": "brazil-wide-2.195122",
+          "phase": "filtered",
+          "ratio": 0.996563696133447,
+          "confidence95": [
+            0.9865598051283704,
+            1.0054648229493364
+          ],
+          "referenceMedianMs": 8.137813499999538,
+          "candidateMedianMs": 8.109849500004202
+        },
+        {
+          "case": "brazil-wide-2.195122",
+          "phase": "parallel",
+          "ratio": 0.998548615900794,
+          "confidence95": [
+            0.9153438736176637,
+            1.020566287743213
+          ],
+          "referenceMedianMs": 16.73816050000005,
+          "candidateMedianMs": 16.71386700000039
+        },
+        {
+          "case": "brazil-wide-2.195122",
+          "phase": "resize",
+          "ratio": 1.0011080792868348,
+          "confidence95": [
+            0.970814704908554,
+            1.0166282352203577
+          ],
+          "referenceMedianMs": 8.909561000000394,
+          "candidateMedianMs": 8.919433499999286
+        },
+        {
+          "case": "brazil-wide-2.195122",
+          "phase": "update",
+          "ratio": 0.9941410676141991,
+          "confidence95": [
+            0.9692814266333956,
+            1.1130044394084477
+          ],
+          "referenceMedianMs": 8.598153499999171,
+          "candidateMedianMs": 8.547777499999938
+        },
+        {
+          "case": "brazil-wide-2.195122",
+          "phase": "warm",
+          "ratio": 0.969142028324255,
+          "confidence95": [
+            0.8130390903160416,
+            1.0000102340125392
+          ],
+          "referenceMedianMs": 8.742911000001186,
+          "candidateMedianMs": 8.47312249999959
+        },
+        {
+          "case": "rio-coast-1.333333",
+          "phase": "cold",
+          "ratio": 0.8275571729157052,
+          "confidence95": [
+            0.8102220485444702,
+            0.8518705431935433
+          ],
+          "referenceMedianMs": 131.0349254999992,
+          "candidateMedianMs": 108.43889249999938
+        },
+        {
+          "case": "rio-coast-1.333333",
+          "phase": "filtered",
+          "ratio": 0.9957435136715136,
+          "confidence95": [
+            0.9774896775754802,
+            1.0003586032087453
+          ],
+          "referenceMedianMs": 30.43707650000033,
+          "candidateMedianMs": 30.307521499998984
+        },
+        {
+          "case": "rio-coast-1.333333",
+          "phase": "parallel",
+          "ratio": 0.9998936990808462,
+          "confidence95": [
+            0.994183942232836,
+            1.0038551958596307
+          ],
+          "referenceMedianMs": 66.11890150000181,
+          "candidateMedianMs": 66.11187299999892
+        },
+        {
+          "case": "rio-coast-1.333333",
+          "phase": "resize",
+          "ratio": 0.9967478311143881,
+          "confidence95": [
+            0.9878443253811984,
+            1.0029256034455152
+          ],
+          "referenceMedianMs": 30.400173999999424,
+          "candidateMedianMs": 30.30130749999944
+        },
+        {
+          "case": "rio-coast-1.333333",
+          "phase": "update",
+          "ratio": 0.9935012275488072,
+          "confidence95": [
+            0.98492390016686,
+            0.99741662345529
+          ],
+          "referenceMedianMs": 37.83983850000186,
+          "candidateMedianMs": 37.593926000000465
+        },
+        {
+          "case": "rio-coast-1.333333",
+          "phase": "warm",
+          "ratio": 0.9958831570148101,
+          "confidence95": [
+            0.9900335553796402,
+            1.002891042994072
+          ],
+          "referenceMedianMs": 35.880528000000595,
+          "candidateMedianMs": 35.73281349999888
+        },
+        {
+          "case": "rio-coast-2.195122",
+          "phase": "cold",
+          "ratio": 0.8382429197701372,
+          "confidence95": [
+            0.8302889920389649,
+            0.8636534884500887
+          ],
+          "referenceMedianMs": 145.22093849999965,
+          "candidateMedianMs": 121.73042349999923
+        },
+        {
+          "case": "rio-coast-2.195122",
+          "phase": "filtered",
+          "ratio": 0.9956660177837782,
+          "confidence95": [
+            0.992561330822004,
+            0.9997748980588004
+          ],
+          "referenceMedianMs": 44.96292100000119,
+          "candidateMedianMs": 44.76805249999779
+        },
+        {
+          "case": "rio-coast-2.195122",
+          "phase": "parallel",
+          "ratio": 0.9997834574094873,
+          "confidence95": [
+            0.996546665327067,
+            1.0034512754846616
+          ],
+          "referenceMedianMs": 98.14928299999883,
+          "candidateMedianMs": 98.12802950000105
+        },
+        {
+          "case": "rio-coast-2.195122",
+          "phase": "resize",
+          "ratio": 0.9884715565216832,
+          "confidence95": [
+            0.9656138496088712,
+            0.9944602030510132
+          ],
+          "referenceMedianMs": 46.1681580000004,
+          "candidateMedianMs": 45.635910999999396
+        },
+        {
+          "case": "rio-coast-2.195122",
+          "phase": "update",
+          "ratio": 0.9956190782937195,
+          "confidence95": [
+            0.9902180687000495,
+            1.0011458048788688
+          ],
+          "referenceMedianMs": 53.86480649999976,
+          "candidateMedianMs": 53.628828999999314
+        },
+        {
+          "case": "rio-coast-2.195122",
+          "phase": "warm",
+          "ratio": 0.9950764053688651,
+          "confidence95": [
+            0.9934938788112466,
+            0.9997215034921545
+          ],
+          "referenceMedianMs": 52.07628150000164,
+          "candidateMedianMs": 51.819878999998764
+        },
+        {
+          "case": "sao-paulo-dense-1.333333",
+          "phase": "cold",
+          "ratio": 0.8977490719136322,
+          "confidence95": [
+            0.8661620642379366,
+            0.9270973033905355
+          ],
+          "referenceMedianMs": 157.92212649999965,
+          "candidateMedianMs": 141.7744425000019
+        },
+        {
+          "case": "sao-paulo-dense-1.333333",
+          "phase": "filtered",
+          "ratio": 0.9959337771348254,
+          "confidence95": [
+            0.9889322592300178,
+            1.0028186577332365
+          ],
+          "referenceMedianMs": 42.06655799999771,
+          "candidateMedianMs": 41.89550599999893
+        },
+        {
+          "case": "sao-paulo-dense-1.333333",
+          "phase": "parallel",
+          "ratio": 0.9996492718660385,
+          "confidence95": [
+            0.9882582193455416,
+            1.0016698813072267
+          ],
+          "referenceMedianMs": 88.7838670000001,
+          "candidateMedianMs": 88.7527280000013
+        },
+        {
+          "case": "sao-paulo-dense-1.333333",
+          "phase": "resize",
+          "ratio": 0.9980646787935573,
+          "confidence95": [
+            0.9917559431104725,
+            1.0016885371400182
+          ],
+          "referenceMedianMs": 42.10128000000259,
+          "candidateMedianMs": 42.0198005000002
+        },
+        {
+          "case": "sao-paulo-dense-1.333333",
+          "phase": "update",
+          "ratio": 0.9938741710539523,
+          "confidence95": [
+            0.9864288719082135,
+            1.0002271787762904
+          ],
+          "referenceMedianMs": 49.67776650000087,
+          "candidateMedianMs": 49.373449000000164
+        },
+        {
+          "case": "sao-paulo-dense-1.333333",
+          "phase": "warm",
+          "ratio": 0.9932310561345128,
+          "confidence95": [
+            0.9891312686845605,
+            1.0007472045710344
+          ],
+          "referenceMedianMs": 47.808048999999755,
+          "candidateMedianMs": 47.48443900000029
+        },
+        {
+          "case": "sao-paulo-dense-2.195122",
+          "phase": "cold",
+          "ratio": 0.8988739085465481,
+          "confidence95": [
+            0.8753477559578673,
+            0.92664074046628
+          ],
+          "referenceMedianMs": 178.178689999997,
+          "candidateMedianMs": 160.16017550000106
+        },
+        {
+          "case": "sao-paulo-dense-2.195122",
+          "phase": "filtered",
+          "ratio": 0.9965433782528377,
+          "confidence95": [
+            0.9923890549977661,
+            1.00055846695851
+          ],
+          "referenceMedianMs": 58.902453000000605,
+          "candidateMedianMs": 58.698849499999596
+        },
+        {
+          "case": "sao-paulo-dense-2.195122",
+          "phase": "parallel",
+          "ratio": 1.001316593209957,
+          "confidence95": [
+            0.9974758705094608,
+            1.0058801686753558
+          ],
+          "referenceMedianMs": 125.160527,
+          "candidateMedianMs": 125.32531250000284
+        },
+        {
+          "case": "sao-paulo-dense-2.195122",
+          "phase": "resize",
+          "ratio": 0.9967101109212646,
+          "confidence95": [
+            0.9851761118230948,
+            0.9999755205618628
+          ],
+          "referenceMedianMs": 59.752166500002204,
+          "candidateMedianMs": 59.55558850000307
+        },
+        {
+          "case": "sao-paulo-dense-2.195122",
+          "phase": "update",
+          "ratio": 0.996301629069874,
+          "confidence95": [
+            0.9941191682819007,
+            1.0008681741491707
+          ],
+          "referenceMedianMs": 67.91476700000021,
+          "candidateMedianMs": 67.66359300000113
+        },
+        {
+          "case": "sao-paulo-dense-2.195122",
+          "phase": "warm",
+          "ratio": 0.996237647024784,
+          "confidence95": [
+            0.9924998636252025,
+            1.0008927169712085
+          ],
+          "referenceMedianMs": 66.0097554999993,
+          "candidateMedianMs": 65.7614035000006
+        },
+        {
+          "case": "sorocaba-1.333333",
+          "phase": "cold",
+          "ratio": 0.9264737670781882,
+          "confidence95": [
+            0.8947565156428386,
+            0.9630672131975558
+          ],
+          "referenceMedianMs": 174.7491200000004,
+          "candidateMedianMs": 161.90047549999872
+        },
+        {
+          "case": "sorocaba-1.333333",
+          "phase": "filtered",
+          "ratio": 0.9967429456019642,
+          "confidence95": [
+            0.9934431258456533,
+            1.000499022692425
+          ],
+          "referenceMedianMs": 59.28838650000034,
+          "candidateMedianMs": 59.09528099999807
+        },
+        {
+          "case": "sorocaba-1.333333",
+          "phase": "parallel",
+          "ratio": 1.004988009561491,
+          "confidence95": [
+            0.998704147928588,
+            1.0085968206485036
+          ],
+          "referenceMedianMs": 122.81702599999971,
+          "candidateMedianMs": 123.4296385000016
+        },
+        {
+          "case": "sorocaba-1.333333",
+          "phase": "resize",
+          "ratio": 0.9967993104012236,
+          "confidence95": [
+            0.993241539198686,
+            0.9992213204100961
+          ],
+          "referenceMedianMs": 59.84928999999647,
+          "candidateMedianMs": 59.65773099999933
+        },
+        {
+          "case": "sorocaba-1.333333",
+          "phase": "update",
+          "ratio": 0.9923133399563933,
+          "confidence95": [
+            0.9834768255597099,
+            0.9981222150227016
+          ],
+          "referenceMedianMs": 66.67648850000114,
+          "candidateMedianMs": 66.16396900000018
+        },
+        {
+          "case": "sorocaba-1.333333",
+          "phase": "warm",
+          "ratio": 0.9881487122014417,
+          "confidence95": [
+            0.9306472286029104,
+            0.9940837704738523
+          ],
+          "referenceMedianMs": 65.33792050000557,
+          "candidateMedianMs": 64.56358200000068
+        },
+        {
+          "case": "sorocaba-2.195122",
+          "phase": "cold",
+          "ratio": 0.9068149330610776,
+          "confidence95": [
+            0.8944553998803604,
+            0.9215040615380442
+          ],
+          "referenceMedianMs": 207.54300700000022,
+          "candidateMedianMs": 188.20309799999995
+        },
+        {
+          "case": "sorocaba-2.195122",
+          "phase": "filtered",
+          "ratio": 0.9990258568613872,
+          "confidence95": [
+            0.9955211358930345,
+            1.004594167339872
+          ],
+          "referenceMedianMs": 87.88698149999982,
+          "candidateMedianMs": 87.80136699999821
+        },
+        {
+          "case": "sorocaba-2.195122",
+          "phase": "parallel",
+          "ratio": 1.0016064886323657,
+          "confidence95": [
+            0.9980640184968155,
+            1.0066741626598394
+          ],
+          "referenceMedianMs": 182.32279650000237,
+          "candidateMedianMs": 182.61569600000075
+        },
+        {
+          "case": "sorocaba-2.195122",
+          "phase": "resize",
+          "ratio": 0.9971924872318372,
+          "confidence95": [
+            0.994122330981725,
+            0.9988477451952892
+          ],
+          "referenceMedianMs": 89.80796199999895,
+          "candidateMedianMs": 89.55582500000128
+        },
+        {
+          "case": "sorocaba-2.195122",
+          "phase": "update",
+          "ratio": 0.9998454467946888,
+          "confidence95": [
+            0.9851591026960247,
+            1.006141614261866
+          ],
+          "referenceMedianMs": 96.36487300000226,
+          "candidateMedianMs": 96.3499795000007
+        },
+        {
+          "case": "sorocaba-2.195122",
+          "phase": "warm",
+          "ratio": 0.9930961033083665,
+          "confidence95": [
+            0.9811577900135483,
+            1.0081881930687828
+          ],
+          "referenceMedianMs": 95.23527499999909,
+          "candidateMedianMs": 94.57778049999979
+        }
+      ],
+      "changedFrames": [
+        "sao-paulo-dense-1.333333-base",
+        "sao-paulo-dense-1.333333-update",
+        "sao-paulo-dense-1.333333-resize",
+        "sao-paulo-dense-2.195122-base",
+        "sao-paulo-dense-2.195122-update",
+        "sao-paulo-dense-2.195122-resize",
+        "rio-coast-2.195122-base",
+        "rio-coast-2.195122-update",
+        "rio-coast-2.195122-resize",
+        "sorocaba-2.195122-base",
+        "sorocaba-2.195122-update",
+        "sorocaba-2.195122-resize"
+      ],
+      "peakRssRatio": 1.0116049828488898,
+      "confidenceVerdict": "faster",
+      "visualReviewRequired": true,
+      "regressedCells": []
+    },
+    {
+      "sha": "43e10605cd5b8b24d1cd411ce9544b70130fc040",
+      "group": "finalists-before-rename",
+      "status": "measured",
+      "scoreRatio": 0.9652052379522407,
+      "confidence95": [
+        0.9490407116084784,
+        0.9692543080242986
+      ],
+      "worstCellRatio": 1.0133213952699704,
+      "cells": [
+        {
+          "case": "brazil-wide-1.333333",
+          "phase": "cold",
+          "ratio": 0.5954445155706172,
+          "confidence95": [
+            0.5881004700984243,
+            0.603724407328433
+          ],
+          "referenceMedianMs": 71.60827900000004,
+          "candidateMedianMs": 42.63875700000062
+        },
+        {
+          "case": "brazil-wide-1.333333",
+          "phase": "filtered",
+          "ratio": 0.9919187503823348,
+          "confidence95": [
+            0.9567291860800282,
+            1.0121524584907855
+          ],
+          "referenceMedianMs": 4.925414000004821,
+          "candidateMedianMs": 4.885610500000439
+        },
+        {
+          "case": "brazil-wide-1.333333",
+          "phase": "parallel",
+          "ratio": 0.9958235372587887,
+          "confidence95": [
+            0.7888709927062196,
+            1.016795584653299
+          ],
+          "referenceMedianMs": 10.082695000000967,
+          "candidateMedianMs": 10.040585000002466
+        },
+        {
+          "case": "brazil-wide-1.333333",
+          "phase": "resize",
+          "ratio": 0.9961838397928043,
+          "confidence95": [
+            0.975227361979712,
+            1.0188887444302284
+          ],
+          "referenceMedianMs": 5.140769499999806,
+          "candidateMedianMs": 5.121151499999542
+        },
+        {
+          "case": "brazil-wide-1.333333",
+          "phase": "update",
+          "ratio": 0.9687704732520596,
+          "confidence95": [
+            0.7964191183784577,
+            0.9974204631752451
+          ],
+          "referenceMedianMs": 5.3751535000010335,
+          "candidateMedianMs": 5.207289999998466
+        },
+        {
+          "case": "brazil-wide-1.333333",
+          "phase": "warm",
+          "ratio": 0.969604836749946,
+          "confidence95": [
+            0.8047038968705251,
+            0.9956186935243849
+          ],
+          "referenceMedianMs": 5.453910499998528,
+          "candidateMedianMs": 5.28813799999989
+        },
+        {
+          "case": "brazil-wide-2.195122",
+          "phase": "cold",
+          "ratio": 0.619879557544291,
+          "confidence95": [
+            0.6076488685786029,
+            0.6272134876892439
+          ],
+          "referenceMedianMs": 75.0646435000017,
+          "candidateMedianMs": 46.53103800000099
+        },
+        {
+          "case": "brazil-wide-2.195122",
+          "phase": "filtered",
+          "ratio": 0.9886895378428167,
+          "confidence95": [
+            0.9237149053981727,
+            1.0120705564261516
+          ],
+          "referenceMedianMs": 8.430159500003356,
+          "candidateMedianMs": 8.334810499999548
+        },
+        {
+          "case": "brazil-wide-2.195122",
+          "phase": "parallel",
+          "ratio": 0.9978707486062307,
+          "confidence95": [
+            0.9100994106387448,
+            1.014421855926486
+          ],
+          "referenceMedianMs": 17.020535999999993,
+          "candidateMedianMs": 16.984294999999292
+        },
+        {
+          "case": "brazil-wide-2.195122",
+          "phase": "resize",
+          "ratio": 0.980974589579398,
+          "confidence95": [
+            0.844123800941681,
+            1.009355252403487
+          ],
+          "referenceMedianMs": 9.308051500000147,
+          "candidateMedianMs": 9.130961999996543
+        },
+        {
+          "case": "brazil-wide-2.195122",
+          "phase": "update",
+          "ratio": 0.9783419440837228,
+          "confidence95": [
+            0.8413812348784828,
+            1.0034467519879438
+          ],
+          "referenceMedianMs": 8.887824499997805,
+          "candidateMedianMs": 8.695331500002794
+        },
+        {
+          "case": "brazil-wide-2.195122",
+          "phase": "warm",
+          "ratio": 0.9665026459019646,
+          "confidence95": [
+            0.8334818605975056,
+            1.0038404805497414
+          ],
+          "referenceMedianMs": 9.00099450000016,
+          "candidateMedianMs": 8.699484999999186
+        },
+        {
+          "case": "rio-coast-1.333333",
+          "phase": "cold",
+          "ratio": 0.8210426521005787,
+          "confidence95": [
+            0.7995568368283891,
+            0.8406769410456807
+          ],
+          "referenceMedianMs": 129.3565129999988,
+          "candidateMedianMs": 106.20721450000201
+        },
+        {
+          "case": "rio-coast-1.333333",
+          "phase": "filtered",
+          "ratio": 0.998496717886776,
+          "confidence95": [
+            0.9905349815641765,
+            1.0082835815229247
+          ],
+          "referenceMedianMs": 31.000834499998746,
+          "candidateMedianMs": 30.954231499999878
+        },
+        {
+          "case": "rio-coast-1.333333",
+          "phase": "parallel",
+          "ratio": 1.006478993685017,
+          "confidence95": [
+            1.0025474684207556,
+            1.0104289253787961
+          ],
+          "referenceMedianMs": 66.45160049999913,
+          "candidateMedianMs": 66.88213999999789
+        },
+        {
+          "case": "rio-coast-1.333333",
+          "phase": "resize",
+          "ratio": 0.9977787326673346,
+          "confidence95": [
+            0.9929005501523639,
+            1.0075748857017117
+          ],
+          "referenceMedianMs": 30.89362500000061,
+          "candidateMedianMs": 30.825002000000495
+        },
+        {
+          "case": "rio-coast-1.333333",
+          "phase": "update",
+          "ratio": 1.0031728591214595,
+          "confidence95": [
+            0.9953167261569916,
+            1.0093925757506774
+          ],
+          "referenceMedianMs": 37.94936850000158,
+          "candidateMedianMs": 38.069776500000444
+        },
+        {
+          "case": "rio-coast-1.333333",
+          "phase": "warm",
+          "ratio": 1.0034400165513055,
+          "confidence95": [
+            0.994910618095638,
+            1.0120061757169536
+          ],
+          "referenceMedianMs": 36.311162500001956,
+          "candidateMedianMs": 36.43607349999911
+        },
+        {
+          "case": "rio-coast-2.195122",
+          "phase": "cold",
+          "ratio": 0.8518675378107409,
+          "confidence95": [
+            0.8177152358199222,
+            0.866973472025621
+          ],
+          "referenceMedianMs": 146.2655125000001,
+          "candidateMedianMs": 124.59884200000124
+        },
+        {
+          "case": "rio-coast-2.195122",
+          "phase": "filtered",
+          "ratio": 1.0035172903207348,
+          "confidence95": [
+            0.9968038191330356,
+            1.0091509577520974
+          ],
+          "referenceMedianMs": 45.21733649999851,
+          "candidateMedianMs": 45.37637899999936
+        },
+        {
+          "case": "rio-coast-2.195122",
+          "phase": "parallel",
+          "ratio": 1.004909834747628,
+          "confidence95": [
+            1.0003219062086934,
+            1.0098123846456422
+          ],
+          "referenceMedianMs": 98.51685950000046,
+          "candidateMedianMs": 99.00056100000074
+        },
+        {
+          "case": "rio-coast-2.195122",
+          "phase": "resize",
+          "ratio": 1.0045936629223768,
+          "confidence95": [
+            0.9917685063058526,
+            1.0066780806599394
+          ],
+          "referenceMedianMs": 46.06465549999848,
+          "candidateMedianMs": 46.276261000000886
+        },
+        {
+          "case": "rio-coast-2.195122",
+          "phase": "update",
+          "ratio": 0.9978853197682379,
+          "confidence95": [
+            0.9921138431991612,
+            1.0036277262708688
+          ],
+          "referenceMedianMs": 54.34675100000095,
+          "candidateMedianMs": 54.231825000000754
+        },
+        {
+          "case": "rio-coast-2.195122",
+          "phase": "warm",
+          "ratio": 1.003787084091513,
+          "confidence95": [
+            0.9984802472781706,
+            1.008742196191816
+          ],
+          "referenceMedianMs": 52.21405049999885,
+          "candidateMedianMs": 52.41178950000085
+        },
+        {
+          "case": "sao-paulo-dense-1.333333",
+          "phase": "cold",
+          "ratio": 0.8969169563082348,
+          "confidence95": [
+            0.8717246957806999,
+            0.9256776530510692
+          ],
+          "referenceMedianMs": 161.02416950000043,
+          "candidateMedianMs": 144.42530800000168
+        },
+        {
+          "case": "sao-paulo-dense-1.333333",
+          "phase": "filtered",
+          "ratio": 1.0077200654188816,
+          "confidence95": [
+            1.003897792470771,
+            1.015475439243007
+          ],
+          "referenceMedianMs": 42.5558570000012,
+          "candidateMedianMs": 42.88439099999778
+        },
+        {
+          "case": "sao-paulo-dense-1.333333",
+          "phase": "parallel",
+          "ratio": 1.0115361642300038,
+          "confidence95": [
+            1.0071060272503856,
+            1.0192624263120478
+          ],
+          "referenceMedianMs": 89.09087799999907,
+          "candidateMedianMs": 90.11864500000229
+        },
+        {
+          "case": "sao-paulo-dense-1.333333",
+          "phase": "resize",
+          "ratio": 1.0133213952699704,
+          "confidence95": [
+            1.0044756162716184,
+            1.0188154133194671
+          ],
+          "referenceMedianMs": 42.36365550000119,
+          "candidateMedianMs": 42.92799849999756
+        },
+        {
+          "case": "sao-paulo-dense-1.333333",
+          "phase": "update",
+          "ratio": 1.0070252161640174,
+          "confidence95": [
+            0.9489174627262834,
+            1.0126782919378667
+          ],
+          "referenceMedianMs": 49.86722000000191,
+          "candidateMedianMs": 50.217548000000534
+        },
+        {
+          "case": "sao-paulo-dense-1.333333",
+          "phase": "warm",
+          "ratio": 1.0104697726652758,
+          "confidence95": [
+            1.0033852297946486,
+            1.0195488443321103
+          ],
+          "referenceMedianMs": 47.93341900000087,
+          "candidateMedianMs": 48.435271000000284
+        },
+        {
+          "case": "sao-paulo-dense-2.195122",
+          "phase": "cold",
+          "ratio": 0.899407302620178,
+          "confidence95": [
+            0.8809477944746814,
+            0.9156016715817381
+          ],
+          "referenceMedianMs": 180.3690275000008,
+          "candidateMedianMs": 162.22522050000043
+        },
+        {
+          "case": "sao-paulo-dense-2.195122",
+          "phase": "filtered",
+          "ratio": 1.0064317380378656,
+          "confidence95": [
+            1.0048290577201466,
+            1.0110448302124315
+          ],
+          "referenceMedianMs": 59.09701199999836,
+          "candidateMedianMs": 59.47710850000294
+        },
+        {
+          "case": "sao-paulo-dense-2.195122",
+          "phase": "parallel",
+          "ratio": 1.0083182076050685,
+          "confidence95": [
+            1.0038685584889937,
+            1.0121069948224186
+          ],
+          "referenceMedianMs": 125.71488349999981,
+          "candidateMedianMs": 126.76060599999983
+        },
+        {
+          "case": "sao-paulo-dense-2.195122",
+          "phase": "resize",
+          "ratio": 1.0031139332193266,
+          "confidence95": [
+            0.9908908388598344,
+            1.0099155587924913
+          ],
+          "referenceMedianMs": 59.986675000000105,
+          "candidateMedianMs": 60.173469499999555
+        },
+        {
+          "case": "sao-paulo-dense-2.195122",
+          "phase": "update",
+          "ratio": 1.0044748048378533,
+          "confidence95": [
+            0.9941971454568043,
+            1.008261821733516
+          ],
+          "referenceMedianMs": 68.36443400000098,
+          "candidateMedianMs": 68.67035150000129
+        },
+        {
+          "case": "sao-paulo-dense-2.195122",
+          "phase": "warm",
+          "ratio": 1.0049471170197688,
+          "confidence95": [
+            0.9977550016363681,
+            1.0100132461886726
+          ],
+          "referenceMedianMs": 66.3137740000002,
+          "candidateMedianMs": 66.6418360000007
+        },
+        {
+          "case": "sorocaba-1.333333",
+          "phase": "cold",
+          "ratio": 0.9293916782400212,
+          "confidence95": [
+            0.9056839183172805,
+            0.9676980807330188
+          ],
+          "referenceMedianMs": 176.36751150000055,
+          "candidateMedianMs": 163.91449750000174
+        },
+        {
+          "case": "sorocaba-1.333333",
+          "phase": "filtered",
+          "ratio": 1.0099340452394492,
+          "confidence95": [
+            1.0019113968443143,
+            1.014633086460325
+          ],
+          "referenceMedianMs": 59.672568999999385,
+          "candidateMedianMs": 60.265358999999535
+        },
+        {
+          "case": "sorocaba-1.333333",
+          "phase": "parallel",
+          "ratio": 1.012334330185499,
+          "confidence95": [
+            1.0076173029821205,
+            1.023276843228538
+          ],
+          "referenceMedianMs": 123.1187245000001,
+          "candidateMedianMs": 124.63731150000058
+        },
+        {
+          "case": "sorocaba-1.333333",
+          "phase": "resize",
+          "ratio": 1.0064667418429771,
+          "confidence95": [
+            1.0034471400820457,
+            1.0116493114905405
+          ],
+          "referenceMedianMs": 60.207830999999715,
+          "candidateMedianMs": 60.59717950000231
+        },
+        {
+          "case": "sorocaba-1.333333",
+          "phase": "update",
+          "ratio": 1.0102375401501316,
+          "confidence95": [
+            1.0025879260654602,
+            1.0169843502198839
+          ],
+          "referenceMedianMs": 66.92310749999888,
+          "candidateMedianMs": 67.60823550000168
+        },
+        {
+          "case": "sorocaba-1.333333",
+          "phase": "warm",
+          "ratio": 1.0088077619555957,
+          "confidence95": [
+            1.0013583749073505,
+            1.0176902099682885
+          ],
+          "referenceMedianMs": 65.22201700000005,
+          "candidateMedianMs": 65.79647699999987
+        },
+        {
+          "case": "sorocaba-2.195122",
+          "phase": "cold",
+          "ratio": 0.9294565628354617,
+          "confidence95": [
+            0.910575101352459,
+            0.9463681529340209
+          ],
+          "referenceMedianMs": 208.42992049999975,
+          "candidateMedianMs": 193.7265574999983
+        },
+        {
+          "case": "sorocaba-2.195122",
+          "phase": "filtered",
+          "ratio": 1.0071162283711135,
+          "confidence95": [
+            1.0033500271916225,
+            1.0099544662203637
+          ],
+          "referenceMedianMs": 88.17262000000119,
+          "candidateMedianMs": 88.80007650000061
+        },
+        {
+          "case": "sorocaba-2.195122",
+          "phase": "parallel",
+          "ratio": 1.0082439169200916,
+          "confidence95": [
+            1.0061365951331112,
+            1.0134117897225945
+          ],
+          "referenceMedianMs": 183.08160000000134,
+          "candidateMedianMs": 184.59090949999882
+        },
+        {
+          "case": "sorocaba-2.195122",
+          "phase": "resize",
+          "ratio": 1.005617156818537,
+          "confidence95": [
+            1.0015086527889432,
+            1.0070397862829341
+          ],
+          "referenceMedianMs": 89.97763750000195,
+          "candidateMedianMs": 90.48305600000094
+        },
+        {
+          "case": "sorocaba-2.195122",
+          "phase": "update",
+          "ratio": 1.0053562972908938,
+          "confidence95": [
+            0.9982342623502217,
+            1.0121522700289876
+          ],
+          "referenceMedianMs": 96.8571144999969,
+          "candidateMedianMs": 97.37590999999702
+        },
+        {
+          "case": "sorocaba-2.195122",
+          "phase": "warm",
+          "ratio": 1.00811854715328,
+          "confidence95": [
+            1.0001537618309955,
+            1.0249844308107086
+          ],
+          "referenceMedianMs": 95.1064254999983,
+          "candidateMedianMs": 95.87855149999996
+        }
+      ],
+      "changedFrames": [
+        "sao-paulo-dense-1.333333-base",
+        "sao-paulo-dense-1.333333-update",
+        "sao-paulo-dense-1.333333-resize",
+        "sao-paulo-dense-2.195122-base",
+        "sao-paulo-dense-2.195122-update",
+        "sao-paulo-dense-2.195122-resize",
+        "sorocaba-1.333333-base",
+        "sorocaba-1.333333-update",
+        "sorocaba-2.195122-base",
+        "sorocaba-2.195122-update",
+        "sorocaba-2.195122-resize"
+      ],
+      "peakRssRatio": 1.0588594790525163,
+      "confidenceVerdict": "faster",
+      "visualReviewRequired": true,
+      "regressedCells": [
+        {
+          "case": "rio-coast-1.333333",
+          "phase": "parallel",
+          "ratio": 1.006478993685017,
+          "confidence95": [
+            1.0025474684207556,
+            1.0104289253787961
+          ],
+          "referenceMedianMs": 66.45160049999913,
+          "candidateMedianMs": 66.88213999999789
+        },
+        {
+          "case": "rio-coast-2.195122",
+          "phase": "parallel",
+          "ratio": 1.004909834747628,
+          "confidence95": [
+            1.0003219062086934,
+            1.0098123846456422
+          ],
+          "referenceMedianMs": 98.51685950000046,
+          "candidateMedianMs": 99.00056100000074
+        },
+        {
+          "case": "sao-paulo-dense-1.333333",
+          "phase": "filtered",
+          "ratio": 1.0077200654188816,
+          "confidence95": [
+            1.003897792470771,
+            1.015475439243007
+          ],
+          "referenceMedianMs": 42.5558570000012,
+          "candidateMedianMs": 42.88439099999778
+        },
+        {
+          "case": "sao-paulo-dense-1.333333",
+          "phase": "parallel",
+          "ratio": 1.0115361642300038,
+          "confidence95": [
+            1.0071060272503856,
+            1.0192624263120478
+          ],
+          "referenceMedianMs": 89.09087799999907,
+          "candidateMedianMs": 90.11864500000229
+        },
+        {
+          "case": "sao-paulo-dense-1.333333",
+          "phase": "resize",
+          "ratio": 1.0133213952699704,
+          "confidence95": [
+            1.0044756162716184,
+            1.0188154133194671
+          ],
+          "referenceMedianMs": 42.36365550000119,
+          "candidateMedianMs": 42.92799849999756
+        },
+        {
+          "case": "sao-paulo-dense-1.333333",
+          "phase": "warm",
+          "ratio": 1.0104697726652758,
+          "confidence95": [
+            1.0033852297946486,
+            1.0195488443321103
+          ],
+          "referenceMedianMs": 47.93341900000087,
+          "candidateMedianMs": 48.435271000000284
+        },
+        {
+          "case": "sao-paulo-dense-2.195122",
+          "phase": "filtered",
+          "ratio": 1.0064317380378656,
+          "confidence95": [
+            1.0048290577201466,
+            1.0110448302124315
+          ],
+          "referenceMedianMs": 59.09701199999836,
+          "candidateMedianMs": 59.47710850000294
+        },
+        {
+          "case": "sao-paulo-dense-2.195122",
+          "phase": "parallel",
+          "ratio": 1.0083182076050685,
+          "confidence95": [
+            1.0038685584889937,
+            1.0121069948224186
+          ],
+          "referenceMedianMs": 125.71488349999981,
+          "candidateMedianMs": 126.76060599999983
+        },
+        {
+          "case": "sorocaba-1.333333",
+          "phase": "filtered",
+          "ratio": 1.0099340452394492,
+          "confidence95": [
+            1.0019113968443143,
+            1.014633086460325
+          ],
+          "referenceMedianMs": 59.672568999999385,
+          "candidateMedianMs": 60.265358999999535
+        },
+        {
+          "case": "sorocaba-1.333333",
+          "phase": "parallel",
+          "ratio": 1.012334330185499,
+          "confidence95": [
+            1.0076173029821205,
+            1.023276843228538
+          ],
+          "referenceMedianMs": 123.1187245000001,
+          "candidateMedianMs": 124.63731150000058
+        },
+        {
+          "case": "sorocaba-1.333333",
+          "phase": "resize",
+          "ratio": 1.0064667418429771,
+          "confidence95": [
+            1.0034471400820457,
+            1.0116493114905405
+          ],
+          "referenceMedianMs": 60.207830999999715,
+          "candidateMedianMs": 60.59717950000231
+        },
+        {
+          "case": "sorocaba-1.333333",
+          "phase": "update",
+          "ratio": 1.0102375401501316,
+          "confidence95": [
+            1.0025879260654602,
+            1.0169843502198839
+          ],
+          "referenceMedianMs": 66.92310749999888,
+          "candidateMedianMs": 67.60823550000168
+        },
+        {
+          "case": "sorocaba-1.333333",
+          "phase": "warm",
+          "ratio": 1.0088077619555957,
+          "confidence95": [
+            1.0013583749073505,
+            1.0176902099682885
+          ],
+          "referenceMedianMs": 65.22201700000005,
+          "candidateMedianMs": 65.79647699999987
+        },
+        {
+          "case": "sorocaba-2.195122",
+          "phase": "filtered",
+          "ratio": 1.0071162283711135,
+          "confidence95": [
+            1.0033500271916225,
+            1.0099544662203637
+          ],
+          "referenceMedianMs": 88.17262000000119,
+          "candidateMedianMs": 88.80007650000061
+        },
+        {
+          "case": "sorocaba-2.195122",
+          "phase": "parallel",
+          "ratio": 1.0082439169200916,
+          "confidence95": [
+            1.0061365951331112,
+            1.0134117897225945
+          ],
+          "referenceMedianMs": 183.08160000000134,
+          "candidateMedianMs": 184.59090949999882
+        },
+        {
+          "case": "sorocaba-2.195122",
+          "phase": "resize",
+          "ratio": 1.005617156818537,
+          "confidence95": [
+            1.0015086527889432,
+            1.0070397862829341
+          ],
+          "referenceMedianMs": 89.97763750000195,
+          "candidateMedianMs": 90.48305600000094
+        },
+        {
+          "case": "sorocaba-2.195122",
+          "phase": "warm",
+          "ratio": 1.00811854715328,
+          "confidence95": [
+            1.0001537618309955,
+            1.0249844308107086
+          ],
+          "referenceMedianMs": 95.1064254999983,
+          "candidateMedianMs": 95.87855149999996
+        }
+      ]
+    }
+  ],
+  "note": "Scores are balanced geometric means across cases and phases, not production traffic-weighted request latency. Confidence intervals resample whole passes and blocks and require independent finalist repetition; they do not prove hardware equivalence. Individual cell intervals are screening evidence, not multiplicity-adjusted definitive tests."
+}

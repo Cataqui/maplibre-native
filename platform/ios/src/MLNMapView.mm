@@ -710,7 +710,8 @@ public:
       .withPixelRatio(config.scaleFactor)
       .withConstrainMode(mbgl::ConstrainMode::None)
       .withViewportMode(mbgl::ViewportMode::Default)
-      .withCrossSourceCollisions(enableCrossSourceCollisions);
+      .withCrossSourceCollisions(enableCrossSourceCollisions)
+      .withFastPFOREnabled(mlnMapoptions.fastPFOREnabled);
 
   mbgl::TileServerOptions *tileServerOptions =
       [[MLNSettings sharedSettings] tileServerOptionsInternal];
@@ -1781,6 +1782,9 @@ public:
                        options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
                        context:windowScreenContext];
     }
+
+    // https://github.com/maplibre/maplibre-native/issues/4204
+    [self setNeedsLayout];
   }
 }
 
@@ -6365,7 +6369,7 @@ static void *windowScreenContext = &windowScreenContext;
       completionHandler:^{
         MLNMapView *strongSelf = weakSelf;
         if (strongSelf.userTrackingState == MLNUserTrackingStateBegan ||
-            strongSelf.userTrackingState == MLNDistanceThresholdForCameraPause) {
+            strongSelf.userTrackingState == MLNUserTrackingStateBeginSignificantTransition) {
           strongSelf.userTrackingState = MLNUserTrackingStateChanged;
         }
         if (completion) {
@@ -7100,6 +7104,16 @@ static void *windowScreenContext = &windowScreenContext;
 
   if ([self.delegate respondsToSelector:@selector(mapView:spriteDidError:url:)]) {
     [self.delegate mapView:self spriteDidError:id url:url];
+  }
+}
+
+- (void)rendererDidError {
+  if (!_mbglMap) {
+    return;
+  }
+
+  if ([self.delegate respondsToSelector:@selector(mapViewRendererDidError:)]) {
+    [self.delegate mapViewRendererDidError:self];
   }
 }
 

@@ -1,0 +1,689 @@
+{
+  "candidates": [
+    {
+      "sha": "a34723ff4a53d9622f7e42fc3f10197d5acb94bd",
+      "status": "review-required",
+      "images": [
+        {
+          "file": "brazil-wide-1.333333-base.png",
+          "difference": {
+            "meanAbsoluteChannelDifference": 0.0,
+            "maximumChannelDifference": 0,
+            "changedPixelFraction": 0.0
+          },
+          "baselineVariationMaximum": {
+            "meanAbsoluteChannelDifference": 0.0,
+            "maximumChannelDifference": 0,
+            "changedPixelFraction": 0.0
+          },
+          "exceedsObservedBaselineVariation": false
+        },
+        {
+          "file": "brazil-wide-1.333333-resize.png",
+          "difference": {
+            "meanAbsoluteChannelDifference": 0.0,
+            "maximumChannelDifference": 0,
+            "changedPixelFraction": 0.0
+          },
+          "baselineVariationMaximum": {
+            "meanAbsoluteChannelDifference": 0.0,
+            "maximumChannelDifference": 0,
+            "changedPixelFraction": 0.0
+          },
+          "exceedsObservedBaselineVariation": false
+        },
+        {
+          "file": "brazil-wide-1.333333-update.png",
+          "difference": {
+            "meanAbsoluteChannelDifference": 0.0,
+            "maximumChannelDifference": 0,
+            "changedPixelFraction": 0.0
+          },
+          "baselineVariationMaximum": {
+            "meanAbsoluteChannelDifference": 0.0,
+            "maximumChannelDifference": 0,
+            "changedPixelFraction": 0.0
+          },
+          "exceedsObservedBaselineVariation": false
+        },
+        {
+          "file": "brazil-wide-2.195122-base.png",
+          "difference": {
+            "meanAbsoluteChannelDifference": 0.0,
+            "maximumChannelDifference": 0,
+            "changedPixelFraction": 0.0
+          },
+          "baselineVariationMaximum": {
+            "meanAbsoluteChannelDifference": 0.0,
+            "maximumChannelDifference": 0,
+            "changedPixelFraction": 0.0
+          },
+          "exceedsObservedBaselineVariation": false
+        },
+        {
+          "file": "brazil-wide-2.195122-resize.png",
+          "difference": {
+            "meanAbsoluteChannelDifference": 0.0,
+            "maximumChannelDifference": 0,
+            "changedPixelFraction": 0.0
+          },
+          "baselineVariationMaximum": {
+            "meanAbsoluteChannelDifference": 0.0,
+            "maximumChannelDifference": 0,
+            "changedPixelFraction": 0.0
+          },
+          "exceedsObservedBaselineVariation": false
+        },
+        {
+          "file": "brazil-wide-2.195122-update.png",
+          "difference": {
+            "meanAbsoluteChannelDifference": 0.0,
+            "maximumChannelDifference": 0,
+            "changedPixelFraction": 0.0
+          },
+          "baselineVariationMaximum": {
+            "meanAbsoluteChannelDifference": 0.0,
+            "maximumChannelDifference": 0,
+            "changedPixelFraction": 0.0
+          },
+          "exceedsObservedBaselineVariation": false
+        },
+        {
+          "file": "rio-coast-1.333333-base.png",
+          "difference": {
+            "meanAbsoluteChannelDifference": 0.0,
+            "maximumChannelDifference": 0,
+            "changedPixelFraction": 0.0
+          },
+          "baselineVariationMaximum": {
+            "meanAbsoluteChannelDifference": 1.7877574370709383e-06,
+            "maximumChannelDifference": 1,
+            "changedPixelFraction": 4.767353165522502e-06
+          },
+          "exceedsObservedBaselineVariation": false
+        },
+        {
+          "file": "rio-coast-1.333333-resize.png",
+          "difference": {
+            "meanAbsoluteChannelDifference": 0.0,
+            "maximumChannelDifference": 0,
+            "changedPixelFraction": 0.0
+          },
+          "baselineVariationMaximum": {
+            "meanAbsoluteChannelDifference": 1.7246136865342163e-06,
+            "maximumChannelDifference": 1,
+            "changedPixelFraction": 2.299484915378955e-06
+          },
+          "exceedsObservedBaselineVariation": false
+        },
+        {
+          "file": "rio-coast-1.333333-update.png",
+          "difference": {
+            "meanAbsoluteChannelDifference": 0.0,
+            "maximumChannelDifference": 0,
+            "changedPixelFraction": 0.0
+          },
+          "baselineVariationMaximum": {
+            "meanAbsoluteChannelDifference": 1.7877574370709383e-06,
+            "maximumChannelDifference": 1,
+            "changedPixelFraction": 4.767353165522502e-06
+          },
+          "exceedsObservedBaselineVariation": false
+        },
+        {
+          "file": "rio-coast-2.195122-base.png",
+          "difference": {
+            "meanAbsoluteChannelDifference": 4.614978902953586e-06,
+            "maximumChannelDifference": 4,
+            "changedPixelFraction": 1.7580872011251758e-06
+          },
+          "baselineVariationMaximum": {
+            "meanAbsoluteChannelDifference": 0.0,
+            "maximumChannelDifference": 0,
+            "changedPixelFraction": 0.0
+          },
+          "exceedsObservedBaselineVariation": true
+        },
+        {
+          "file": "rio-coast-2.195122-resize.png",
+          "difference": {
+            "meanAbsoluteChannelDifference": 4.454135134217939e-06,
+            "maximumChannelDifference": 4,
+            "changedPixelFraction": 2.545220076695965e-06
+          },
+          "baselineVariationMaximum": {
+            "meanAbsoluteChannelDifference": 0.0,
+            "maximumChannelDifference": 0,
+            "changedPixelFraction": 0.0
+          },
+          "exceedsObservedBaselineVariation": true
+        },
+        {
+          "file": "rio-coast-2.195122-update.png",
+          "difference": {
+            "meanAbsoluteChannelDifference": 4.614978902953586e-06,
+            "maximumChannelDifference": 4,
+            "changedPixelFraction": 1.7580872011251758e-06
+          },
+          "baselineVariationMaximum": {
+            "meanAbsoluteChannelDifference": 0.0,
+            "maximumChannelDifference": 0,
+            "changedPixelFraction": 0.0
+          },
+          "exceedsObservedBaselineVariation": true
+        },
+        {
+          "file": "sao-paulo-dense-1.333333-base.png",
+          "difference": {
+            "meanAbsoluteChannelDifference": 9.534706331045004e-06,
+            "maximumChannelDifference": 3,
+            "changedPixelFraction": 1.906941266209001e-05
+          },
+          "baselineVariationMaximum": {
+            "meanAbsoluteChannelDifference": 5.3036803966437835e-05,
+            "maximumChannelDifference": 4,
+            "changedPixelFraction": 5.959191456903127e-05
+          },
+          "exceedsObservedBaselineVariation": false
+        },
+        {
+          "file": "sao-paulo-dense-1.333333-resize.png",
+          "difference": {
+            "meanAbsoluteChannelDifference": 1.2647167034584253e-05,
+            "maximumChannelDifference": 3,
+            "changedPixelFraction": 1.379690949227373e-05
+          },
+          "baselineVariationMaximum": {
+            "meanAbsoluteChannelDifference": 1.437178072111847e-05,
+            "maximumChannelDifference": 3,
+            "changedPixelFraction": 1.379690949227373e-05
+          },
+          "exceedsObservedBaselineVariation": false
+        },
+        {
+          "file": "sao-paulo-dense-1.333333-update.png",
+          "difference": {
+            "meanAbsoluteChannelDifference": 6.55511060259344e-06,
+            "maximumChannelDifference": 3,
+            "changedPixelFraction": 7.151029748283753e-06
+          },
+          "baselineVariationMaximum": {
+            "meanAbsoluteChannelDifference": 4.767353165522502e-05,
+            "maximumChannelDifference": 4,
+            "changedPixelFraction": 3.5755148741418764e-05
+          },
+          "exceedsObservedBaselineVariation": false
+        },
+        {
+          "file": "sao-paulo-dense-2.195122-base.png",
+          "difference": {
+            "meanAbsoluteChannelDifference": 7.2521097046413505e-06,
+            "maximumChannelDifference": 5,
+            "changedPixelFraction": 2.6371308016877636e-06
+          },
+          "baselineVariationMaximum": {
+            "meanAbsoluteChannelDifference": 9.669479606188467e-06,
+            "maximumChannelDifference": 5,
+            "changedPixelFraction": 3.5161744022503516e-06
+          },
+          "exceedsObservedBaselineVariation": false
+        },
+        {
+          "file": "sao-paulo-dense-2.195122-resize.png",
+          "difference": {
+            "meanAbsoluteChannelDifference": 8.484066922319883e-06,
+            "maximumChannelDifference": 7,
+            "changedPixelFraction": 4.242033461159941e-06
+          },
+          "baselineVariationMaximum": {
+            "meanAbsoluteChannelDifference": 1.1453490345131842e-05,
+            "maximumChannelDifference": 7,
+            "changedPixelFraction": 5.09044015339193e-06
+          },
+          "exceedsObservedBaselineVariation": false
+        },
+        {
+          "file": "sao-paulo-dense-2.195122-update.png",
+          "difference": {
+            "meanAbsoluteChannelDifference": 1.2086849507735584e-05,
+            "maximumChannelDifference": 6,
+            "changedPixelFraction": 5.274261603375527e-06
+          },
+          "baselineVariationMaximum": {
+            "meanAbsoluteChannelDifference": 1.4504219409282701e-05,
+            "maximumChannelDifference": 6,
+            "changedPixelFraction": 6.153305203938116e-06
+          },
+          "exceedsObservedBaselineVariation": false
+        },
+        {
+          "file": "sorocaba-1.333333-base.png",
+          "difference": {
+            "meanAbsoluteChannelDifference": 1.4897978642257818e-05,
+            "maximumChannelDifference": 3,
+            "changedPixelFraction": 1.1918382913806255e-05
+          },
+          "baselineVariationMaximum": {
+            "meanAbsoluteChannelDifference": 1.4897978642257818e-05,
+            "maximumChannelDifference": 3,
+            "changedPixelFraction": 1.1918382913806255e-05
+          },
+          "exceedsObservedBaselineVariation": false
+        },
+        {
+          "file": "sorocaba-1.333333-resize.png",
+          "difference": {
+            "meanAbsoluteChannelDifference": 6.898454746136865e-06,
+            "maximumChannelDifference": 3,
+            "changedPixelFraction": 4.59896983075791e-06
+          },
+          "baselineVariationMaximum": {
+            "meanAbsoluteChannelDifference": 6.898454746136865e-06,
+            "maximumChannelDifference": 3,
+            "changedPixelFraction": 4.59896983075791e-06
+          },
+          "exceedsObservedBaselineVariation": false
+        },
+        {
+          "file": "sorocaba-1.333333-update.png",
+          "difference": {
+            "meanAbsoluteChannelDifference": 1.4897978642257818e-05,
+            "maximumChannelDifference": 3,
+            "changedPixelFraction": 1.1918382913806255e-05
+          },
+          "baselineVariationMaximum": {
+            "meanAbsoluteChannelDifference": 1.4897978642257818e-05,
+            "maximumChannelDifference": 3,
+            "changedPixelFraction": 1.1918382913806255e-05
+          },
+          "exceedsObservedBaselineVariation": false
+        },
+        {
+          "file": "sorocaba-2.195122-base.png",
+          "difference": {
+            "meanAbsoluteChannelDifference": 5.933544303797468e-05,
+            "maximumChannelDifference": 5,
+            "changedPixelFraction": 2.7250351617440224e-05
+          },
+          "baselineVariationMaximum": {
+            "meanAbsoluteChannelDifference": 2.747011251758087e-05,
+            "maximumChannelDifference": 5,
+            "changedPixelFraction": 1.3185654008438819e-05
+          },
+          "exceedsObservedBaselineVariation": true
+        },
+        {
+          "file": "sorocaba-2.195122-resize.png",
+          "difference": {
+            "meanAbsoluteChannelDifference": 0.00012068585197000034,
+            "maximumChannelDifference": 15,
+            "changedPixelFraction": 3.563308107374351e-05
+          },
+          "baselineVariationMaximum": {
+            "meanAbsoluteChannelDifference": 1.2938202056537823e-05,
+            "maximumChannelDifference": 4,
+            "changedPixelFraction": 5.09044015339193e-06
+          },
+          "exceedsObservedBaselineVariation": true
+        },
+        {
+          "file": "sorocaba-2.195122-update.png",
+          "difference": {
+            "meanAbsoluteChannelDifference": 5.933544303797468e-05,
+            "maximumChannelDifference": 5,
+            "changedPixelFraction": 2.7250351617440224e-05
+          },
+          "baselineVariationMaximum": {
+            "meanAbsoluteChannelDifference": 2.747011251758087e-05,
+            "maximumChannelDifference": 5,
+            "changedPixelFraction": 1.3185654008438819e-05
+          },
+          "exceedsObservedBaselineVariation": true
+        }
+      ]
+    },
+    {
+      "sha": "65a34053706139d5f6c52e71883d58ceda4c077b",
+      "status": "review-required",
+      "images": [
+        {
+          "file": "brazil-wide-1.333333-base.png",
+          "difference": {
+            "meanAbsoluteChannelDifference": 0.0,
+            "maximumChannelDifference": 0,
+            "changedPixelFraction": 0.0
+          },
+          "baselineVariationMaximum": {
+            "meanAbsoluteChannelDifference": 0.0,
+            "maximumChannelDifference": 0,
+            "changedPixelFraction": 0.0
+          },
+          "exceedsObservedBaselineVariation": false
+        },
+        {
+          "file": "brazil-wide-1.333333-resize.png",
+          "difference": {
+            "meanAbsoluteChannelDifference": 0.0,
+            "maximumChannelDifference": 0,
+            "changedPixelFraction": 0.0
+          },
+          "baselineVariationMaximum": {
+            "meanAbsoluteChannelDifference": 0.0,
+            "maximumChannelDifference": 0,
+            "changedPixelFraction": 0.0
+          },
+          "exceedsObservedBaselineVariation": false
+        },
+        {
+          "file": "brazil-wide-1.333333-update.png",
+          "difference": {
+            "meanAbsoluteChannelDifference": 0.0,
+            "maximumChannelDifference": 0,
+            "changedPixelFraction": 0.0
+          },
+          "baselineVariationMaximum": {
+            "meanAbsoluteChannelDifference": 0.0,
+            "maximumChannelDifference": 0,
+            "changedPixelFraction": 0.0
+          },
+          "exceedsObservedBaselineVariation": false
+        },
+        {
+          "file": "brazil-wide-2.195122-base.png",
+          "difference": {
+            "meanAbsoluteChannelDifference": 0.0,
+            "maximumChannelDifference": 0,
+            "changedPixelFraction": 0.0
+          },
+          "baselineVariationMaximum": {
+            "meanAbsoluteChannelDifference": 0.0,
+            "maximumChannelDifference": 0,
+            "changedPixelFraction": 0.0
+          },
+          "exceedsObservedBaselineVariation": false
+        },
+        {
+          "file": "brazil-wide-2.195122-resize.png",
+          "difference": {
+            "meanAbsoluteChannelDifference": 0.0,
+            "maximumChannelDifference": 0,
+            "changedPixelFraction": 0.0
+          },
+          "baselineVariationMaximum": {
+            "meanAbsoluteChannelDifference": 0.0,
+            "maximumChannelDifference": 0,
+            "changedPixelFraction": 0.0
+          },
+          "exceedsObservedBaselineVariation": false
+        },
+        {
+          "file": "brazil-wide-2.195122-update.png",
+          "difference": {
+            "meanAbsoluteChannelDifference": 0.0,
+            "maximumChannelDifference": 0,
+            "changedPixelFraction": 0.0
+          },
+          "baselineVariationMaximum": {
+            "meanAbsoluteChannelDifference": 0.0,
+            "maximumChannelDifference": 0,
+            "changedPixelFraction": 0.0
+          },
+          "exceedsObservedBaselineVariation": false
+        },
+        {
+          "file": "rio-coast-1.333333-base.png",
+          "difference": {
+            "meanAbsoluteChannelDifference": 1.7877574370709383e-06,
+            "maximumChannelDifference": 1,
+            "changedPixelFraction": 4.767353165522502e-06
+          },
+          "baselineVariationMaximum": {
+            "meanAbsoluteChannelDifference": 1.7877574370709383e-06,
+            "maximumChannelDifference": 1,
+            "changedPixelFraction": 4.767353165522502e-06
+          },
+          "exceedsObservedBaselineVariation": false
+        },
+        {
+          "file": "rio-coast-1.333333-resize.png",
+          "difference": {
+            "meanAbsoluteChannelDifference": 1.7246136865342163e-06,
+            "maximumChannelDifference": 1,
+            "changedPixelFraction": 2.299484915378955e-06
+          },
+          "baselineVariationMaximum": {
+            "meanAbsoluteChannelDifference": 1.7246136865342163e-06,
+            "maximumChannelDifference": 1,
+            "changedPixelFraction": 2.299484915378955e-06
+          },
+          "exceedsObservedBaselineVariation": false
+        },
+        {
+          "file": "rio-coast-1.333333-update.png",
+          "difference": {
+            "meanAbsoluteChannelDifference": 1.7877574370709383e-06,
+            "maximumChannelDifference": 1,
+            "changedPixelFraction": 4.767353165522502e-06
+          },
+          "baselineVariationMaximum": {
+            "meanAbsoluteChannelDifference": 1.7877574370709383e-06,
+            "maximumChannelDifference": 1,
+            "changedPixelFraction": 4.767353165522502e-06
+          },
+          "exceedsObservedBaselineVariation": false
+        },
+        {
+          "file": "rio-coast-2.195122-base.png",
+          "difference": {
+            "meanAbsoluteChannelDifference": 0.0,
+            "maximumChannelDifference": 0,
+            "changedPixelFraction": 0.0
+          },
+          "baselineVariationMaximum": {
+            "meanAbsoluteChannelDifference": 0.0,
+            "maximumChannelDifference": 0,
+            "changedPixelFraction": 0.0
+          },
+          "exceedsObservedBaselineVariation": false
+        },
+        {
+          "file": "rio-coast-2.195122-resize.png",
+          "difference": {
+            "meanAbsoluteChannelDifference": 0.0,
+            "maximumChannelDifference": 0,
+            "changedPixelFraction": 0.0
+          },
+          "baselineVariationMaximum": {
+            "meanAbsoluteChannelDifference": 0.0,
+            "maximumChannelDifference": 0,
+            "changedPixelFraction": 0.0
+          },
+          "exceedsObservedBaselineVariation": false
+        },
+        {
+          "file": "rio-coast-2.195122-update.png",
+          "difference": {
+            "meanAbsoluteChannelDifference": 0.0,
+            "maximumChannelDifference": 0,
+            "changedPixelFraction": 0.0
+          },
+          "baselineVariationMaximum": {
+            "meanAbsoluteChannelDifference": 0.0,
+            "maximumChannelDifference": 0,
+            "changedPixelFraction": 0.0
+          },
+          "exceedsObservedBaselineVariation": false
+        },
+        {
+          "file": "sao-paulo-dense-1.333333-base.png",
+          "difference": {
+            "meanAbsoluteChannelDifference": 0.0,
+            "maximumChannelDifference": 0,
+            "changedPixelFraction": 0.0
+          },
+          "baselineVariationMaximum": {
+            "meanAbsoluteChannelDifference": 5.3036803966437835e-05,
+            "maximumChannelDifference": 4,
+            "changedPixelFraction": 5.959191456903127e-05
+          },
+          "exceedsObservedBaselineVariation": false
+        },
+        {
+          "file": "sao-paulo-dense-1.333333-resize.png",
+          "difference": {
+            "meanAbsoluteChannelDifference": 0.0,
+            "maximumChannelDifference": 0,
+            "changedPixelFraction": 0.0
+          },
+          "baselineVariationMaximum": {
+            "meanAbsoluteChannelDifference": 1.437178072111847e-05,
+            "maximumChannelDifference": 3,
+            "changedPixelFraction": 1.379690949227373e-05
+          },
+          "exceedsObservedBaselineVariation": false
+        },
+        {
+          "file": "sao-paulo-dense-1.333333-update.png",
+          "difference": {
+            "meanAbsoluteChannelDifference": 0.0,
+            "maximumChannelDifference": 0,
+            "changedPixelFraction": 0.0
+          },
+          "baselineVariationMaximum": {
+            "meanAbsoluteChannelDifference": 4.767353165522502e-05,
+            "maximumChannelDifference": 4,
+            "changedPixelFraction": 3.5755148741418764e-05
+          },
+          "exceedsObservedBaselineVariation": false
+        },
+        {
+          "file": "sao-paulo-dense-2.195122-base.png",
+          "difference": {
+            "meanAbsoluteChannelDifference": 7.2521097046413505e-06,
+            "maximumChannelDifference": 5,
+            "changedPixelFraction": 3.5161744022503516e-06
+          },
+          "baselineVariationMaximum": {
+            "meanAbsoluteChannelDifference": 9.669479606188467e-06,
+            "maximumChannelDifference": 5,
+            "changedPixelFraction": 3.5161744022503516e-06
+          },
+          "exceedsObservedBaselineVariation": false
+        },
+        {
+          "file": "sao-paulo-dense-2.195122-resize.png",
+          "difference": {
+            "meanAbsoluteChannelDifference": 5.09044015339193e-06,
+            "maximumChannelDifference": 4,
+            "changedPixelFraction": 2.545220076695965e-06
+          },
+          "baselineVariationMaximum": {
+            "meanAbsoluteChannelDifference": 1.1453490345131842e-05,
+            "maximumChannelDifference": 7,
+            "changedPixelFraction": 5.09044015339193e-06
+          },
+          "exceedsObservedBaselineVariation": false
+        },
+        {
+          "file": "sao-paulo-dense-2.195122-update.png",
+          "difference": {
+            "meanAbsoluteChannelDifference": 1.2086849507735584e-05,
+            "maximumChannelDifference": 6,
+            "changedPixelFraction": 6.153305203938116e-06
+          },
+          "baselineVariationMaximum": {
+            "meanAbsoluteChannelDifference": 1.4504219409282701e-05,
+            "maximumChannelDifference": 6,
+            "changedPixelFraction": 6.153305203938116e-06
+          },
+          "exceedsObservedBaselineVariation": false
+        },
+        {
+          "file": "sorocaba-1.333333-base.png",
+          "difference": {
+            "meanAbsoluteChannelDifference": 0.0,
+            "maximumChannelDifference": 0,
+            "changedPixelFraction": 0.0
+          },
+          "baselineVariationMaximum": {
+            "meanAbsoluteChannelDifference": 1.4897978642257818e-05,
+            "maximumChannelDifference": 3,
+            "changedPixelFraction": 1.1918382913806255e-05
+          },
+          "exceedsObservedBaselineVariation": false
+        },
+        {
+          "file": "sorocaba-1.333333-resize.png",
+          "difference": {
+            "meanAbsoluteChannelDifference": 0.0,
+            "maximumChannelDifference": 0,
+            "changedPixelFraction": 0.0
+          },
+          "baselineVariationMaximum": {
+            "meanAbsoluteChannelDifference": 6.898454746136865e-06,
+            "maximumChannelDifference": 3,
+            "changedPixelFraction": 4.59896983075791e-06
+          },
+          "exceedsObservedBaselineVariation": false
+        },
+        {
+          "file": "sorocaba-1.333333-update.png",
+          "difference": {
+            "meanAbsoluteChannelDifference": 0.0,
+            "maximumChannelDifference": 0,
+            "changedPixelFraction": 0.0
+          },
+          "baselineVariationMaximum": {
+            "meanAbsoluteChannelDifference": 1.4897978642257818e-05,
+            "maximumChannelDifference": 3,
+            "changedPixelFraction": 1.1918382913806255e-05
+          },
+          "exceedsObservedBaselineVariation": false
+        },
+        {
+          "file": "sorocaba-2.195122-base.png",
+          "difference": {
+            "meanAbsoluteChannelDifference": 3.2304852320675105e-05,
+            "maximumChannelDifference": 5,
+            "changedPixelFraction": 1.2306610407876231e-05
+          },
+          "baselineVariationMaximum": {
+            "meanAbsoluteChannelDifference": 2.747011251758087e-05,
+            "maximumChannelDifference": 5,
+            "changedPixelFraction": 1.3185654008438819e-05
+          },
+          "exceedsObservedBaselineVariation": true
+        },
+        {
+          "file": "sorocaba-2.195122-resize.png",
+          "difference": {
+            "meanAbsoluteChannelDifference": 2.2906980690263684e-05,
+            "maximumChannelDifference": 4,
+            "changedPixelFraction": 7.635660230087895e-06
+          },
+          "baselineVariationMaximum": {
+            "meanAbsoluteChannelDifference": 1.2938202056537823e-05,
+            "maximumChannelDifference": 4,
+            "changedPixelFraction": 5.09044015339193e-06
+          },
+          "exceedsObservedBaselineVariation": true
+        },
+        {
+          "file": "sorocaba-2.195122-update.png",
+          "difference": {
+            "meanAbsoluteChannelDifference": 3.2304852320675105e-05,
+            "maximumChannelDifference": 5,
+            "changedPixelFraction": 1.2306610407876231e-05
+          },
+          "baselineVariationMaximum": {
+            "meanAbsoluteChannelDifference": 2.747011251758087e-05,
+            "maximumChannelDifference": 5,
+            "changedPixelFraction": 1.3185654008438819e-05
+          },
+          "exceedsObservedBaselineVariation": true
+        }
+      ]
+    }
+  ],
+  "note": "Observed baseline maxima describe these four runs only; they are not guaranteed tolerance bounds. Inspect images and semantic placement evidence before deciding correctness."
+}

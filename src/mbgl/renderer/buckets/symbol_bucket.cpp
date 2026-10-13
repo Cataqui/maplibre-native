@@ -96,6 +96,18 @@ bool SymbolBucket::hasData() const {
            hasTextCollisionBoxData() || hasIconCollisionCircleData() || hasTextCollisionCircleData();
 }
 
+void SymbolBucket::update(const FeatureStates& states,
+                          const GeometryTileLayer& layer,
+                          const std::string& layerID,
+                          const ImagePositions& imagePositions) {
+    auto it = paintProperties.find(layerID);
+    if (it != paintProperties.end()) {
+        it->second.iconBinders.updateVertexVectors(states, layer, imagePositions);
+        it->second.textBinders.updateVertexVectors(states, layer, imagePositions);
+        uploaded = false;
+    }
+}
+
 bool SymbolBucket::hasTextData() const {
     return !text.segments.empty();
 }
@@ -235,7 +247,7 @@ SymbolInstanceReferences SymbolBucket::getSymbols(const std::optional<SortKeyRan
 }
 
 #if MLN_SYMBOL_GUARDS
-bool SymbolBucket::check(std::source_location source) {
+bool SymbolBucket::check(source_location source) {
     if (text.vertices().elements() != text.dynamicVertices().elements() ||
         text.vertices().elements() != text.opacityVertices().elements() ||
         icon.vertices().elements() != icon.dynamicVertices().elements() ||

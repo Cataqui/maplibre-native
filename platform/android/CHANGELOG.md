@@ -1,5 +1,107 @@
 # Changelog MapLibre Native for Android
 
+## 13.4.1
+
+### 🐞 Bug fixes
+
+- core: check if edge length is zero for rounded corners  ([#4424](https://github.com/maplibre/maplibre-native/pull/4424)).
+
+## 13.4.0
+
+### ✨ Features and improvements
+
+- Add feature state functionality to Android ([#4219](https://github.com/maplibre/maplibre-native/pull/4219)).
+- Add fill extrusion style property that enables rounded corners for extruded buildings (Core feature) ([#4343](https://github.com/maplibre/maplibre-native/pull/4343)).
+- Enable FastPFOR encodings in MLT ([#4146](https://github.com/maplibre/maplibre-native/pull/4146)).
+- feat(android): Create default OkHttpClient only when needed ([#4411](https://github.com/maplibre/maplibre-native/pull/4411)).
+- feat(android): Vulkan graphics backend support for Android custom layers ([#4348](https://github.com/maplibre/maplibre-native/pull/4348)).
+- feat(core): render local CJK glyphs at 2x texture resolution ([#4304](https://github.com/maplibre/maplibre-native/pull/4304)).
+
+### 🐞 Bug fixes
+
+- Clamp pan offset to the horizon on pitched maps ([#3105](https://github.com/maplibre/maplibre-native/pull/3105)) (#4362).
+- Convert a PMTiles metadata decompression failure into an error response ([#4399](https://github.com/maplibre/maplibre-native/pull/4399)).
+- core: do not use JSON serialization for layer grouping key ([#4075](https://github.com/maplibre/maplibre-native/pull/4075)).
+- core: Fix Vulkan snapshot timing for headless too ([#4397](https://github.com/maplibre/maplibre-native/pull/4397)).
+- core: Tolerate stencil clipping setup failures ([#4317](https://github.com/maplibre/maplibre-native/pull/4317)).
+- fix(core): make headless OpenGL display singletons thread-safe ([#4332](https://github.com/maplibre/maplibre-native/pull/4332)).
+- fix(core): notify layer observer when source-layer or source-id changes ([#4372](https://github.com/maplibre/maplibre-native/pull/4372)).
+- fix(proguard): overly broad enum keep rule ([#4365](https://github.com/maplibre/maplibre-native/pull/4365)).
+
+## 13.3.1
+
+### ✨ Features and improvements
+
+- Reduce Android runtime symbol resolution ([#4356](https://github.com/maplibre/maplibre-native/pull/4356)).
+
+### 🐞 Bug fixes
+
+- fix(core): Update image descriptor sets when removing textures ([#4351](https://github.com/maplibre/maplibre-native/pull/4351)).
+- Fix surface snapshot timing ([#4339](https://github.com/maplibre/maplibre-native/pull/4339)).
+- core: Fix dynamic texture resource management ([#4337](https://github.com/maplibre/maplibre-native/pull/4337)).
+
+## 13.3.0
+
+### ✨ Features and improvements
+
+- core: Enable Vulkan surface transforms by capability ([#4320](https://github.com/maplibre/maplibre-native/pull/4320)).
+- core: Update Vulkan headers ([#4319](https://github.com/maplibre/maplibre-native/pull/4319)).
+- Improve Vulkan Android surface lifecycle ([#4323](https://github.com/maplibre/maplibre-native/pull/4323)).
+- Implement Vulkan surface snapshot ([#4314](https://github.com/maplibre/maplibre-native/pull/4314)).
+- Vulkan fill extrusion instancing [Core optimization] ([#4310](https://github.com/maplibre/maplibre-native/pull/4310)).
+- Implement ambient cache for PMTiles sources ([#4290](https://github.com/maplibre/maplibre-native/pull/4290)).
+
+### 🐞 Bug fixes
+
+- fix(android): guard stale layer remove path ([#4300](https://github.com/maplibre/maplibre-native/pull/4300)).
+- core: Fix specialized location indicator puck scaling ([#4327](https://github.com/maplibre/maplibre-native/pull/4327)).
+- Fix resize desync between Android surface and renderable ([#4328](https://github.com/maplibre/maplibre-native/pull/4328)).
+
+## 13.2.0
+
+### ✨ Features and improvements
+
+- Optimize fill extrusion memory by using instancing [Core optimization] ([#4256](https://github.com/maplibre/maplibre-native/pull/4256)).
+- Add asynchronous deletion option for Android renderer backend ([#4287](https://github.com/maplibre/maplibre-native/pull/4287)).
+
+### 🐞 Bug fixes
+
+- fix(renderer): guard ImageManager callback against use-after-free ([#4233](https://github.com/maplibre/maplibre-native/pull/4233)).
+- core: clear vulkan allocator handle after destruction ([#4302](https://github.com/maplibre/maplibre-native/pull/4302)).
+- [core] Keep `BackendScope` and context valid when closing the thread pool ([#4307](https://github.com/maplibre/maplibre-native/pull/4307)).
+- [core] Fix buffer versioning ([#4291](https://github.com/maplibre/maplibre-native/pull/4291)).
+
+## 13.1.0
+
+Note: this release has some changes to how icon offsets behave on pitched maps. If this causes a regression for your use case please open an issue on `maplibre/maplibre-native`.
+
+### ✨ Features and improvements
+
+- Update Boost to 1.90 ([#4210](https://github.com/maplibre/maplibre-native/pull/4210)).
+- android: update AGP and Gradle dependencies ([#4245](https://github.com/maplibre/maplibre-native/pull/4245)).
+- Handle allocation failure [Core feature] ([#4178](https://github.com/maplibre/maplibre-native/pull/4178)).
+-  (android): apply size optimization flags to RelWithDebInfo build config ([#4247](https://github.com/maplibre/maplibre-native/pull/4247)).
+- Disable icon scaling with offsets ([#3928](https://github.com/maplibre/maplibre-native/pull/3928)).
+- Add attribute buffer index to support multiple attributes interleaved in single buffer bind [Core optimization] ([#4241](https://github.com/maplibre/maplibre-native/pull/4241)).
+
+### 🐞 Bug fixes
+
+- Fix infinite recursion causing Stack Overflow in TileSet.kt setBounds() ([#4252](https://github.com/maplibre/maplibre-native/pull/4252)).
+- core: Fix crash in RenderLayer::updateTile when layerGroup is not a TileLayerGroup ([#4217](https://github.com/maplibre/maplibre-native/pull/4217)).
+
+## 13.0.2
+
+### ✨ Features and improvements
+
+- core: Skip empty dynamic texture submissions ([#4177](https://github.com/maplibre/maplibre-native/pull/4177)).
+- core: better handle tile compression in PMTiles sources ([#4159](https://github.com/maplibre/maplibre-native/pull/4159)).
+- core: Use interleaved buffer for paint property binders ([#4124](https://github.com/maplibre/maplibre-native/pull/4124)).
+
+### 🐞 Bug fixes
+
+- core: Fix vulkan surface rotation ([#4182](https://github.com/maplibre/maplibre-native/pull/4182)).
+- core: Fix crash during exception stack unwind ([#4188](https://github.com/maplibre/maplibre-native/pull/4188)).
+
 ## 13.0.1
 
 ### 🐞 Bug fixes

@@ -1,0 +1,2562 @@
+[
+  {
+    "upstreamSha": "81884212e954647fbf04cf7c2fb508a9c84ba340",
+    "title": "Make sure MLNScaleBar is exported (#4198)",
+    "measurementSha": "20d120303397d4cce27918768ffe626863e533fb",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "baseline-equivalent",
+    "scoreRatio": 1,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "53aa67c3002030a6d424cbfc91ff6a23f0d1cc54",
+    "title": "chore(deps): update dependency gradle to v8.14.4 (#4080)",
+    "measurementSha": "20d120303397d4cce27918768ffe626863e533fb",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "baseline-equivalent",
+    "scoreRatio": 1,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "d67e21d2411a708859dd269024d6912560b066da",
+    "title": "Fix build issues iOS example app (#4199)",
+    "measurementSha": "20d120303397d4cce27918768ffe626863e533fb",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "baseline-equivalent",
+    "scoreRatio": 1,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "b930be8337e311e736e27ec6cee2b64f5ae74f5c",
+    "title": "Release MapLibre iOS 6.25.0 (#4200)",
+    "measurementSha": "20d120303397d4cce27918768ffe626863e533fb",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "baseline-equivalent",
+    "scoreRatio": 1,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "6849681f74d681585629a2438af2a1ed4e12f804",
+    "title": "Release MapLibre Android 13.0.2 (#4201)",
+    "measurementSha": "20d120303397d4cce27918768ffe626863e533fb",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "baseline-equivalent",
+    "scoreRatio": 1,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "2055a06fe02968ed273c5054bee4bd8e308f6375",
+    "title": "Bump the github-actions group across 1 directory with 18 updates (#4196)",
+    "measurementSha": "20d120303397d4cce27918768ffe626863e533fb",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "baseline-equivalent",
+    "scoreRatio": 1,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "18d316e9a972660c15bdc252f0e0ada289e4c435",
+    "title": "Add Caltopo logo to backers section (#4209)",
+    "measurementSha": "20d120303397d4cce27918768ffe626863e533fb",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "baseline-equivalent",
+    "scoreRatio": 1,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "2ce0b6634b00a40e7f85dc138fda17bf2f3de0cf",
+    "title": "Remove Bounties, program phased out (#4212)",
+    "measurementSha": "20d120303397d4cce27918768ffe626863e533fb",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "baseline-equivalent",
+    "scoreRatio": 1,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "9cd8e64cc9820f64aa9bedba1bbc3ed1b4cf92ce",
+    "title": "Update Boost to 1.90 (#4210)",
+    "measurementSha": "9cd8e64cc9820f64aa9bedba1bbc3ed1b4cf92ce",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 1.0132732685120565,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "62b61492e84ccd8dcbba3785e19d77692ef54a9f",
+    "title": "Fixed typos - Replace Mapbox GL with MapLibre (build-msvc.md) (#4144)",
+    "measurementSha": "9cd8e64cc9820f64aa9bedba1bbc3ed1b4cf92ce",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 1.0132732685120565,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "04c4507fe80c7cfe515369cdb086907a5128a430",
+    "title": "ios: fix build issues Xcode 26 (#4216)",
+    "measurementSha": "9cd8e64cc9820f64aa9bedba1bbc3ed1b4cf92ce",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 1.0132732685120565,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "886af93da4a978c6249b09ae047f571dd9a1b9c3",
+    "title": "iOS: Force `MLNMapView` layout after transitions (#4225)",
+    "measurementSha": "9cd8e64cc9820f64aa9bedba1bbc3ed1b4cf92ce",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 1.0132732685120565,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "fe89ca47b8b009a06419ee79e8b7ac0257e47d74",
+    "title": "macos: fix Xcode 26 build compatibility (#4226)",
+    "measurementSha": "9cd8e64cc9820f64aa9bedba1bbc3ed1b4cf92ce",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 1.0132732685120565,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "3ebe7a2d87473a70f761351079df74325916cbe0",
+    "title": "macos: add xcframework Bazel targets (#4113)",
+    "measurementSha": "3ebe7a2d87473a70f761351079df74325916cbe0",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 1.0024884761312651,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "dacb7d4e074b4f9e2ce8be562c198e9956a52109",
+    "title": "Remove unused Jazzy docs (#4230)",
+    "measurementSha": "3ebe7a2d87473a70f761351079df74325916cbe0",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 1.0024884761312651,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "db984960c11ed1c2a67f2f3a76fb451da014cff3",
+    "title": "Release MapLibre iOS 6.25.1 (#4240)",
+    "measurementSha": "3ebe7a2d87473a70f761351079df74325916cbe0",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 1.0024884761312651,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "9f8667cf4459aeb10b9e45143c177bc401b32658",
+    "title": "android: update AGP and Gradle dependencies (#4245)",
+    "measurementSha": "3ebe7a2d87473a70f761351079df74325916cbe0",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 1.0024884761312651,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "14a81ec831674276c93b407688e375ace5a6d9f7",
+    "title": "Handle allocation failure [Core feature] (#4178)",
+    "measurementSha": "14a81ec831674276c93b407688e375ace5a6d9f7",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9995567333537646,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "39465b55b646ccdfe6a6933036cc2b030dfcb362",
+    "title": "Update dependency gradle to v9.4.1 (#4227)",
+    "measurementSha": "14a81ec831674276c93b407688e375ace5a6d9f7",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9995567333537646,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "edf6cd36e06dc736df5c0811ea9e65fdf4faf61b",
+    "title": "Link AI Policy from CONTRIBUTING.md (#4249)",
+    "measurementSha": "14a81ec831674276c93b407688e375ace5a6d9f7",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9995567333537646,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "ae818ca6f28e5776c1c9a886bb803c0cda9b6fce",
+    "title": "Benchmark cpu/memory usage (#3697)",
+    "measurementSha": "14a81ec831674276c93b407688e375ace5a6d9f7",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9995567333537646,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "0d78bd8d1a48f9366718977ce9daf01e077c1831",
+    "title": "Fix infinite recursion causing Stack Overflow in TileSet.kt setBounds() (#4252)",
+    "measurementSha": "14a81ec831674276c93b407688e375ace5a6d9f7",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9995567333537646,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "9e2d167656583875c47b5927e95a7a1fa5304f0b",
+    "title": "(android): apply size optimization flags to RelWithDebInfo build config (#4247)",
+    "measurementSha": "14a81ec831674276c93b407688e375ace5a6d9f7",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9995567333537646,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "f75f3b7e8fbe328241103cec7b164a7d3fec6480",
+    "title": "Disable icon scaling with offsets (#3928)",
+    "measurementSha": "f75f3b7e8fbe328241103cec7b164a7d3fec6480",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9887100122299368,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "2489914ec28a196a7979bf4fafa10f87c9c99cb8",
+    "title": "Disable `ViewPagerScrollTest` (#4255)",
+    "measurementSha": "f75f3b7e8fbe328241103cec7b164a7d3fec6480",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9887100122299368,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "5bf484bae43c9d596fb12d381c4b1e2d85f3ee75",
+    "title": "Fix: unconditionally rewriting contentScaleFactor/drawableSize every layout pass caused a feedback loop under iOS 26 Smart Display Zoom (#4251)",
+    "measurementSha": "f75f3b7e8fbe328241103cec7b164a7d3fec6480",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9887100122299368,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "67a29aabb05c276b7e6ef099d693c0f035c7dd97",
+    "title": "Release MapLibre iOS 6.26.0 (#4265)",
+    "measurementSha": "f75f3b7e8fbe328241103cec7b164a7d3fec6480",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9887100122299368,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "086bfcae4cdf5e6e4ced3921975606f99d258e25",
+    "title": "iOS: Fix case image expression crash (#4269)",
+    "measurementSha": "f75f3b7e8fbe328241103cec7b164a7d3fec6480",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9887100122299368,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "29f90974f05991752f8c40354ed8adc73b116b52",
+    "title": "Trigger ios-release from GitHub runner instead of self-hosted runner (#4246)",
+    "measurementSha": "f75f3b7e8fbe328241103cec7b164a7d3fec6480",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9887100122299368,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "86eff40b65e3b6064e3bee3fc5452d78686d9bcd",
+    "title": "Add attribute buffer index to support multiple attributes interleaved in single buffer bind [Core optimization] (#4241)",
+    "measurementSha": "86eff40b65e3b6064e3bee3fc5452d78686d9bcd",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 1.0043421819338063,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "5d702897708517132e894d92e074214e58b323fe",
+    "title": "core: Fix crash in RenderLayer::updateTile when layerGroup is not a TileLayerGroup (#4217)",
+    "measurementSha": "5d702897708517132e894d92e074214e58b323fe",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9759773444016175,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "80686f477c280c6fc76f2413fa7d80360bcf280a",
+    "title": "Release MapLibre Android 13.1.0 (#4271)",
+    "measurementSha": "5d702897708517132e894d92e074214e58b323fe",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9759773444016175,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "647636bf6115e058991dd644638ba6748c9cf4c6",
+    "title": "Expose Metal texture from headless backend (#4267)",
+    "measurementSha": "647636bf6115e058991dd644638ba6748c9cf4c6",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 1.0041951609023845,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "836ecad10545a7b521367a383f605d7421cd97ec",
+    "title": "update wgpu-native to 29.0.0.0 (#4222)",
+    "measurementSha": "836ecad10545a7b521367a383f605d7421cd97ec",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 1.0108790350284653,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "e0af63c913339973006e798030723d030518a519",
+    "title": "Update metal-cpp (#4087)",
+    "measurementSha": "e0af63c913339973006e798030723d030518a519",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 1.0057738754869128,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "6aa804f7e2f2c91d57e838cca9ddaf14d8101462",
+    "title": "Optimize fill extrusion memory by using instancing [Core optimization] (#4256)",
+    "measurementSha": "6aa804f7e2f2c91d57e838cca9ddaf14d8101462",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9991381596825176,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "9faee4790be60a2618d26f2eabfc5e24d5db9ddd",
+    "title": "Sponsor additions (#4285)",
+    "measurementSha": "6aa804f7e2f2c91d57e838cca9ddaf14d8101462",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9991381596825176,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "6b9b342bf3f335e68945cbcb3c38dc2c0e891242",
+    "title": "fix(renderer): guard ImageManager callback against use-after-free (#4233)",
+    "measurementSha": "6b9b342bf3f335e68945cbcb3c38dc2c0e891242",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9975894675319941,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "bccfcddfcff117aedf78a5892b11c53e716cee25",
+    "title": "Add asynchronous deletion option for Android renderer backend (#4287)",
+    "measurementSha": "6b9b342bf3f335e68945cbcb3c38dc2c0e891242",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9975894675319941,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "103a1447c043c36cf48ba18d9db735949bfcb360",
+    "title": "Bump simple-git from 3.33.0 to 3.36.0 (#4293)",
+    "measurementSha": "103a1447c043c36cf48ba18d9db735949bfcb360",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 1.0063331615059798,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "9e11772fa809b7fea459f592b8d7c2503cf29f4e",
+    "title": "core: clear vulkan allocator handle after destruction (#4302)",
+    "measurementSha": "9e11772fa809b7fea459f592b8d7c2503cf29f4e",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 1.0066302202721988,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "fe1d9112a0081c8d7dc1070a9e3d52210e9a22b3",
+    "title": "[core] Keep `BackendScope` and context valid when closing the thread pool (#4307)",
+    "measurementSha": "fe1d9112a0081c8d7dc1070a9e3d52210e9a22b3",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9986425196429543,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "57f2521a6a5d33787de00ced9b11f28bad67cbd5",
+    "title": "[core] Fix buffer versioning (#4291)",
+    "measurementSha": "57f2521a6a5d33787de00ced9b11f28bad67cbd5",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9870835855254175,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "d20b369af0bf0148587974a1b8d17b0e01b91b91",
+    "title": "Release MapLibre Android 13.2.0 (#4308)",
+    "measurementSha": "57f2521a6a5d33787de00ced9b11f28bad67cbd5",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9870835855254175,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "b53ac1b891996d0ff09f3ba380b4faba7116ceaf",
+    "title": "Hide vendored HarfBuzz symbols on Apple (#4263)",
+    "measurementSha": "b53ac1b891996d0ff09f3ba380b4faba7116ceaf",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 1.0043157957105013,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "b41590e474fc3d75fefdf91440883b7ebc82658b",
+    "title": "Release MapLibre iOS 6.26.1 (#4311)",
+    "measurementSha": "b53ac1b891996d0ff09f3ba380b4faba7116ceaf",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 1.0043157957105013,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "f3c29ccf0b21353e8e64de5c50a5bf682a9526fb",
+    "title": "fix(android): guard stale layer remove path (#4300)",
+    "measurementSha": "b53ac1b891996d0ff09f3ba380b4faba7116ceaf",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 1.0043157957105013,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "a4072d746775776259a9f30d96e5d9ac31c36073",
+    "title": "Replace link with MapLibre Plugins Android (#4313)",
+    "measurementSha": "a4072d746775776259a9f30d96e5d9ac31c36073",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 1.0089638081819192,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "47d09677560f090ff727d3b699685fc89e8e12e8",
+    "title": "Fix mlt and icu not included in the macOS amalgamation (#4316)",
+    "measurementSha": "a4072d746775776259a9f30d96e5d9ac31c36073",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 1.0089638081819192,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "9341970067b4f74ad37ac295bc6ad955c1dc48d2",
+    "title": "core: Enable Vulkan surface transforms by capability (#4320)",
+    "measurementSha": "9341970067b4f74ad37ac295bc6ad955c1dc48d2",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 1.0135042035139665,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "5602ad8bd357c1ffb2b63b8d45de1d85123fdb58",
+    "title": "core: Update Vulkan headers (#4319)",
+    "measurementSha": "5602ad8bd357c1ffb2b63b8d45de1d85123fdb58",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 1.0036347802776826,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "f6d70e954b07fdadf6a5adda8da49e73178298c6",
+    "title": "core: Add source location fallback (#4318)",
+    "measurementSha": "f6d70e954b07fdadf6a5adda8da49e73178298c6",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 1.0062197756027595,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "8456c3f925eab98259c87bf462ee12545d642f82",
+    "title": "Update node support to v26, remove node v20, update NAN to 2.27.0 (#4322)",
+    "measurementSha": "8456c3f925eab98259c87bf462ee12545d642f82",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 1.0047455574074342,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "35126d6a51d040de349c6c269b5fa744e0022378",
+    "title": "Bump js version to 6.5.0-pre.0 (#4325)",
+    "measurementSha": "35126d6a51d040de349c6c269b5fa744e0022378",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 1.0058601328290788,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "0642e7a913925516b84ec3355556dd3f46486f6b",
+    "title": "replace node-pre-gyp-github with gh release (#4329)",
+    "measurementSha": "0642e7a913925516b84ec3355556dd3f46486f6b",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 1.0070595453756561,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "7f678439651c6daba5ba4167a432ad4000d1dd1c",
+    "title": "Bump js version to 6.5.0-pre.1 (#4330)",
+    "measurementSha": "7f678439651c6daba5ba4167a432ad4000d1dd1c",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 1.0166430082142968,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "a770b79551626590a57b114a7751c53394f7eb4b",
+    "title": "core: Fix specialized location indicator puck scaling (#4327)",
+    "measurementSha": "a770b79551626590a57b114a7751c53394f7eb4b",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 1.001567683168766,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "269d1bc9101bcad0a5b61ab9ead4581287d4c091",
+    "title": "Improve Vulkan Android surface lifecycle (#4323)",
+    "measurementSha": "a770b79551626590a57b114a7751c53394f7eb4b",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 1.001567683168766,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "8a393c5b2c067aad972e086d214b7f15ad05d607",
+    "title": "Fix resize desync between Android surface and renderable (#4328)",
+    "measurementSha": "8a393c5b2c067aad972e086d214b7f15ad05d607",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9973922489163968,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "9fa80b37d2022deee257e9c70590627e104bb78b",
+    "title": "Implement Vulkan surface snapshot (#4314)",
+    "measurementSha": "9fa80b37d2022deee257e9c70590627e104bb78b",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 1.0114407495141335,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "1b6ed35426d5508e95f659733b9674df6073ba07",
+    "title": "Vulkan fill extrusion instancing [Core optimization] (#4310)",
+    "measurementSha": "1b6ed35426d5508e95f659733b9674df6073ba07",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 1.004360714587737,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "a2eb4409aa7ce3885b260104107286a34d31a770",
+    "title": "core: ambient cache for pmtile sources (#4290)",
+    "measurementSha": "a2eb4409aa7ce3885b260104107286a34d31a770",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9970076784225523,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "50bb530afd70a3af9c9fd0cbb7b0fac3ee09b4ac",
+    "title": "Release MapLibre Android 13.3.0 (#4334)",
+    "measurementSha": "a2eb4409aa7ce3885b260104107286a34d31a770",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9970076784225523,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "1193b1072ecb4d00394b000cdc0e14e115fc1405",
+    "title": "Release MapLibre iOS 6.27.0 (#4333)",
+    "measurementSha": "a2eb4409aa7ce3885b260104107286a34d31a770",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9970076784225523,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "3a7c0a11c2261d3f8397ed6b43f80e67e20e65d6",
+    "title": "Fix automated iOS release (#4335)",
+    "measurementSha": "a2eb4409aa7ce3885b260104107286a34d31a770",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9970076784225523,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "fa8a9c8e3261ce64940127aecc1d52f540c21c57",
+    "title": "Bundle wgpu-native into Linux WebGPU amalgamation (#4220)",
+    "measurementSha": "fa8a9c8e3261ce64940127aecc1d52f540c21c57",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9949664190835149,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "b7d171ea0b6d2d0bc548d6ec83618b36b162e192",
+    "title": "doc: fix mdbook links (#4354)",
+    "measurementSha": "fa8a9c8e3261ce64940127aecc1d52f540c21c57",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9949664190835149,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "0724dcf58dd45d4d02c2958d8971a424c4130657",
+    "title": "fix(android): Add missing benchmark app module (#4352)",
+    "measurementSha": "fa8a9c8e3261ce64940127aecc1d52f540c21c57",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9949664190835149,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "e7a373b013cd8acce4cfe462a2876829c1fe56ee",
+    "title": "core: Fix dynamic texture resource management (#4337)",
+    "measurementSha": "e7a373b013cd8acce4cfe462a2876829c1fe56ee",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 1.0010268000460378,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "55175e1d9d29d14d4fd66861cdf6daad608fdd4b",
+    "title": "fix(core): Update image descriptor sets when removing textures (#4351)",
+    "measurementSha": "55175e1d9d29d14d4fd66861cdf6daad608fdd4b",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9953258501560321,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "51b142b30919f3c5c037f12329a9f3e4bb6e7b2a",
+    "title": "Fix surface snapshot timing (#4339)",
+    "measurementSha": "51b142b30919f3c5c037f12329a9f3e4bb6e7b2a",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.999939274669653,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "7a26ce81079122e8ca7175b48b863ce386fd6ef9",
+    "title": "Reduce Android runtime symbol resolution (#4356)",
+    "measurementSha": "51b142b30919f3c5c037f12329a9f3e4bb6e7b2a",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.999939274669653,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "ea5dc44ee4e753252d0929e9ad731716b7524e55",
+    "title": "Release MapLibre Android 13.3.1 (#4361)",
+    "measurementSha": "51b142b30919f3c5c037f12329a9f3e4bb6e7b2a",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.999939274669653,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "9f6f8e3f1be98f105908eee03387de1b94a54b18",
+    "title": "Run iOS CI on GitHub-hosted macOS (#4359)",
+    "measurementSha": "9f6f8e3f1be98f105908eee03387de1b94a54b18",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9982647644537901,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "aa90185d424e6766db8a37ace65abac482619a97",
+    "title": "feat(android): Vulkan graphics backend support for Android custom layers (#4348)",
+    "measurementSha": "aa90185d424e6766db8a37ace65abac482619a97",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9964713404201945,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "60f15190c3c3a966d196ccf6eeeee5a363e21774",
+    "title": "core: Release finished WebGPU command encoders (#4368)",
+    "measurementSha": "60f15190c3c3a966d196ccf6eeeee5a363e21774",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 1.0011471021181466,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "887e6021e661b7586798311ccba2c8a6ded1a56e",
+    "title": "feat(core): render local CJK glyphs at 2x texture resolution (#4304)",
+    "measurementSha": "887e6021e661b7586798311ccba2c8a6ded1a56e",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.998373966304122,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "027b9340c3de25b6a40cee723513b8e58fe111bf",
+    "title": "core: Defer WebGPU dynamic texture wrapper creation (#4369)",
+    "measurementSha": "027b9340c3de25b6a40cee723513b8e58fe111bf",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 1.0054008327935802,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "58d76e16174d3766f1a5061af461271e5afd7b7a",
+    "title": "core: Remove dlfcn dependency on Windows (#4347)",
+    "measurementSha": "58d76e16174d3766f1a5061af461271e5afd7b7a",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 1.0123432675431718,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "4cfc8a97f75b13f8474b3e5b038bb45b1326747f",
+    "title": "add possibility to link wgpu library from extern (#4272)",
+    "measurementSha": "4cfc8a97f75b13f8474b3e5b038bb45b1326747f",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 1.006581941896836,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "7f0f09d1bcf7bfacaad83d15b89f665641781824",
+    "title": "Add WGPU default platform includes to mbgl-core (#4380)",
+    "measurementSha": "7f0f09d1bcf7bfacaad83d15b89f665641781824",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 1.0030152806570716,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "5611a2f76bced184d9bade5336442e09aa304a13",
+    "title": "fix(proguard): overly broad enum keep rule (#4365)",
+    "measurementSha": "7f0f09d1bcf7bfacaad83d15b89f665641781824",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 1.0030152806570716,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "516e01baa37b2145e3738d6577a4709d2a799a58",
+    "title": "Fix iOS Device Farm artifact permissions (#4381)",
+    "measurementSha": "7f0f09d1bcf7bfacaad83d15b89f665641781824",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 1.0030152806570716,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "b3052f9fce6a92f0061de73fb9cc647960b95b0b",
+    "title": "Fix iOS Bazel cache path (#4384)",
+    "measurementSha": "7f0f09d1bcf7bfacaad83d15b89f665641781824",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 1.0030152806570716,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "aad2e6d1826bd160e055e70ffebc00c82f681d5d",
+    "title": "Enable fill extrusion pattern render tests [Core] (#4261)",
+    "measurementSha": "aad2e6d1826bd160e055e70ffebc00c82f681d5d",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 1.0006485203820454,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "15256b5767152705867e422bb9757dbdeb48ffdc",
+    "title": "Use setup-bazel for iOS Bazel cache (#4386)",
+    "measurementSha": "aad2e6d1826bd160e055e70ffebc00c82f681d5d",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 1.0006485203820454,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "e8aa3712bb38fd3dad638cc6a82c1a2f32141cb0",
+    "title": "Configure shared sccache S3 setup (#4387)",
+    "measurementSha": "aad2e6d1826bd160e055e70ffebc00c82f681d5d",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 1.0006485203820454,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "08579ca76d35785605257921619f08d33dac4ac0",
+    "title": "fix(core): notify layer observer when source-layer or source-id changes (#4372)",
+    "measurementSha": "08579ca76d35785605257921619f08d33dac4ac0",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.953816662780692,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "fa6f19f0a00655f3094d7a00f6a852c34d1bfd62",
+    "title": "Fix MLNNetworkConfiguration not forwarding 'didReceiveResponse' to its delegate. (#4393)",
+    "measurementSha": "08579ca76d35785605257921619f08d33dac4ac0",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.953816662780692,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "46afad6a6b4772a919c3e70c867c3b621ec71672",
+    "title": "qt: clamp timer interval to INT_MAX ms (#4305)",
+    "measurementSha": "08579ca76d35785605257921619f08d33dac4ac0",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.953816662780692,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "14d3c7529d29a2bfb8733d0b112a38cdb8a0175b",
+    "title": "core: add nearClippedProjectionMatrix to MLNCustomStyleLayer (#4364)",
+    "measurementSha": "14d3c7529d29a2bfb8733d0b112a38cdb8a0175b",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 1.0322647530419404,
+    "verdict": "slower"
+  },
+  {
+    "upstreamSha": "ad258ded1c4b0e8b2d68f63e90b6538eb02f795a",
+    "title": "Fix Darwin style codegen Bazel requirement (#4391)",
+    "measurementSha": "14d3c7529d29a2bfb8733d0b112a38cdb8a0175b",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 1.0322647530419404,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "e3c81d607aec52a61743441aafbcd8b6d578b757",
+    "title": "Fix blurry map view in landscape on iPad (due to an orientation-varying scale factor) (#4373)",
+    "measurementSha": "14d3c7529d29a2bfb8733d0b112a38cdb8a0175b",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 1.0322647530419404,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "7f8297efe86b7b89ec4f06a5daef56c173fc2431",
+    "title": "Manual update of GitHub actions (#4394)",
+    "measurementSha": "14d3c7529d29a2bfb8733d0b112a38cdb8a0175b",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 1.0322647530419404,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "50fa63ddf428b6dcfe4abc040911182312afa661",
+    "title": "build(deps): bump bazel-contrib/setup-bazel from 8cb04a772ab4c1eb984e9c1b493a182e96c5e425 to c5acdfb288317d0b5c0bbd7a396a3dc868bb0f86 in the github-actions group across 1 directory (#4395)",
+    "measurementSha": "14d3c7529d29a2bfb8733d0b112a38cdb8a0175b",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 1.0322647530419404,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "62d716aed5457df592bb06e9216d500ed5409a09",
+    "title": "fix(test): convert with-server.js to ESM (use import syntax instead of require) (#4363)",
+    "measurementSha": "14d3c7529d29a2bfb8733d0b112a38cdb8a0175b",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 1.0322647530419404,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "60a7a7a5ed2814197ed121b67290c39528cc8179",
+    "title": "Clamp pan offset to the horizon on pitched maps (#3105) (#4362)",
+    "measurementSha": "60a7a7a5ed2814197ed121b67290c39528cc8179",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 1.0244915154531278,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "4fd61f40c72526fd20dd352083bdbba3dd446e93",
+    "title": "build(deps): bump taiki-e/install-action from 2.83.0 to 2.83.1 in the github-actions group (#4400)",
+    "measurementSha": "60a7a7a5ed2814197ed121b67290c39528cc8179",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 1.0244915154531278,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "eedb4def3d830f2e61add94159034c1995e84fb1",
+    "title": "Update pitched offset test to match maplibre-gl-js (#4336)",
+    "measurementSha": "60a7a7a5ed2814197ed121b67290c39528cc8179",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 1.0244915154531278,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "2e65a1940c6fa8ab92dc2c2fc7a6d6f935202df8",
+    "title": "chore(deps): update dependency bazel to v8.6.0 (#4053)",
+    "measurementSha": "60a7a7a5ed2814197ed121b67290c39528cc8179",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 1.0244915154531278,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "9d53ac53a624218687f01b44670a40d676994325",
+    "title": "feat(core): Include platform/default/include in headers tarball (#4346)",
+    "measurementSha": "60a7a7a5ed2814197ed121b67290c39528cc8179",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 1.0244915154531278,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "fba652eb7227e99064b6babbf36116c3e95ee48e",
+    "title": "fix: typos (#4202)",
+    "measurementSha": "fba652eb7227e99064b6babbf36116c3e95ee48e",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 1.0197933654763014,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "58538f0bcd80d24b505408dad4f4474e4d028ced",
+    "title": "core: do not use JSON serialization for layer grouping key (#4075)",
+    "measurementSha": "58538f0bcd80d24b505408dad4f4474e4d028ced",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 1.0017251866649164,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "945ffff22958416168a819d9c3220e1fa47d3b3a",
+    "title": "core: Tolerate stencil clipping setup failures (#4317)",
+    "measurementSha": "945ffff22958416168a819d9c3220e1fa47d3b3a",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9952560160633435,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "764accc8f5be4fca165ed10224c1fb97bae77834",
+    "title": "core: Fix Vulkan snapshot timing for headless too (#4397)",
+    "measurementSha": "764accc8f5be4fca165ed10224c1fb97bae77834",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 1.0285433432307596,
+    "verdict": "slower"
+  },
+  {
+    "upstreamSha": "c58080b491e447e012852c3ef06c19256ba1a7cf",
+    "title": "Add feature state functionality to Android (#4219)",
+    "measurementSha": "c58080b491e447e012852c3ef06c19256ba1a7cf",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 1.0177741486199299,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "d4ae69d3bce737846b310b488ed2fc178dc112c6",
+    "title": "fix(core): make headless OpenGL display singletons thread-safe (#4332)",
+    "measurementSha": "d4ae69d3bce737846b310b488ed2fc178dc112c6",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9449594137974844,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "f442c704b806d6f1e64242aa462a31c6f128cf47",
+    "title": "Fix intermittent iOS CppUnitTests build race (#4402)",
+    "measurementSha": "d4ae69d3bce737846b310b488ed2fc178dc112c6",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9449594137974844,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "247c776d2658b408c5a9138ee6dbed5bcd9f704f",
+    "title": "Enable FastPFOR encodings in MLT (#4146)",
+    "measurementSha": "247c776d2658b408c5a9138ee6dbed5bcd9f704f",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9563654379033424,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "6c55cef8b0bcc0014dd2da97e9b2c31216e09681",
+    "title": "Update PMTiles docs & bump NDK version (#4278)",
+    "measurementSha": "247c776d2658b408c5a9138ee6dbed5bcd9f704f",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9563654379033424,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "07f8f33e52e678e5b9a5537c2abdc92aa38bd2cc",
+    "title": "Convert a PMTiles metadata decompression failure into an error response (#4399)",
+    "measurementSha": "07f8f33e52e678e5b9a5537c2abdc92aa38bd2cc",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.958438930636771,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "93d484456a20b05071171956dec6098d57c73ee5",
+    "title": "macos: add release workflow for GitHub Releases (#4242)",
+    "measurementSha": "07f8f33e52e678e5b9a5537c2abdc92aa38bd2cc",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.958438930636771,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "cdde840e67cd464def800282e4d382c5df4948a1",
+    "title": "Fix Android feature state instrumentation tests (#4405)",
+    "measurementSha": "07f8f33e52e678e5b9a5537c2abdc92aa38bd2cc",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.958438930636771,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "ce3caaf78319cf3a6f244b896f022335b3765ced",
+    "title": "build(android): Use cacheable Gradle task for downloading Vulkan validation layers (#4412)",
+    "measurementSha": "07f8f33e52e678e5b9a5537c2abdc92aa38bd2cc",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.958438930636771,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "4ec05558c849954b551c55300b31a48616d4da35",
+    "title": "Remove AWS key from iOS/Android (#4413)",
+    "measurementSha": "07f8f33e52e678e5b9a5537c2abdc92aa38bd2cc",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.958438930636771,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "7426c42e6480ddb053786ba4dfe387aca70fd95e",
+    "title": "ios: release MapLibreApp to TestFlight (#4416)",
+    "measurementSha": "07f8f33e52e678e5b9a5537c2abdc92aa38bd2cc",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.958438930636771,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "d866b289cc7337c491ebde9546360a2a52ec4a0a",
+    "title": "Add fill extrusion style property that enables rounded corners for extruded buildings (Core feature) (#4343)",
+    "measurementSha": "d866b289cc7337c491ebde9546360a2a52ec4a0a",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9603713458870621,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "63293b3b2e4f819dd6e810ae53f1c4d7388be7ba",
+    "title": "feat(android): Create default OkHttpClient only when needed (#4411)",
+    "measurementSha": "d866b289cc7337c491ebde9546360a2a52ec4a0a",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9603713458870621,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "2a3e5e8cab298e9b72c6afcd7b09457249228971",
+    "title": "Release MapLibre Android 13.4.0 (#4423)",
+    "measurementSha": "d866b289cc7337c491ebde9546360a2a52ec4a0a",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9603713458870621,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "5f14c5501cb693199926438edfb24c97368c0d1e",
+    "title": "Release MapLibre iOS 6.28.0 (#4422)",
+    "measurementSha": "d866b289cc7337c491ebde9546360a2a52ec4a0a",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9603713458870621,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "5cfd7f165097918f38f172f78ca52f00bf18bf54",
+    "title": "Make sure maplibre-tile-spec builds OK with Qt with all configurations (#4419)",
+    "measurementSha": "5cfd7f165097918f38f172f78ca52f00bf18bf54",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9577401600846309,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "b288c6dee6ef87dd6fa37c7f2005979d271323ee",
+    "title": "feat(core): Add public stringifyGeoJSON to mbgl::style::conversion (#4345)",
+    "measurementSha": "b288c6dee6ef87dd6fa37c7f2005979d271323ee",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9492970976406072,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "702ebc6114ad864d86f86dd23b469183014fd548",
+    "title": "core: check if edge length is zero for rounded corners  (#4424)",
+    "measurementSha": "702ebc6114ad864d86f86dd23b469183014fd548",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9552765880443892,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "1d67f94dfcb6c2ee3e95e6f19db52fe36a6d429a",
+    "title": "core: refactor VectorMLTTileData behind impl (#4427)",
+    "measurementSha": "1d67f94dfcb6c2ee3e95e6f19db52fe36a6d429a",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9599946621982254,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "18545ca10d296704b2cba675b182ff2c8da24588",
+    "title": "Release MapLibre Android 13.4.1 and fix iOS workflow (#4429)",
+    "measurementSha": "1d67f94dfcb6c2ee3e95e6f19db52fe36a6d429a",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9599946621982254,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "15fcee54dc923680afdbcae7354a2caeb74a2269",
+    "title": "core: emdawnwebgpu build support (#4370)",
+    "measurementSha": "15fcee54dc923680afdbcae7354a2caeb74a2269",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9578471328511671,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "5bcdc704b8bbf0e629ee7189ec9ff7187e74a3ed",
+    "title": "core: Drain WebGPU render-thread cleanup jobs (#4367)",
+    "measurementSha": "5bcdc704b8bbf0e629ee7189ec9ff7187e74a3ed",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9656815206398809,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "83ce54ed3e4005b56b571e723d090003c4e6bf7c",
+    "title": "fix(core): accept alpha in hsl colors (#4435)",
+    "measurementSha": "83ce54ed3e4005b56b571e723d090003c4e6bf7c",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9643905688121005,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "a6189feecb744544ec15a6cd89c0d17583009dea",
+    "title": "docs: remove duplicate packages from macOS Homebrew   install command (#4441)",
+    "measurementSha": "83ce54ed3e4005b56b571e723d090003c4e6bf7c",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9643905688121005,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "c8dad00be558183af30971f2bb44d17b22cafb93",
+    "title": "fix(android): Fix surface changed ANR (#4439)",
+    "measurementSha": "83ce54ed3e4005b56b571e723d090003c4e6bf7c",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9643905688121005,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "5e6fd6bb788cd83477daa7b667afcd09e208043e",
+    "title": "do a recursive checkout in gh-pages-docc.yml workflow (#4450)",
+    "measurementSha": "83ce54ed3e4005b56b571e723d090003c4e6bf7c",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9643905688121005,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "a34723ff4a53d9622f7e42fc3f10197d5acb94bd",
+    "title": "fix(core): repaint feature-state-driven symbol paint properties (#4445)",
+    "measurementSha": "a34723ff4a53d9622f7e42fc3f10197d5acb94bd",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9368150231844464,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "25e4f6acbf521bd253f25d26b0e2b81ccf829d7c",
+    "title": "fix(android): Add option to move symbol location indicator bearing down the image stack (#4408)",
+    "measurementSha": "a34723ff4a53d9622f7e42fc3f10197d5acb94bd",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9368150231844464,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "9ef0f1c79084ec05535e1dfedbf695fc8363fb90",
+    "title": "core: add CustomVectorSource for binary tile data delivery (#4377)",
+    "measurementSha": "9ef0f1c79084ec05535e1dfedbf695fc8363fb90",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9730447614193215,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "e626fc0fbd3911ae2538267c36a94c01f2f8ff66",
+    "title": "Make string expressions operate on unicode (#4344)",
+    "measurementSha": "e626fc0fbd3911ae2538267c36a94c01f2f8ff66",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9472488926429018,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "f1905c521577f009c70179fac53e3f4f67a3fa53",
+    "title": "fix(core): Add action journal exception handling (#4438)",
+    "measurementSha": "f1905c521577f009c70179fac53e3f4f67a3fa53",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9790194036963079,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "40be634126c95fa1f592e9e66ff9a831b2ed7160",
+    "title": "Android: setOverrideSynchronousUpdate for existing sources (#4366)",
+    "measurementSha": "40be634126c95fa1f592e9e66ff9a831b2ed7160",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9793551999111598,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "e2b01754b66ba5c575569e561744eff99e6b5339",
+    "title": "build: Make the emdawnwebgpu suspension mode configurable (#4451)",
+    "measurementSha": "e2b01754b66ba5c575569e561744eff99e6b5339",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9494705037414758,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "ccb9af119e684f6fadd5eb14744e68bba9806694",
+    "title": "feat: specify layer/property that has a parse error when logging (#4292)",
+    "measurementSha": "ccb9af119e684f6fadd5eb14744e68bba9806694",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9346796015096575,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "b0388d186d582a8535aa3c03e3cc2ef98cb70dc0",
+    "title": "Add multiBackend Android flavor for runtime OpenGL/Vulkan switching (#4288)",
+    "measurementSha": "ccb9af119e684f6fadd5eb14744e68bba9806694",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9346796015096575,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "7f430aa624f29e9eb171b866f3f4ffee71ad37a8",
+    "title": "core: Use compatible descriptor set layout for tile clipping (#4470)",
+    "measurementSha": "7f430aa624f29e9eb171b866f3f4ffee71ad37a8",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9504553121479583,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "d9664ee1879485dc1cdce919000a5298d91a4f81",
+    "title": "core: Add error reporting for corrupted symbols (#4458)",
+    "measurementSha": "d9664ee1879485dc1cdce919000a5298d91a4f81",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9377427316491099,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "49f80e95f3fbe01af2935ecd2c9c7797f2f6eef1",
+    "title": "Changes to the custom Metal layer to allow more flexible rendering (#4446)",
+    "measurementSha": "49f80e95f3fbe01af2935ecd2c9c7797f2f6eef1",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9610360046309433,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "8be081ae8316162edde4714f08c34603addd4bf0",
+    "title": "accept libpng with different release/patch number (#4467)",
+    "measurementSha": "8be081ae8316162edde4714f08c34603addd4bf0",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.955988654382798,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "bd92c87d39517143b2503430830da86f694b2eae",
+    "title": "fix(android): Workaround for Adreno `VK_ERROR_DEVICE_LOST` (#4442)",
+    "measurementSha": "bd92c87d39517143b2503430830da86f694b2eae",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9524297111001327,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "9a9f8317822645f0f5f760d5879a38326849a5cf",
+    "title": "feat: implement split and join expressions (#4463)",
+    "measurementSha": "9a9f8317822645f0f5f760d5879a38326849a5cf",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9626528912734126,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "a666f02633c1d03bd793dc214cbb2dbcacf8d74e",
+    "title": "Release MapLibre Android 13.5.0 (#4477)",
+    "measurementSha": "9a9f8317822645f0f5f760d5879a38326849a5cf",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9626528912734126,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "743ed537942c0537a3092931b9f6185c9969604b",
+    "title": "fix (glfw): Remove duplicate `glfwSwapInterval` (#4484)",
+    "measurementSha": "9a9f8317822645f0f5f760d5879a38326849a5cf",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9626528912734126,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "d508e656926ab0e6175ceecd1d229a79fe1c160e",
+    "title": "macOS: render the Metal map on demand (#4480)",
+    "measurementSha": "9a9f8317822645f0f5f760d5879a38326849a5cf",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9626528912734126,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "6485d28b3eb43ac6687cd7faeae9ad74c1a5b00b",
+    "title": "macOS: report the drawable size to the renderer (#4479)",
+    "measurementSha": "9a9f8317822645f0f5f760d5879a38326849a5cf",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9626528912734126,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "95a977e12e1a3163c2fca7dff4648555144e69f0",
+    "title": "Reduce Android AAR size with header-only Prefab (#4483)",
+    "measurementSha": "95a977e12e1a3163c2fca7dff4648555144e69f0",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9423783247920513,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "836b8629844704052c1a1b1704868f27b618cdac",
+    "title": "android: allow configurable Maven publication repository (#4485)",
+    "measurementSha": "95a977e12e1a3163c2fca7dff4648555144e69f0",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9423783247920513,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "550f64be2232e09934ffc660a9acdbacff8b164a",
+    "title": "core: rename `mbgl` namespace to `mln` (#4487)",
+    "measurementSha": "550f64be2232e09934ffc660a9acdbacff8b164a",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9360967627332109,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "65a34053706139d5f6c52e71883d58ceda4c077b",
+    "title": "fix(core): Fix nullptr access during custom layer pre-render (#4496)",
+    "measurementSha": "65a34053706139d5f6c52e71883d58ceda4c077b",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9427280215841238,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "2e13de25f46d37240a7fce1e460ba92a0d9b5edb",
+    "title": "Fix surface transform (#4495)",
+    "measurementSha": "2e13de25f46d37240a7fce1e460ba92a0d9b5edb",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9947694269963069,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "f0bd259b53f5dda65cd092cc5f6ff15d4d9d2d83",
+    "title": "Release MapLibre Android 13.5.1 (#4507)",
+    "measurementSha": "2e13de25f46d37240a7fce1e460ba92a0d9b5edb",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9947694269963069,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "06fcf13d4201752e3d44e88663b0622efa391630",
+    "title": "fix(glfw): synchronize Metal renderable size (#4510)",
+    "measurementSha": "2e13de25f46d37240a7fce1e460ba92a0d9b5edb",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9947694269963069,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "2a8ebc4906df6037e756534e583a3b8e55283ed7",
+    "title": "core: rename `mbgl` directories to `mln` (#4511)",
+    "measurementSha": "2a8ebc4906df6037e756534e583a3b8e55283ed7",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9554413341886906,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "0c7fbe2b2938b06ad671b7fcf43e967065e05376",
+    "title": "Release MapLibre iOS 6.29.0 (#4509)",
+    "measurementSha": "2a8ebc4906df6037e756534e583a3b8e55283ed7",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9554413341886906,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "a4670161a039370e77b835cbcf9d6c64a0815f10",
+    "title": "Fix iOS Swift package release ordering (#4520)",
+    "measurementSha": "2a8ebc4906df6037e756534e583a3b8e55283ed7",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9554413341886906,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "08f775e2ed919bc5b2180d1db5c4766728d51674",
+    "title": "build(deps): bump the github-actions group across 1 directory with 13 updates (#4493)",
+    "measurementSha": "2a8ebc4906df6037e756534e583a3b8e55283ed7",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9554413341886906,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "ef5ff9ac014aa8981e87dac8a31b3760b8267c5d",
+    "title": "Update expected-lite to restore C++23 consumer compatibility for `database_file_source.hpp` (#4474)",
+    "measurementSha": "ef5ff9ac014aa8981e87dac8a31b3760b8267c5d",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9577553705234149,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "96afb98b7f8a6819fef5470673a79fe0352b8532",
+    "title": "core: remove unused Metal RendererBackend state-cache methods (#4519)",
+    "measurementSha": "96afb98b7f8a6819fef5470673a79fe0352b8532",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9722160117287371,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "1d0908bdaa26c1418c87a8ec72916c43dd8ccaca",
+    "title": "test: restore heatmap render tests disabled during renderer migration (#4466)",
+    "measurementSha": "96afb98b7f8a6819fef5470673a79fe0352b8532",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9722160117287371,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "cbe4681ef1ee71f8b8cc8bc03aa337cab3145a2a",
+    "title": "Reduce symbol buffers memory by using instancing (Core optimization) (#4383)",
+    "measurementSha": "cbe4681ef1ee71f8b8cc8bc03aa337cab3145a2a",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.958911924567405,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "c3b588321bf37f1878e6101a1f05174d9a6a2565",
+    "title": "Fix `ImageSource` not rendering across world copies (#4508)",
+    "measurementSha": "c3b588321bf37f1878e6101a1f05174d9a6a2565",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9784883961429128,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "6010a2e68782207a7e68dbb61ca3a57a1e999bc2",
+    "title": "fix(core): update amalgam symbol filters for mln namespace rename (#4531)",
+    "measurementSha": "6010a2e68782207a7e68dbb61ca3a57a1e999bc2",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9616613130212424,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "2919f71e394876ecca220a7a620000e337b318f2",
+    "title": "Release MapLibre Android 13.6.0 (#4529)",
+    "measurementSha": "6010a2e68782207a7e68dbb61ca3a57a1e999bc2",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9616613130212424,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "be3f03b86ec5dffc9ecb09ba1478fac84e9f66d0",
+    "title": "fix(macos): preserve exception RTTI in amalgam archive (#4350)",
+    "measurementSha": "6010a2e68782207a7e68dbb61ca3a57a1e999bc2",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9616613130212424,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "e5d0fce32a98ec94303ab18ae3da46581b0edd48",
+    "title": "core: refactor renderable size ownership (#4512)",
+    "measurementSha": "e5d0fce32a98ec94303ab18ae3da46581b0edd48",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9553679796393479,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "96e806931ddf0ed185e6df3584d43766515d60af",
+    "title": "fix(core): Sync image transition based on layout (#4540)",
+    "measurementSha": "96e806931ddf0ed185e6df3584d43766515d60af",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9726638205016448,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "0b342a1209121a27676c44c7157b3491321c4d80",
+    "title": "fix(core): Fix missing symbols/glyphs (#4554)",
+    "measurementSha": "0b342a1209121a27676c44c7157b3491321c4d80",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9782951467815374,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "fed6dc019b10440e807777cef78ff2fe9ef7a1a2",
+    "title": "ci: cancel superseded rust-ci runs on pull requests (#4555)",
+    "measurementSha": "0b342a1209121a27676c44c7157b3491321c4d80",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9782951467815374,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "474d127bfb081bd1b0074b8894daa5169a06d9f1",
+    "title": "fix(core): break a label before a left parenthesis, not after it (#4553)",
+    "measurementSha": "474d127bfb081bd1b0074b8894daa5169a06d9f1",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9670465906364769,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "843cdec996ae318f14aaf7fd2ebc783b0ba0d520",
+    "title": "fix(core): bundle fastpfor-lib into the Linux/macOS amalgams (#4538)",
+    "measurementSha": "843cdec996ae318f14aaf7fd2ebc783b0ba0d520",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.981594548761309,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "eca9e1db33d25c8c1054ad70cf2ca00608eee639",
+    "title": "mbgl-render add support for style from stdin and png to stdout (#4561)",
+    "measurementSha": "eca9e1db33d25c8c1054ad70cf2ca00608eee639",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.976045588546094,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "a33d3f00fb9dbf9117ce18edd799aa0ca5bcce5b",
+    "title": "fix(ios): use window scene interface orientation for heading compensation (#4548)",
+    "measurementSha": "eca9e1db33d25c8c1054ad70cf2ca00608eee639",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.976045588546094,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "042f21da5cc1598e19bd28d729a2deaa0bae253f",
+    "title": "Rename OpenGL event to GraphicsBackend (#4515)",
+    "measurementSha": "042f21da5cc1598e19bd28d729a2deaa0bae253f",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9723653924293939,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "57d198149785cb6068ca6d62d478670c64a60358",
+    "title": "keep digits and short codes upright in CJK line labels (#4566)",
+    "measurementSha": "57d198149785cb6068ca6d62d478670c64a60358",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.968195788448109,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "c7506d6aff3800e946f89e1a51432fc22d1a6534",
+    "title": "Release MapLibre Android 13.6.1 (#4601)",
+    "measurementSha": "57d198149785cb6068ca6d62d478670c64a60358",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.968195788448109,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "1a29db9b2b947f5d7ade43acdd5b39d8d5fd4b16",
+    "title": "fix(core): keep the padding-dependent pitch limit at or above the minimum pitch (#4576)",
+    "measurementSha": "1a29db9b2b947f5d7ade43acdd5b39d8d5fd4b16",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9602922365352636,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "955ea87d259439a7b8f54db4bb1a29e5b977165c",
+    "title": "core: remove obsolete chrono abs polyfill (#4605)",
+    "measurementSha": "955ea87d259439a7b8f54db4bb1a29e5b977165c",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9645895822996371,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "54b268cd19550b1bb0046fbee164c167e41a492f",
+    "title": "feat(ios): add feature state api (#4420)",
+    "measurementSha": "955ea87d259439a7b8f54db4bb1a29e5b977165c",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9645895822996371,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "469eccff0900b3f2d417cd2b95ed23de8b937efd",
+    "title": "Release MapLibre iOS 6.30.0 (#4609)",
+    "measurementSha": "955ea87d259439a7b8f54db4bb1a29e5b977165c",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9645895822996371,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "0ffe6336b4e7266c75c13337b4aa1d0f2b0877d5",
+    "title": "Ignore generated expression and render test reports (#4607)",
+    "measurementSha": "955ea87d259439a7b8f54db4bb1a29e5b977165c",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9645895822996371,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "a244ed6c52d4dc8dc0c6b3d9babd8f12ed4defbe",
+    "title": "core: remove CustomDrawableLayer API (#4611)",
+    "measurementSha": "a244ed6c52d4dc8dc0c6b3d9babd8f12ed4defbe",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9632926372515794,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "58e8696ad7254278decca7b86591dd9b5d11ce97",
+    "title": "fix(core): enumerate OpenGL extensions with glGetStringi when available (#4579)",
+    "measurementSha": "58e8696ad7254278decca7b86591dd9b5d11ce97",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9605491681276054,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "abd68adf0d0f3e661ae40e7515e0e0cff90d83f8",
+    "title": "Add semiliteral expression to core and mobile SDKs (#4604)",
+    "measurementSha": "abd68adf0d0f3e661ae40e7515e0e0cff90d83f8",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.95482613605554,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "01791ad02c1bfe3b22c42a97619b972aba962f82",
+    "title": "Release MapLibre iOS 6.31.0 (#4619)",
+    "measurementSha": "abd68adf0d0f3e661ae40e7515e0e0cff90d83f8",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.95482613605554,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "9ee6f1c3b5b97fc2cba1c1042cadef87fa158476",
+    "title": "fix(ios): Cancel tasks when dismissing long running test (#4620)",
+    "measurementSha": "abd68adf0d0f3e661ae40e7515e0e0cff90d83f8",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.95482613605554,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "766bac738dbe84e16a71c2f34050b1a0a14dae26",
+    "title": "fix(ios,core): Use @autoreleasepool blocks on worker threads (#4621)",
+    "measurementSha": "766bac738dbe84e16a71c2f34050b1a0a14dae26",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9533919923169037,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "3c53fd1cdb6340d0f1da4b313a29df1fc2a3cded",
+    "title": "chore: update dependencies to resolve security alerts (#4630)",
+    "measurementSha": "3c53fd1cdb6340d0f1da4b313a29df1fc2a3cded",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9565757802727963,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "5ef3766fa38ba4ab1137bd2763f95cd2f3348ca1",
+    "title": "Fix invisible raster layers on Adreno 3xx (#4631)",
+    "measurementSha": "5ef3766fa38ba4ab1137bd2763f95cd2f3348ca1",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9538355466728331,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "b8b51a82d6da16b9f2dce707c13ae6a3e21f8ab7",
+    "title": "chore(deps): update dependency bazel to v8.8.0 (#4632)",
+    "measurementSha": "5ef3766fa38ba4ab1137bd2763f95cd2f3348ca1",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9538355466728331,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "c82c14f9710a861e0a4cef335eff311eea50cd86",
+    "title": "Add a variation on the iOS Desert Bus test which repeatedly creates and destroys a map instance (#4633)",
+    "measurementSha": "c82c14f9710a861e0a4cef335eff311eea50cd86",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9636862639691147,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "1805fa27a55c59c84d72831ded4fa5cf0a042e25",
+    "title": "feat(core): Implement Rendered Feature Accessibility (#4460)",
+    "measurementSha": "1805fa27a55c59c84d72831ded4fa5cf0a042e25",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9775523646087702,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "d4543d7599f76342616d51a2e180a19a5a6811c9",
+    "title": "fix(core): use the correct WebGPU location indicator uniform binding (#4642)",
+    "measurementSha": "d4543d7599f76342616d51a2e180a19a5a6811c9",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9531224933628643,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "4c7c118078f1dced80707e6fe0f54ad1b32b0f59",
+    "title": "fix(core): rebuild background drawables after style changes (#4616)",
+    "measurementSha": "4c7c118078f1dced80707e6fe0f54ad1b32b0f59",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.977586913783215,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "04110d9d9b1866d31331f9b37568b1cd9b10f40d",
+    "title": "fix(core): skip WebGPU draws with missing required bindings (#4643)",
+    "measurementSha": "04110d9d9b1866d31331f9b37568b1cd9b10f40d",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9527012279532947,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "9da6e78c9f640f65637af9e647f64f97af5f51d6",
+    "title": "Logo update in sponsorship section (#4645)",
+    "measurementSha": "04110d9d9b1866d31331f9b37568b1cd9b10f40d",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9527012279532947,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "87a97ff582c71f4a4dacef45c2844691a93303a7",
+    "title": "fix(core): skip location indicator images without textures (#4641)",
+    "measurementSha": "87a97ff582c71f4a4dacef45c2844691a93303a7",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.941159791587979,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "ea57d2b4a2d3db76e7cb5b25afcccb8029a29df4",
+    "title": "feat(core): construct MapProjection from a TransformState (#4647)",
+    "measurementSha": "ea57d2b4a2d3db76e7cb5b25afcccb8029a29df4",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9587121684873753,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "5b003fa71fba238cc30f1086fa9d8254c1087b0b",
+    "title": "core: add first version of C plugin API with ngon layer as example (#4612)",
+    "measurementSha": "5b003fa71fba238cc30f1086fa9d8254c1087b0b",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.974337312261516,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "b18b5efff6dfb9868489be36100bed6093c7d396",
+    "title": "Increase min iOS to 15 to support Xcode 27 (#4648)",
+    "measurementSha": "b18b5efff6dfb9868489be36100bed6093c7d396",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.951820131471146,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "d5df4d12eaec24620dcba5b1a3a93c1318463d52",
+    "title": "perf(core): Convert available images to copy-on-write (#4651)",
+    "measurementSha": "d5df4d12eaec24620dcba5b1a3a93c1318463d52",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.975369124209564,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "ed73434e983facf74c075b3bf1f3d015365a123e",
+    "title": "core: Add HarmonyOS platform (#4315)",
+    "measurementSha": "ed73434e983facf74c075b3bf1f3d015365a123e",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9825571819024485,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "b7242e43a7ef1aec2adcccd0c577b14f928b2afe",
+    "title": "fix(core): pick raster-dem tiles at the rounded zoom like raster sources (#4650)",
+    "measurementSha": "b7242e43a7ef1aec2adcccd0c577b14f928b2afe",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9642906250378971,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "de51949f665160db9c04bc441b7b83ea39425ed3",
+    "title": "core/ios: require 15.5 and remove obsolete compatibility code (#4656)",
+    "measurementSha": "de51949f665160db9c04bc441b7b83ea39425ed3",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9568209193949496,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "0630c58ed7ae1e434ea4dba873fe6f784e196280",
+    "title": "ci: fix Codecov upload condition (#4655)",
+    "measurementSha": "de51949f665160db9c04bc441b7b83ea39425ed3",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9568209193949496,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "25b5675c093811a25ba98e46084fcddd8fc303b1",
+    "title": "build(deps): bump the github-actions group across 1 directory with 12 updates (#4659)",
+    "measurementSha": "de51949f665160db9c04bc441b7b83ea39425ed3",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9568209193949496,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "8d00e66b70b95fa8784131964ab16499e23d2d30",
+    "title": "fix(macos): align deployment targets on 14.3 (#4661)",
+    "measurementSha": "8d00e66b70b95fa8784131964ab16499e23d2d30",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9731124257879292,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "285976c40fa938453fc8465d92137d9826e13909",
+    "title": "fix(core): don't alias output and input in transformMat3f (#4662)",
+    "measurementSha": "285976c40fa938453fc8465d92137d9826e13909",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.958287820473807,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "bc332868b65d8d52ddca03ba3bd9c18e45383e36",
+    "title": "fix(core): premultiply plugin default colors (#4663)",
+    "measurementSha": "bc332868b65d8d52ddca03ba3bd9c18e45383e36",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9637928975649482,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "ef11fddfd6edff77ba494f80aefc7313250f016f",
+    "title": "core: add c plugin api stencil and near clip matrix features (#4665)",
+    "measurementSha": "ef11fddfd6edff77ba494f80aefc7313250f016f",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9776584522802421,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "72ec5f5fff701d3db657d4727d8c38c30843e0b6",
+    "title": "fix(core): Extend lod bias sampling to all textures (#4666)",
+    "measurementSha": "72ec5f5fff701d3db657d4727d8c38c30843e0b6",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9639383709167014,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "6f75ff093780c4bffa34a4474cf2506028f659f1",
+    "title": "fix(core): let Vulkan surfaces bound swapchain image acquisition (#4646)",
+    "measurementSha": "6f75ff093780c4bffa34a4474cf2506028f659f1",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.966030407315299,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "952b0b38b78457b5097eb180b73e8d037303d741",
+    "title": "ci(ios): free runner disk space before the size test build and the cache save (#4671)",
+    "measurementSha": "6f75ff093780c4bffa34a4474cf2506028f659f1",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.966030407315299,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "e366f83cb9c976f1e2da64d729a17276f794111b",
+    "title": "core: let latLngForPixel return unwrapped longitudes (#4573)",
+    "measurementSha": "e366f83cb9c976f1e2da64d729a17276f794111b",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9710296064048921,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "d695deef12fc64ee075a892c2d913c45fe8c7b42",
+    "title": "android: load APK assets from file:///android_asset/ URIs (#4501)",
+    "measurementSha": "e366f83cb9c976f1e2da64d729a17276f794111b",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9710296064048921,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "3d9a9a0dcd965363b38ca8595d46164a4bd3b070",
+    "title": "ci(ios): free runner disk space by deleting the simulator runtimes other than iOS (#4680)",
+    "measurementSha": "e366f83cb9c976f1e2da64d729a17276f794111b",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9710296064048921,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "c758494379f6a084959131e3a13af4bf6d698238",
+    "title": "android: read byte ranges (pmtiles) from APK assets (#4602)",
+    "measurementSha": "e366f83cb9c976f1e2da64d729a17276f794111b",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9710296064048921,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "c9c65b4378cab0cd2a27c9031f2b76c18b8f11b8",
+    "title": "core: make layer property scope independent of plugin support (#4652)",
+    "measurementSha": "c9c65b4378cab0cd2a27c9031f2b76c18b8f11b8",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9593821904149329,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "3db2ced57652d0329fe2703148bc10dc5eb32f8d",
+    "title": "core: Add should_animate callback to plugin layer API (#4654)",
+    "measurementSha": "3db2ced57652d0329fe2703148bc10dc5eb32f8d",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9538698794279613,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "ea6ae05fe69793ecf27792fa4b333944b226a27f",
+    "title": "ohos: Fix sample builds and validate shared linking in CI (#4687)",
+    "measurementSha": "3db2ced57652d0329fe2703148bc10dc5eb32f8d",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9538698794279613,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "ea9eb2c9d34a6b29eaa6ee682765b8b21930e482",
+    "title": "ci(windows): update vcpkg and fix the arm64 build on the Visual Studio 2026 runner image (#4693)",
+    "measurementSha": "ea9eb2c9d34a6b29eaa6ee682765b8b21930e482",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9794781940773069,
+    "verdict": "inconclusive"
+  },
+  {
+    "upstreamSha": "302960b90d89d81815e6bf7c8870ff282c43217b",
+    "title": "core: add per-drawable depth, stencil, and cull to C plugin API (#4692)",
+    "measurementSha": "302960b90d89d81815e6bf7c8870ff282c43217b",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9670679151788278,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "d55e579049ed75cb8f13bd734e43df5b994b1e41",
+    "title": "feat(core): js-parity global-state expression support (#4516)",
+    "measurementSha": "d55e579049ed75cb8f13bd734e43df5b994b1e41",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9564295479999613,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "6e7a82ae1244e1b29cb02e19832755ca1b552894",
+    "title": "ci: cancel superseded runs for every ios-ci job and the workflow_run follow-ups (#4667)",
+    "measurementSha": "d55e579049ed75cb8f13bd734e43df5b994b1e41",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9564295479999613,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "043df51b2dfebfd8a1f0b20d355ab23238ae31bb",
+    "title": "android: enable native plugins in pre-releases and add demo (#4653)",
+    "measurementSha": "d55e579049ed75cb8f13bd734e43df5b994b1e41",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9564295479999613,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "b2c5c0aff4d645c04cd37cdde33fc992d955f06b",
+    "title": "fix(android): Add `RenderingStats` inner classes to proguard exclusions to fix JNI (#4699)",
+    "measurementSha": "d55e579049ed75cb8f13bd734e43df5b994b1e41",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9564295479999613,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "ba9fc57bc88725d7602fd652e601384e9f2e3183",
+    "title": "Add Vanishing Route test/demo to iOS Swift app (#4681)",
+    "measurementSha": "d55e579049ed75cb8f13bd734e43df5b994b1e41",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9564295479999613,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "d2b3162a3cb3cdbc65a846214756d8e52109e8e7",
+    "title": "feat(core): add the interpolate-lab and interpolate-hcl expressions (#4668)",
+    "measurementSha": "d2b3162a3cb3cdbc65a846214756d8e52109e8e7",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9609315450967818,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "9b906be593c29516a813bcebf38a888eed111614",
+    "title": "chore(deps): update dependency bazel to v8.8.1 (#4709)",
+    "measurementSha": "d2b3162a3cb3cdbc65a846214756d8e52109e8e7",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9609315450967818,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "f13ceb6eb817cd8945abcc95f946dd25aa97c229",
+    "title": "build(deps): bump the github-actions group across 1 directory with 6 updates (#4716)",
+    "measurementSha": "d2b3162a3cb3cdbc65a846214756d8e52109e8e7",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9609315450967818,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "bf4388cbd5102f3a4af44c14dd2a48d957f53007",
+    "title": "build(ios): bundle XCFramework debug symbols and update Bazel dependencies (#4698)",
+    "measurementSha": "bf4388cbd5102f3a4af44c14dd2a48d957f53007",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.966652421932314,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "cf190b4adcef9285b5518f34957d668e345b2ba4",
+    "title": "fix(core): refresh location indicator colors during transitions (#4639)",
+    "measurementSha": "cf190b4adcef9285b5518f34957d668e345b2ba4",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9550034941748452,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "eae8b432146e31776d3dd08883dcf39aaa193ff0",
+    "title": "ci: time out hung jobs and retry stalled apt-get downloads (#4724)",
+    "measurementSha": "cf190b4adcef9285b5518f34957d668e345b2ba4",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9550034941748452,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "5ae8ce43cde5a56195fd369065476de2c2a66a1b",
+    "title": "fix(android): Close `MapRenderer` mailbox on renderer reset (#4686)",
+    "measurementSha": "cf190b4adcef9285b5518f34957d668e345b2ba4",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9550034941748452,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "f1909874093de87cb3a375573ab2228e89bbd227",
+    "title": "android, core: Use non-blocking resize for `MapLibreSurfaceView` (#4705)",
+    "measurementSha": "f1909874093de87cb3a375573ab2228e89bbd227",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9646935821727359,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "d61d19b040015eff57b8331dadc3826d31f7d5bb",
+    "title": "fix(core): size line patterns like GL JS (#4726)",
+    "measurementSha": "d61d19b040015eff57b8331dadc3826d31f7d5bb",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9607438889205094,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "707dd2fa1b02ec9beb166173e1e3405f3cab6858",
+    "title": "ci: remove validate-tags-match-title check (#4736)",
+    "measurementSha": "d61d19b040015eff57b8331dadc3826d31f7d5bb",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9607438889205094,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "730309bc09e663a538812eef11016b8de2a4fdf3",
+    "title": "stop the Xcode project Bazel server after the RenderTest build (#4733)",
+    "measurementSha": "d61d19b040015eff57b8331dadc3826d31f7d5bb",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9607438889205094,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "7e3a95d31ddeeafbbb95d71b7f14e7bd2583b6ca",
+    "title": "build: add Nix flake with Linux and Android dev shells (#4729)",
+    "measurementSha": "d61d19b040015eff57b8331dadc3826d31f7d5bb",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9607438889205094,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "6df8516da5c48d92a488afddc0703a2f245f5820",
+    "title": "fix(core): reset in-memory databases without filesystem deletion (#4720)",
+    "measurementSha": "6df8516da5c48d92a488afddc0703a2f245f5820",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9622683700928832,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "43e10605cd5b8b24d1cd411ce9544b70130fc040",
+    "title": "fix(core): reevaluate plugin camera paint when zoom changes (#4721)",
+    "measurementSha": "43e10605cd5b8b24d1cd411ce9544b70130fc040",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9424642228941682,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "85c85090c81dce41633a71d2577f6ee49685c149",
+    "title": "fix(core): handle custom geometry queries before tile data arrives (#4718)",
+    "measurementSha": "85c85090c81dce41633a71d2577f6ee49685c149",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9642116273413102,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "7a7241e4952de21977937f270aa6cd9dec73be2f",
+    "title": "ci(ios): downgrade Bazel to 8.6.0 and revert #4733 (#4739)",
+    "measurementSha": "85c85090c81dce41633a71d2577f6ee49685c149",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9642116273413102,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "7a47d4280e1d88f77528fa889cda2af8d5a75726",
+    "title": "ios: remove Mapbox.h (#4731)",
+    "measurementSha": "7a47d4280e1d88f77528fa889cda2af8d5a75726",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9700441184548271,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "3749417d220bd2a8daa791992045b6bfc6085ecd",
+    "title": "ci: use upstream ctcache and update the cache server IP (#4694)",
+    "measurementSha": "7a47d4280e1d88f77528fa889cda2af8d5a75726",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9700441184548271,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "6da0b62a369facc026134bcfa642276b3c48bdaa",
+    "title": "fix(core): retry failed Vulkan swapchain and surface rebuilds, add #4705 regression tests (#4730)",
+    "measurementSha": "6da0b62a369facc026134bcfa642276b3c48bdaa",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9516568088292717,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "a23b5b73e13ab10ebbff2f5dffa09ffe232752ed",
+    "title": "android: fix test app feature overview under edge-to-edge (#4728)",
+    "measurementSha": "6da0b62a369facc026134bcfa642276b3c48bdaa",
+    "requiresCompiledComparison": false,
+    "independentlyMeasured": false,
+    "status": "measured",
+    "scoreRatio": 0.9516568088292717,
+    "verdict": "same-build-inputs"
+  },
+  {
+    "upstreamSha": "ff0cad94dd40c5dfa7ca2ba3b56268e3677e602f",
+    "title": "fix(core): publish transition option changes (#4677)",
+    "measurementSha": "ff0cad94dd40c5dfa7ca2ba3b56268e3677e602f",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9571329532475656,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "10214d86e06e240eb1d384bc696c0156b36ccfbf",
+    "title": "Fix crash in RenderImageSource::update with an empty tile cover (#4753)",
+    "measurementSha": "10214d86e06e240eb1d384bc696c0156b36ccfbf",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9626118393986915,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "272365993acf4eb025ac291bae357891c962acd1",
+    "title": "fix(core): load file:///C:/ URLs and non-ASCII paths on Windows (#4572)",
+    "measurementSha": "272365993acf4eb025ac291bae357891c962acd1",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9636899419151875,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "29c98e92728258a2e7e0bf9ac4d14a72140a8f43",
+    "title": "fix(core): handle platform locale expression failures (#4745)",
+    "measurementSha": "29c98e92728258a2e7e0bf9ac4d14a72140a8f43",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9436653524123829,
+    "verdict": "faster"
+  },
+  {
+    "upstreamSha": "49537ef244ba08d730cf707c67f16da06956f3ee",
+    "title": "fix(core): maintain renderer frame and draw statistics (#4719)",
+    "measurementSha": "49537ef244ba08d730cf707c67f16da06956f3ee",
+    "requiresCompiledComparison": true,
+    "independentlyMeasured": true,
+    "status": "measured",
+    "scoreRatio": 0.9500190337525845,
+    "verdict": "faster"
+  }
+]

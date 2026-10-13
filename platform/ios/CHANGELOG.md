@@ -2,6 +2,60 @@
 
 MapLibre welcomes participation and contributions from everyone. Please read [`MapLibre iOS Developer Guide`](https://maplibre.org/maplibre-native/docs/book/ios/index.html) to get started.
 
+## 6.28.0
+
+- core: Fix dynamic texture resource management ([#4337](https://github.com/maplibre/maplibre-native/pull/4337)).
+- fix(core): Update image descriptor sets when removing textures ([#4351](https://github.com/maplibre/maplibre-native/pull/4351)).
+- Fix surface snapshot timing ([#4339](https://github.com/maplibre/maplibre-native/pull/4339)).
+- Reduce Android runtime symbol resolution ([#4356](https://github.com/maplibre/maplibre-native/pull/4356)).
+- feat(core): render local CJK glyphs at 2x texture resolution ([#4304](https://github.com/maplibre/maplibre-native/pull/4304)).
+- Convert a PMTiles metadata decompression failure into an error response instead of an uncaught exception ([#4399](https://github.com/maplibre/maplibre-native/pull/4399)).
+- fix(core): notify layer observer when source-layer or source-id changes ([#4372](https://github.com/maplibre/maplibre-native/pull/4372)).
+- Fix MLNNetworkConfiguration not forwarding 'didReceiveResponse' to its delegate. ([#4393](https://github.com/maplibre/maplibre-native/pull/4393)).
+- core: add nearClippedProjectionMatrix to MLNCustomStyleLayer ([#4364](https://github.com/maplibre/maplibre-native/pull/4364)).
+- Fix blurry map view in landscape on iPad (due to an orientation-varying scale factor) ([#4373](https://github.com/maplibre/maplibre-native/pull/4373)).
+- Clamp pan offset to the horizon on pitched maps ([#3105](https://github.com/maplibre/maplibre-native/pull/3105)) (#4362).
+- core: do not use JSON serialization for layer grouping key ([#4075](https://github.com/maplibre/maplibre-native/pull/4075)).
+- core: Tolerate stencil clipping setup failures ([#4317](https://github.com/maplibre/maplibre-native/pull/4317)).
+- Enable FastPFOR encodings in MLT ([#4146](https://github.com/maplibre/maplibre-native/pull/4146)).
+- Add fill extrusion style property that enables rounded corners for extruded buildings (Core feature) ([#4343](https://github.com/maplibre/maplibre-native/pull/4343)).
+- core: check if edge length is zero for rounded corners  ([#4424](https://github.com/maplibre/maplibre-native/pull/4424)).
+
+## 6.27.0
+
+- Implement ambient cache for PMTiles sources ([#4290](https://github.com/maplibre/maplibre-native/pull/4290)).
+
+## 6.26.1
+
+- Hide vendored HarfBuzz symbols on Apple ([#4263](https://github.com/maplibre/maplibre-native/pull/4263)).
+- Add attribute buffer index to support multiple attributes interleaved in single buffer bind [Core optimization] ([#4241](https://github.com/maplibre/maplibre-native/pull/4241)).
+- core: Fix crash in RenderLayer::updateTile when layerGroup is not a TileLayerGroup ([#4217](https://github.com/maplibre/maplibre-native/pull/4217)).
+- Expose Metal texture from headless backend ([#4267](https://github.com/maplibre/maplibre-native/pull/4267)).
+- Update metal-cpp ([#4087](https://github.com/maplibre/maplibre-native/pull/4087)).
+- Optimize fill extrusion memory by using instancing [Core optimization] ([#4256](https://github.com/maplibre/maplibre-native/pull/4256)).
+- fix(renderer): guard ImageManager callback against use-after-free ([#4233](https://github.com/maplibre/maplibre-native/pull/4233)).
+
+## 6.26.0
+
+Note: this release has some changes to how icon offsets behave on pitched maps. If this causes a regression for your use case please open an issue on `maplibre/maplibre-native`.
+
+- core: Handle allocation failure ([#4178](https://github.com/maplibre/maplibre-native/pull/4178)).
+- Disable icon scaling with offsets ([#3928](https://github.com/maplibre/maplibre-native/pull/3928)).
+- Fix: unconditionally rewriting contentScaleFactor/drawableSize every layout pass caused a feedback loop under iOS 26 Smart Display Zoom ([#4251](https://github.com/maplibre/maplibre-native/pull/4251)). This resolves CarPlay users were experiencing.
+- iOS: Fix case image expression crash ([#4269]((https://github.com/maplibre/maplibre-native/pull/4269))).
+
+## 6.25.1
+
+- iOS: Force `MLNMapView` layout after transitions ([#4225](https://github.com/maplibre/maplibre-native/pull/4225)).
+
+## 6.25.0
+
+- Expose Offline Region ID property on MLNOfflinePack for Darwin/iOS ([#4161](https://github.com/maplibre/maplibre-native/pull/4161)).
+- fix color-relief/hillshade invisible above fill layers on Metal/Vulkan/WebGPU ([#4166](https://github.com/maplibre/maplibre-native/pull/4166)).
+- core: better handle tile compression in PMTiles sources ([#4159](https://github.com/maplibre/maplibre-native/pull/4159)).
+- core: Use interleaved buffer for paint property binders ([#4124](https://github.com/maplibre/maplibre-native/pull/4124)).
+- Make sure MLNScaleBar is exported ([#4198](https://github.com/maplibre/maplibre-native/pull/4198)).
+
 ## 6.24.0
 
 - Fix crashing of iOS test apps and add Heatmap ([#4099](https://github.com/maplibre/maplibre-native/pull/4099)).

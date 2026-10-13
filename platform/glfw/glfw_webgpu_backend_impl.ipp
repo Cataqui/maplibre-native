@@ -606,7 +606,7 @@ GLFWWebGPUBackend::GLFWWebGPUBackend(GLFWwindow* window_, bool capFrameRate)
             x11Desc.window = x11Window;
 
             wgpu::SurfaceDescriptor surfaceDesc = {};
-            surfaceDesc.nextInChain = reinterpret_cast<const WGPUChainedStruct*>(&x11Desc);
+            surfaceDesc.nextInChain = reinterpret_cast<WGPUChainedStruct*>(&x11Desc);
 
             wgpuSurface = wgpuInstance.createSurface(surfaceDesc);
 #endif
@@ -750,6 +750,8 @@ GLFWWebGPUBackend::~GLFWWebGPUBackend() {
 
     // Mark any in-flight frame as completed so tear-down logic can continue.
     frameInProgress.store(false, std::memory_order_release);
+
+    context.reset();
 
     {
         std::lock_guard<SpinLock> guard(textureStateLock);

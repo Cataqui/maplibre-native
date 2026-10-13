@@ -1,6 +1,7 @@
 #pragma once
 
 #include <mbgl/gfx/attribute.hpp>
+#include <mbgl/shaders/layer_ubo.hpp>
 
 namespace mbgl {
 namespace attributes {
@@ -16,12 +17,13 @@ MBGL_DEFINE_ATTRIBUTE(int16_t, 4, pixeloffset);
 MBGL_DEFINE_ATTRIBUTE(int16_t, 2, label_pos);
 MBGL_DEFINE_ATTRIBUTE(int16_t, 2, anchor_pos);
 MBGL_DEFINE_ATTRIBUTE(uint16_t, 2, texture_pos);
-MBGL_DEFINE_ATTRIBUTE(int16_t, 4, normal_ed);
 MBGL_DEFINE_ATTRIBUTE(float, 1, fade_opacity);
 MBGL_DEFINE_ATTRIBUTE(uint16_t, 2, placed);
 MBGL_DEFINE_ATTRIBUTE(uint16_t, 3, size);
 MBGL_DEFINE_ATTRIBUTE(float, 1, offset);
 MBGL_DEFINE_ATTRIBUTE(float, 2, shift);
+MBGL_DEFINE_ATTRIBUTE(uint16_t, 2, decimals_ed);
+MBGL_DEFINE_ATTRIBUTE(int16_t, 2, normal2d);
 
 template <typename T, std::size_t N>
 struct data {

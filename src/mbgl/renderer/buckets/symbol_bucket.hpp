@@ -228,6 +228,7 @@ public:
 
     void upload(gfx::UploadPass&) override;
     bool hasData() const override;
+    void update(const FeatureStates&, const GeometryTileLayer&, const std::string&, const ImagePositions&) override;
     std::pair<uint32_t, bool> registerAtCrossTileIndex(CrossTileSymbolLayerIndex&, const RenderTile&) override;
     void place(Placement&, const BucketPlacementData&, std::set<uint32_t>&) override;
     void updateVertices(
@@ -251,7 +252,7 @@ public:
     SymbolInstanceReferences getSymbols(const std::optional<SortKeyRange>& sortKeyRange = std::nullopt) const;
 
 #if MLN_SYMBOL_GUARDS
-    bool check(std::source_location) override;
+    bool check(source_location) override;
 #endif
 
     static SymbolLayoutVertex layoutVertex(Point<float> labelAnchor,
