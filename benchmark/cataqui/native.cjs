@@ -38,7 +38,7 @@ function _features(scene, displacement) {
             scene.center[0] + ((index % 8) - 3.5 + displacement) * scene.width / 12 * degreesPerPixel,
             scene.center[1] + (Math.floor(index / 8) - 5.5) * scene.height / 16 * degreesPerPixel * Math.cos(latitude),
         ] },
-        properties: { id: String(index), rank: index, fitSide: index % 8 >= 5 ? "left" : index % 8 <= 2 ? "right" : "both", name: names[index % names.length], icon: icons[index % icons.length].id },
+        properties: { id: String(index), rank: index, fitSide: index % 8 >= 5 ? "left" : index % 8 <= 2 ? "right" : "both", name: icons[index % icons.length].id === "TRAIN_STATION" ? "" : names[index % names.length], icon: icons[index % icons.length].id },
     })) };
 }
 function _style(scene) {

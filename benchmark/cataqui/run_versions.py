@@ -15,6 +15,7 @@ SOURCE = WORKSPACE / "source"
 TOOLS = REPOSITORY / "benchmark/cataqui"
 
 def command(arguments, *, cwd=None, log=None, timeout=1800):
+    print("Step:", arguments[0], *arguments[1:3], flush=True)
     if log:
         with open(log, "a") as output:
             subprocess.run(arguments, cwd=cwd, check=True, stdout=output, stderr=subprocess.STDOUT, timeout=timeout)
