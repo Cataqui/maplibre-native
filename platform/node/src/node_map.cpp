@@ -50,6 +50,7 @@ struct NodeMap::RenderOptions {
     double ySkew = 1;
     std::vector<std::string> classes;
     mbgl::MapDebugOptions debugOptions = mbgl::MapDebugOptions::NoDebug;
+    bool prepareOnly = false;
 };
 
 Nan::Persistent<v8::Function> NodeMap::constructor;
@@ -94,6 +95,7 @@ ParseError)JS")
     Nan::SetPrototypeMethod(tpl, "load", Load);
     Nan::SetPrototypeMethod(tpl, "loaded", Loaded);
     Nan::SetPrototypeMethod(tpl, "render", Render);
+    Nan::SetPrototypeMethod(tpl, "drawPrepared", DrawPrepared);
     Nan::SetPrototypeMethod(tpl, "release", Release);
     Nan::SetPrototypeMethod(tpl, "cancel", Cancel);
 
@@ -250,6 +252,7 @@ void NodeMap::Load(const Nan::FunctionCallbackInfo<v8::Value>& info) {
     v8::Local<v8::Context> context = info.GetIsolate()->GetCurrentContext();
     auto nodeMap = Nan::ObjectWrap::Unwrap<NodeMap>(info.Holder());
     if (!nodeMap->map) return Nan::ThrowError(releasedMessage());
+    nodeMap->frontend->invalidatePreparedPlacement();
 
     // Reset the flag as this could be the second time
     // we are calling this (being the previous successful).
@@ -427,18 +430,24 @@ NodeMap::RenderOptions NodeMap::ParseOptions(v8::Local<v8::Object> obj) {
         }
     }
 
+    if (Nan::Has(obj, Nan::New("prepareOnly").ToLocalChecked()).FromJust()) {
+        auto value = Nan::Get(obj, Nan::New("prepareOnly").ToLocalChecked()).ToLocalChecked();
+        if (!value->IsBoolean()) throw mbgl::util::MisuseException("prepareOnly must be boolean");
+        options.prepareOnly = Nan::To<bool>(value).ToChecked();
+    }
     return options;
 }
 
 class RenderRequest : public Nan::AsyncResource {
 public:
-    explicit RenderRequest(v8::Local<v8::Function> callback_)
-        : AsyncResource("mbgl:RenderRequest") {
+    explicit RenderRequest(v8::Local<v8::Function> callback_, bool prepareOnly_ = false)
+        : AsyncResource("mbgl:RenderRequest"), prepareOnly(prepareOnly_) {
         callback.Reset(callback_);
     }
     ~RenderRequest() { callback.Reset(); }
 
     Nan::Persistent<v8::Function> callback;
+    const bool prepareOnly;
 };
 
 /**
@@ -486,9 +495,11 @@ void NodeMap::Render(const Nan::FunctionCallbackInfo<v8::Value>& info) {
             nodeMap->startRender();
         } else {
             auto options = ParseOptions(Nan::To<v8::Object>(info[0]).ToLocalChecked());
+            if (options.prepareOnly && nodeMap->mode != mbgl::MapMode::Static)
+                return Nan::ThrowTypeError("prepareOnly requires Static mode");
             assert(!nodeMap->req);
             assert(!nodeMap->image.data);
-            nodeMap->req = std::make_unique<RenderRequest>(Nan::To<v8::Function>(info[1]).ToLocalChecked());
+            nodeMap->req = std::make_unique<RenderRequest>(Nan::To<v8::Function>(info[1]).ToLocalChecked(), options.prepareOnly);
 
             nodeMap->startRender(options);
         }
@@ -503,14 +514,39 @@ void NodeMap::Render(const Nan::FunctionCallbackInfo<v8::Value>& info) {
     info.GetReturnValue().SetUndefined();
 }
 
+void NodeMap::DrawPrepared(const Nan::FunctionCallbackInfo<v8::Value>& info) {
+    auto nodeMap = Nan::ObjectWrap::Unwrap<NodeMap>(info.Holder());
+    if (!nodeMap->map) return Nan::ThrowError(releasedMessage());
+    if (info.Length() != 1 || !info[0]->IsFunction())
+        return Nan::ThrowTypeError("drawPrepared requires one callback");
+    if (nodeMap->req) return Nan::ThrowError("Map is processing a RenderRequest");
+    if (!nodeMap->frontend->hasPreparedPlacement()) return Nan::ThrowError("No valid prepared placement");
+    nodeMap->req = std::make_unique<RenderRequest>(Nan::To<v8::Function>(info[0]).ToLocalChecked());
+    nodeMap->Ref();
+    uv_ref(reinterpret_cast<uv_handle_t*>(nodeMap->async));
+    try {
+        nodeMap->image = nodeMap->frontend->drawPreparedImage();
+    } catch (...) {
+        // Callback boundary translates the original owned exception once; no rethrow.
+        nodeMap->error = std::current_exception();
+        nodeMap->frontend->invalidatePreparedPlacement();
+    }
+    uv_async_send(nodeMap->async);
+    info.GetReturnValue().SetUndefined();
+}
+
 void NodeMap::startRender() {
+    frontend->setPrepareOnly(false);
     map->renderStill([this](const std::exception_ptr& eptr) {
         if (eptr) {
             error = eptr;
+            frontend->setPrepareOnly(false);
+            frontend->invalidatePreparedPlacement();
             uv_async_send(async);
         } else {
             assert(!image.data);
-            image = frontend->readStillImage();
+            if (!req->prepareOnly) image = frontend->readStillImage();
+            frontend->setPrepareOnly(false);
             uv_async_send(async);
         }
     });
@@ -525,6 +561,7 @@ void NodeMap::startRender() {
 }
 
 void NodeMap::startRender(const NodeMap::RenderOptions& options) {
+    frontend->setPrepareOnly(options.prepareOnly);
     frontend->setSize(options.size);
     map->setSize(options.size);
 
@@ -542,10 +579,13 @@ void NodeMap::startRender(const NodeMap::RenderOptions& options) {
     map->renderStill(camera, options.debugOptions, [this](const std::exception_ptr& eptr) {
         if (eptr) {
             error = eptr;
+            frontend->setPrepareOnly(false);
+            frontend->invalidatePreparedPlacement();
             uv_async_send(async);
         } else {
             assert(!image.data);
-            image = frontend->readStillImage();
+            if (!req->prepareOnly) image = frontend->readStillImage();
+            frontend->setPrepareOnly(false);
             uv_async_send(async);
         }
     });
@@ -603,6 +643,9 @@ void NodeMap::renderFinished() {
         assert(!error);
 
         request->runInAsyncScope(target, callback, 1, argv);
+    } else if (request->prepareOnly) {
+        v8::Local<v8::Value> argv[] = {Nan::Null(), Nan::True()};
+        request->runInAsyncScope(target, callback, 2, argv);
     } else if (img.data) {
         v8::Local<v8::Object> pixels = Nan::NewBuffer(
                                            reinterpret_cast<char*>(img.data.get()),
@@ -715,6 +758,7 @@ void NodeMap::AddSource(const Nan::FunctionCallbackInfo<v8::Value>& info) {
 
     auto nodeMap = Nan::ObjectWrap::Unwrap<NodeMap>(info.Holder());
     if (!nodeMap->map) return Nan::ThrowError(releasedMessage());
+    nodeMap->frontend->invalidatePreparedPlacement();
 
     if (info.Length() != 2) {
         return Nan::ThrowTypeError("Two argument required");
@@ -742,6 +786,7 @@ void NodeMap::AddSource(const Nan::FunctionCallbackInfo<v8::Value>& info) {
 void NodeMap::SetGeoJSONSourceData(const Nan::FunctionCallbackInfo<v8::Value>& info) {
     auto nodeMap = Nan::ObjectWrap::Unwrap<NodeMap>(info.Holder());
     if (!nodeMap->map) return Nan::ThrowError(releasedMessage());
+    nodeMap->frontend->invalidatePreparedPlacement();
     if (nodeMap->req) return Nan::ThrowError("Map is currently processing a RenderRequest");
     if (!nodeMap->loaded) return Nan::ThrowTypeError("Style is not loaded");
     if (info.Length() != 2) return Nan::ThrowTypeError("Two arguments required");
@@ -790,6 +835,7 @@ void NodeMap::RemoveSource(const Nan::FunctionCallbackInfo<v8::Value>& info) {
 
     auto nodeMap = Nan::ObjectWrap::Unwrap<NodeMap>(info.Holder());
     if (!nodeMap->map) return Nan::ThrowError(releasedMessage());
+    nodeMap->frontend->invalidatePreparedPlacement();
 
     if (info.Length() != 1) {
         return Nan::ThrowTypeError("One argument required");
@@ -808,6 +854,7 @@ void NodeMap::AddLayer(const Nan::FunctionCallbackInfo<v8::Value>& info) {
 
     auto nodeMap = Nan::ObjectWrap::Unwrap<NodeMap>(info.Holder());
     if (!nodeMap->map) return Nan::ThrowError(releasedMessage());
+    nodeMap->frontend->invalidatePreparedPlacement();
 
     if (info.Length() != 1) {
         return Nan::ThrowTypeError("One argument required");
@@ -829,6 +876,7 @@ void NodeMap::RemoveLayer(const Nan::FunctionCallbackInfo<v8::Value>& info) {
 
     auto nodeMap = Nan::ObjectWrap::Unwrap<NodeMap>(info.Holder());
     if (!nodeMap->map) return Nan::ThrowError(releasedMessage());
+    nodeMap->frontend->invalidatePreparedPlacement();
 
     if (info.Length() != 1) {
         return Nan::ThrowTypeError("One argument required");
@@ -849,6 +897,7 @@ void NodeMap::AddImage(const Nan::FunctionCallbackInfo<v8::Value>& info) {
 
     auto nodeMap = Nan::ObjectWrap::Unwrap<NodeMap>(info.Holder());
     if (!nodeMap->map) return Nan::ThrowError(releasedMessage());
+    nodeMap->frontend->invalidatePreparedPlacement();
 
     if (info.Length() != 3) {
         return Nan::ThrowTypeError("Three arguments required");
@@ -921,6 +970,7 @@ void NodeMap::RemoveImage(const Nan::FunctionCallbackInfo<v8::Value>& info) {
 
     auto nodeMap = Nan::ObjectWrap::Unwrap<NodeMap>(info.Holder());
     if (!nodeMap->map) return Nan::ThrowError(releasedMessage());
+    nodeMap->frontend->invalidatePreparedPlacement();
 
     if (info.Length() != 1) {
         return Nan::ThrowTypeError("One argument required");
@@ -938,6 +988,7 @@ void NodeMap::SetLayerZoomRange(const Nan::FunctionCallbackInfo<v8::Value>& info
 
     auto nodeMap = Nan::ObjectWrap::Unwrap<NodeMap>(info.Holder());
     if (!nodeMap->map) return Nan::ThrowError(releasedMessage());
+    nodeMap->frontend->invalidatePreparedPlacement();
 
     if (info.Length() != 3) {
         return Nan::ThrowTypeError("Three arguments required");
@@ -966,6 +1017,7 @@ void NodeMap::SetLayerProperty(const Nan::FunctionCallbackInfo<v8::Value>& info)
 
     auto nodeMap = Nan::ObjectWrap::Unwrap<NodeMap>(info.Holder());
     if (!nodeMap->map) return Nan::ThrowError(releasedMessage());
+    nodeMap->frontend->invalidatePreparedPlacement();
 
     if (info.Length() < 3) {
         return Nan::ThrowTypeError("Three arguments required");
@@ -998,6 +1050,7 @@ void NodeMap::SetFilter(const Nan::FunctionCallbackInfo<v8::Value>& info) {
 
     auto nodeMap = Nan::ObjectWrap::Unwrap<NodeMap>(info.Holder());
     if (!nodeMap->map) return Nan::ThrowError(releasedMessage());
+    nodeMap->frontend->invalidatePreparedPlacement();
 
     if (info.Length() < 2) {
         return Nan::ThrowTypeError("Two arguments required");
@@ -1030,6 +1083,7 @@ void NodeMap::SetFilter(const Nan::FunctionCallbackInfo<v8::Value>& info) {
 void NodeMap::SetSize(const Nan::FunctionCallbackInfo<v8::Value>& info) {
     auto nodeMap = Nan::ObjectWrap::Unwrap<NodeMap>(info.Holder());
     if (!nodeMap->map) return Nan::ThrowError(releasedMessage());
+    nodeMap->frontend->invalidatePreparedPlacement();
 
     if (info.Length() <= 0 || !info[0]->IsArray()) {
         return Nan::ThrowTypeError("First argument must be an array");
@@ -1058,6 +1112,7 @@ void NodeMap::SetSize(const Nan::FunctionCallbackInfo<v8::Value>& info) {
 void NodeMap::SetCenter(const Nan::FunctionCallbackInfo<v8::Value>& info) {
     auto nodeMap = Nan::ObjectWrap::Unwrap<NodeMap>(info.Holder());
     if (!nodeMap->map) return Nan::ThrowError(releasedMessage());
+    nodeMap->frontend->invalidatePreparedPlacement();
 
     if (info.Length() <= 0 || !info[0]->IsArray()) {
         return Nan::ThrowTypeError("First argument must be an array");
@@ -1085,6 +1140,7 @@ void NodeMap::SetCenter(const Nan::FunctionCallbackInfo<v8::Value>& info) {
 void NodeMap::SetZoom(const Nan::FunctionCallbackInfo<v8::Value>& info) {
     auto nodeMap = Nan::ObjectWrap::Unwrap<NodeMap>(info.Holder());
     if (!nodeMap->map) return Nan::ThrowError(releasedMessage());
+    nodeMap->frontend->invalidatePreparedPlacement();
 
     if (info.Length() <= 0 || !info[0]->IsNumber()) {
         return Nan::ThrowTypeError("First argument must be a number");
@@ -1102,6 +1158,7 @@ void NodeMap::SetZoom(const Nan::FunctionCallbackInfo<v8::Value>& info) {
 void NodeMap::SetBearing(const Nan::FunctionCallbackInfo<v8::Value>& info) {
     auto nodeMap = Nan::ObjectWrap::Unwrap<NodeMap>(info.Holder());
     if (!nodeMap->map) return Nan::ThrowError(releasedMessage());
+    nodeMap->frontend->invalidatePreparedPlacement();
 
     if (info.Length() <= 0 || !info[0]->IsNumber()) {
         return Nan::ThrowTypeError("First argument must be a number");
@@ -1119,6 +1176,7 @@ void NodeMap::SetBearing(const Nan::FunctionCallbackInfo<v8::Value>& info) {
 void NodeMap::SetPitch(const Nan::FunctionCallbackInfo<v8::Value>& info) {
     auto nodeMap = Nan::ObjectWrap::Unwrap<NodeMap>(info.Holder());
     if (!nodeMap->map) return Nan::ThrowError(releasedMessage());
+    nodeMap->frontend->invalidatePreparedPlacement();
 
     if (info.Length() <= 0 || !info[0]->IsNumber()) {
         return Nan::ThrowTypeError("First argument must be a number");
@@ -1139,6 +1197,7 @@ void NodeMap::SetLight(const Nan::FunctionCallbackInfo<v8::Value>& info) {
 
     auto nodeMap = Nan::ObjectWrap::Unwrap<NodeMap>(info.Holder());
     if (!nodeMap->map) return Nan::ThrowError(releasedMessage());
+    nodeMap->frontend->invalidatePreparedPlacement();
 
     if (info.Length() <= 0 || !info[0]->IsObject()) {
         return Nan::ThrowTypeError("First argument must be an object");
@@ -1161,6 +1220,7 @@ void NodeMap::SetLight(const Nan::FunctionCallbackInfo<v8::Value>& info) {
 void NodeMap::SetAxonometric(const Nan::FunctionCallbackInfo<v8::Value>& info) {
     auto nodeMap = Nan::ObjectWrap::Unwrap<NodeMap>(info.Holder());
     if (!nodeMap->map) return Nan::ThrowError(releasedMessage());
+    nodeMap->frontend->invalidatePreparedPlacement();
 
     if (info.Length() <= 0 || !info[0]->IsBoolean()) {
         return Nan::ThrowTypeError("First argument must be a boolean");
@@ -1178,6 +1238,7 @@ void NodeMap::SetAxonometric(const Nan::FunctionCallbackInfo<v8::Value>& info) {
 void NodeMap::SetXSkew(const Nan::FunctionCallbackInfo<v8::Value>& info) {
     auto nodeMap = Nan::ObjectWrap::Unwrap<NodeMap>(info.Holder());
     if (!nodeMap->map) return Nan::ThrowError(releasedMessage());
+    nodeMap->frontend->invalidatePreparedPlacement();
 
     if (info.Length() <= 0 || !info[0]->IsNumber()) {
         return Nan::ThrowTypeError("First argument must be a number");
@@ -1195,6 +1256,7 @@ void NodeMap::SetXSkew(const Nan::FunctionCallbackInfo<v8::Value>& info) {
 void NodeMap::SetYSkew(const Nan::FunctionCallbackInfo<v8::Value>& info) {
     auto nodeMap = Nan::ObjectWrap::Unwrap<NodeMap>(info.Holder());
     if (!nodeMap->map) return Nan::ThrowError(releasedMessage());
+    nodeMap->frontend->invalidatePreparedPlacement();
 
     if (info.Length() <= 0 || !info[0]->IsNumber()) {
         return Nan::ThrowTypeError("First argument must be a number");
@@ -1215,6 +1277,7 @@ void NodeMap::SetFeatureState(const Nan::FunctionCallbackInfo<v8::Value>& info) 
 
     auto nodeMap = Nan::ObjectWrap::Unwrap<NodeMap>(info.Holder());
     if (!nodeMap->map) return Nan::ThrowError(releasedMessage());
+    nodeMap->frontend->invalidatePreparedPlacement();
 
     if (info.Length() < 2) {
         return Nan::ThrowTypeError("Two arguments required");
@@ -1374,6 +1437,7 @@ void NodeMap::GetFeatureState(const Nan::FunctionCallbackInfo<v8::Value>& info) 
 void NodeMap::RemoveFeatureState(const Nan::FunctionCallbackInfo<v8::Value>& info) {
     auto nodeMap = Nan::ObjectWrap::Unwrap<NodeMap>(info.Holder());
     if (!nodeMap->map) return Nan::ThrowError(releasedMessage());
+    nodeMap->frontend->invalidatePreparedPlacement();
 
     if (info.Length() < 1) {
         return Nan::ThrowTypeError("At least one argument required");

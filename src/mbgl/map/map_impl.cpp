@@ -280,6 +280,14 @@ void Map::Impl::onDidFinishRenderingFrame(RenderMode renderMode,
     }
 }
 
+void Map::Impl::onDidFinishPreparingFrame() {
+    assert(mode == MapMode::Static);
+    if (stillImageRequest) {
+        const auto request = std::move(stillImageRequest);
+        request->callback(nullptr);
+    }
+}
+
 void Map::Impl::onWillStartRenderingMap() {
     if (mode == MapMode::Continuous) {
         observer.onWillStartRenderingMap();

@@ -54,6 +54,8 @@ private:
     std::unique_ptr<RenderStaticData> staticData;
     gfx::DynamicTextureAtlasPtr dynamicTextureAtlas;
     bool styleLoaded = false;
+    std::unique_ptr<RenderTree> preparedTree;
+    std::shared_ptr<UpdateParameters> preparedParameters;
 
     enum class RenderState {
         Never,

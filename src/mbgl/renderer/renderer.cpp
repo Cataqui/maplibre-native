@@ -9,6 +9,8 @@
 #include <mbgl/renderer/render_static_data.hpp>
 #include <mbgl/renderer/render_tree.hpp>
 #include <mbgl/renderer/update_parameters.hpp>
+#include <mbgl/renderer/renderer_observer.hpp>
+#include <mbgl/util/exception.hpp>
 #include <mbgl/util/instrumentation.hpp>
 
 #include <algorithm>
@@ -24,6 +26,7 @@ Renderer::~Renderer() {
 }
 
 void Renderer::markContextLost() {
+    invalidatePreparedPlacement();
     impl->orchestrator.markContextLost();
 }
 
@@ -34,6 +37,7 @@ void Renderer::setObserver(RendererObserver* observer) {
 
 void Renderer::render(const std::shared_ptr<UpdateParameters>& updateParameters) {
     MLN_TRACE_FUNC();
+    invalidatePreparedPlacement();
     assert(updateParameters);
     const bool styleChanged = impl->styleLoaded && !updateParameters->styleLoaded;
     impl->styleLoaded = updateParameters->styleLoaded;
@@ -45,6 +49,46 @@ void Renderer::render(const std::shared_ptr<UpdateParameters>& updateParameters)
         renderTree->prepare();
         impl->render(*renderTree, updateParameters);
     }
+}
+
+void Renderer::preparePlacement(const std::shared_ptr<UpdateParameters>& updateParameters) {
+    MLN_TRACE_FUNC();
+    invalidatePreparedPlacement();
+    if (!updateParameters || updateParameters->mode != MapMode::Static) {
+        throw util::MisuseException("Placement preparation requires Static mode");
+    }
+    const bool styleChanged = impl->styleLoaded && !updateParameters->styleLoaded;
+    impl->styleLoaded = updateParameters->styleLoaded;
+    if (!impl->dynamicTextureAtlas || styleChanged) {
+        auto& context = impl->backend.getContext();
+        impl->dynamicTextureAtlas = std::make_unique<gfx::DynamicTextureAtlas>(context);
+    }
+    auto tree = impl->orchestrator.createRenderTree(updateParameters, impl->dynamicTextureAtlas);
+    // Static createRenderTree returns nullptr until style, tiles, glyphs and images are loaded.
+    if (!tree) return;
+    tree->prepare();
+    impl->preparedParameters = updateParameters;
+    impl->preparedTree = std::move(tree);
+    // Do not report a raster frame or advance the renderer's renderState/frameCount.
+    impl->observer->onDidFinishPreparingFrame();
+}
+
+bool Renderer::hasPreparedPlacement() const {
+    return bool(impl->preparedTree) && bool(impl->preparedParameters);
+}
+
+void Renderer::drawPrepared() {
+    if (!hasPreparedPlacement()) throw util::MisuseException("No valid prepared placement");
+    // Release owned cache before callbacks; a reentrant call cannot consume the same tree twice.
+    auto tree = std::move(impl->preparedTree);
+    auto parameters = std::move(impl->preparedParameters);
+    impl->render(*tree, parameters);
+}
+
+void Renderer::invalidatePreparedPlacement() {
+    // RenderTree holds references into orchestrator. Drop it before any scene mutation/cleanup.
+    impl->preparedTree.reset();
+    impl->preparedParameters.reset();
 }
 
 std::vector<Feature> Renderer::queryRenderedFeatures(const ScreenLineString& geometry,
@@ -153,11 +197,13 @@ bool Renderer::getTileCacheEnabled() const {
 
 void Renderer::reduceMemoryUse() {
     gfx::BackendScope guard{impl->backend};
+    invalidatePreparedPlacement();
     impl->reduceMemoryUse();
     impl->orchestrator.reduceMemoryUse();
 }
 
 void Renderer::clearData() {
+    invalidatePreparedPlacement();
     impl->orchestrator.clearData();
 }
 

@@ -53,6 +53,12 @@ public:
 
     void render(const std::shared_ptr<UpdateParameters>&);
 
+    // Cataqui prototype: Static-only placement, retained until the immediately following draw.
+    void preparePlacement(const std::shared_ptr<UpdateParameters>&);
+    bool hasPreparedPlacement() const;
+    void drawPrepared();
+    void invalidatePreparedPlacement();
+
     /// Feature queries
     std::vector<Feature> queryRenderedFeatures(const ScreenLineString&, const RenderedQueryOptions& options = {}) const;
     std::vector<Feature> queryRenderedFeatures(const ScreenCoordinate& point,

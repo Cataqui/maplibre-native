@@ -61,6 +61,7 @@ public:
     void onResourceError(std::exception_ptr) final;
     void onWillStartRenderingFrame() final;
     void onDidFinishRenderingFrame(RenderMode, bool, bool, const gfx::RenderingStats&) final;
+    void onDidFinishPreparingFrame() final;
     void onWillStartRenderingMap() final;
     void onDidFinishRenderingMap() final;
     void onStyleImageMissing(const std::string&, const std::function<void()>&) final;

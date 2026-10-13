@@ -8,6 +8,7 @@
 #include <mbgl/renderer/update_parameters.hpp>
 #include <mbgl/util/monotonic_timer.hpp>
 #include <mbgl/util/run_loop.hpp>
+#include <mbgl/util/exception.hpp>
 
 namespace mbgl {
 
@@ -122,6 +123,7 @@ LatLng HeadlessFrontend::latLngForPixel(const ScreenCoordinate& point) {
 
 void HeadlessFrontend::setSize(Size size_) {
     if (size != size_) {
+        invalidatePreparedPlacement();
         size = size_;
         backend->setSize(
             {static_cast<uint32_t>(size_.width * pixelRatio), static_cast<uint32_t>(size_.height * pixelRatio)});
@@ -129,6 +131,23 @@ void HeadlessFrontend::setSize(Size size_) {
 }
 
 PremultipliedImage HeadlessFrontend::readStillImage() {
+    return backend->readStillImage();
+}
+
+void HeadlessFrontend::setPrepareOnly(bool value) { prepareOnly = value; }
+
+bool HeadlessFrontend::hasPreparedPlacement() const {
+    return renderer && renderer->hasPreparedPlacement();
+}
+
+void HeadlessFrontend::invalidatePreparedPlacement() {
+    if (renderer) renderer->invalidatePreparedPlacement();
+}
+
+PremultipliedImage HeadlessFrontend::drawPreparedImage() {
+    if (!renderer) throw util::MisuseException("Renderer is released");
+    gfx::BackendScope guard{*getBackend()};
+    renderer->drawPrepared();
     return backend->readStillImage();
 }
 
@@ -172,7 +191,8 @@ void HeadlessFrontend::renderFrame() {
         // Copy the shared pointer here so that the parameters aren't
         // destroyed while `render(...)` is still using them.
         auto updateParameters_ = updateParameters;
-        renderer->render(updateParameters_);
+        if (prepareOnly) renderer->preparePlacement(updateParameters_);
+        else renderer->render(updateParameters_);
 
         auto endTime = mbgl::util::MonotonicTimer::now();
         frameTime = (endTime - startTime).count();

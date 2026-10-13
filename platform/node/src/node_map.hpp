@@ -44,6 +44,7 @@ public:
     static void Load(const Nan::FunctionCallbackInfo<v8::Value>&);
     static void Loaded(const Nan::FunctionCallbackInfo<v8::Value>&);
     static void Render(const Nan::FunctionCallbackInfo<v8::Value>&);
+    static void DrawPrepared(const Nan::FunctionCallbackInfo<v8::Value>&);
     static void Release(const Nan::FunctionCallbackInfo<v8::Value>&);
     static void Cancel(const Nan::FunctionCallbackInfo<v8::Value>&);
     static void AddSource(const Nan::FunctionCallbackInfo<v8::Value>&);

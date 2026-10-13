@@ -59,6 +59,9 @@ public:
         onDidFinishRenderingFrame(mode, repaint, placementChanged, stats.encodingTime, stats.renderingTime);
     }
 
+    // Static-only ready notification; no raster/rendering frame has completed.
+    virtual void onDidFinishPreparingFrame() {}
+
     /// Final frame
     virtual void onDidFinishRenderingMap() {}
 

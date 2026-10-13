@@ -56,6 +56,10 @@ public:
     LatLng latLngForPixel(const ScreenCoordinate&);
 
     PremultipliedImage readStillImage();
+    void setPrepareOnly(bool);
+    bool hasPreparedPlacement() const;
+    void invalidatePreparedPlacement();
+    PremultipliedImage drawPreparedImage();
     RenderResult render(Map&);
     void renderOnce(Map&);
     void renderFrame();
@@ -70,6 +74,7 @@ private:
     std::unique_ptr<gfx::HeadlessBackend> backend;
     util::AsyncTask asyncInvalidate;
     bool invalidateOnUpdate;
+    bool prepareOnly = false;
 
     std::unique_ptr<Renderer> renderer;
     std::shared_ptr<UpdateParameters> updateParameters;
