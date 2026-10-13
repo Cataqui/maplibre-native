@@ -7,6 +7,7 @@ import shutil
 import subprocess
 import time
 from pathlib import Path
+from PIL import Image, PngImagePlugin
 from prepare_version import prepare, CAPABILITIES
 
 REPOSITORY = Path("/repository")
@@ -62,6 +63,16 @@ def measure(addon, output, name, blocks, frames=False):
     if frames:
         arguments.extend(["--frames", str(output / (name + "-frames"))])
     command(arguments, log=output / "measurements.log", timeout=600)
+    if frames:
+        metadata = json.loads(destination.read_text())
+        directory = output / (name + "-frames")
+        notice = PngImagePlugin.PngInfo()
+        notice.add_text("Attribution", "Map data: OpenStreetMap contributors, Protomaps. Cataqui style and controlled synthetic reference markers.")
+        for frame in metadata["frames"]:
+            raw = directory / (frame["key"] + ".rgba")
+            image = Image.frombytes("RGBA", (frame["width"], frame["height"]), raw.read_bytes())
+            image.save(raw.with_suffix(".png"), pnginfo=notice)
+            raw.unlink()
     return str(destination.name)
 
 if __name__ == "__main__":
@@ -93,7 +104,7 @@ if __name__ == "__main__":
                 entry["binarySha256"] = hashlib.sha256((addon / "lib/node-v137/mbgl.node").read_bytes()).hexdigest()
                 entry["passes"] = []
                 for index, kind in enumerate(["baseline", "candidate", "candidate", "baseline"]):
-                    file = measure(baseline if kind == "baseline" else addon, output, f"{sha[:12]}-{index}-{kind}", arguments.blocks)
+                    file = measure(baseline if kind == "baseline" else addon, output, f"{sha[:12]}-{index}-{kind}", arguments.blocks, frames=arguments.group == "finalists" and index < 2)
                     entry["passes"].append({"kind": kind, "file": file})
                 entry["status"] = "measured"
             except Exception as error:

@@ -3,7 +3,7 @@ FROM node:24.20.0-bookworm-slim AS node
 FROM ubuntu:24.04
 RUN apt-get update && apt-get install --no-install-recommends -y \
     ca-certificates git xvfb xauth libgl1-mesa-dri libegl1 ccache \
-    build-essential clang cmake ninja-build pkg-config python3 libuv1-dev \
+    build-essential clang cmake ninja-build pkg-config python3 python3-pil libuv1-dev \
     libglfw3-dev libglu1-mesa-dev libgl1-mesa-dev libcurl4-openssl-dev \
     libpng-dev libjpeg-dev libicu-dev libwebp-dev libx11-dev libxrandr-dev \
     libxi-dev libxcursor-dev libxinerama-dev \

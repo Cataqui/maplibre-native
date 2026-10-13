@@ -86,8 +86,8 @@ async function _prepared(map, scene) {
     assert.equal(bytes.length, Math.floor(scene.width * scene.density) * Math.floor(scene.height * scene.density) * 4);
     return { bytes, ids: [...new Set(features.map(feature => feature.properties.id))].sort() };
 }
-function _frame(key, scene, result) {
-    if (values.frames) {
+function _frame(key, scene, result, save = false) {
+    if (save && values.frames) {
         fs.mkdirSync(values.frames, { recursive: true });
         fs.writeFileSync(path.join(values.frames, key + ".rgba"), result.bytes);
     }
@@ -142,6 +142,11 @@ function _frame(key, scene, result) {
                 map.release(); map = undefined;
                 record.phases.release = performance.now() - start;
                 record.maxRssKiB = process.resourceUsage().maxRSS;
+                if (block === -1 && values.frames) {
+                    _frame(key + "-base", scene, warm, true);
+                    _frame(key + "-update", scene, updated, true);
+                    _frame(key + "-resize", resized, resizedResult, true);
+                }
                 if (block === 0) {
                     frames.push(_frame(key + "-base", scene, warm));
                     frames.push(_frame(key + "-update", scene, updated));
@@ -151,6 +156,6 @@ function _frame(key, scene, result) {
             } finally { if (map) map.release(); }
         }
     }
-    fs.writeFileSync(values.output, JSON.stringify({ schemaVersion: 1, platform: process.platform, arch: process.arch, node: process.version, abi: process.versions.modules, samples, frames, usedResources: [...usedResources].sort() }, null, 2) + "\n");
+    fs.writeFileSync(values.output, JSON.stringify({ schemaVersion: 1, harnessSha256: createHash("sha256").update(fs.readFileSync(__filename)).digest("hex"), fixtureSha256: createHash("sha256").update(fs.readFileSync(path.join(fixtures, "manifest.json"))).update(fs.readFileSync(path.join(fixtures, "production-style.json"))).update(fs.readFileSync(path.join(fixtures, "icons.json"))).digest("hex"), platform: process.platform, arch: process.arch, node: process.version, abi: process.versions.modules, samples, frames, usedResources: [...usedResources].sort() }, null, 2) + "\n");
     console.log(JSON.stringify({ samples: samples.length, output: values.output }));
 })().catch(error => { console.error(error); process.exitCode = 1; });
