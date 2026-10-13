@@ -9,6 +9,24 @@ from pathlib import Path
 
 PRIMARY = ("cold", "warm", "parallel", "update", "filtered", "resize")
 
+def _resolved(candidates):
+    resolved = {}
+    for row in candidates:
+        previous = resolved.get(row["sha"])
+        if previous is None:
+            resolved[row["sha"]] = row
+        elif previous["status"] == "measured" and row["status"] == "measured":
+            raise ValueError("Analyze independent measured runs separately")
+        elif row["status"] == "measured":
+            row["previousFailures"] = [previous]
+            resolved[row["sha"]] = row
+        elif previous["status"] == "measured":
+            previous.setdefault("previousFailures", []).append(row)
+        else:
+            row["previousFailures"] = [previous]
+            resolved[row["sha"]] = row
+    return list(resolved.values())
+
 def _cells(samples):
     cells = {}
     for sample in samples:
@@ -102,6 +120,7 @@ if __name__ == "__main__":
             result["visualReviewRequired"] = bool(result["changedFrames"])
             result["regressedCells"] = [cell for cell in result["cells"] if cell["confidence95"][0] > 1]
             candidates.append(result)
+    candidates = _resolved(candidates)
     candidates.sort(key=lambda row: row.get("scoreRatio", float("inf")))
     (output / "comparison.json").write_text(json.dumps({"controls": controls, "candidates": candidates, "note": "Scores are balanced geometric means across cases and phases, not production traffic-weighted request latency. Confidence intervals resample whole passes and blocks and require independent finalist repetition; they do not prove hardware equivalence. Individual cell intervals are screening evidence, not multiplicity-adjusted definitive tests."}, indent=2) + "\n")
     with open(output / "comparison.csv", "w") as file:

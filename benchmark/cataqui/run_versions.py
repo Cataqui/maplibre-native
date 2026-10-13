@@ -8,7 +8,7 @@ import subprocess
 import time
 from pathlib import Path
 from PIL import Image, PngImagePlugin
-from prepare_version import prepare, CAPABILITIES
+from prepare_version import prepare, layout, CAPABILITIES
 
 REPOSITORY = Path("/repository")
 WORKSPACE = Path("/workspace")
@@ -41,10 +41,10 @@ def build(sha, output):
     (headers / "index.tab").write_text("version\tdate\tfiles\tnpm\tv8\tuv\tzlib\topenssl\tmodules\tlts\tsecurity\nv24.20.0\t-\t-\t-\t-\t-\t-\t-\t137\t-\t-\n")
     command(["cmake", "--preset", "linux-opengl-node", "-DCMAKE_BUILD_TYPE=Release", "-DCMAKE_CXX_COMPILER_LAUNCHER=ccache", "-DBUILD_TESTING=OFF", "-DCMAKE_CXX_FLAGS=-march=x86-64", "-DCMAKE_C_FLAGS=-march=x86-64"], cwd=SOURCE, log=log)
     command(["cmake", "--build", "build", "--target", "mbgl-node.abi-137", "--parallel", "2"], cwd=SOURCE, log=log)
-    engine_namespace = "mln" if (SOURCE / "include/mln").exists() else "mbgl"
-    regression = (REPOSITORY / "test/cataqui/uniform-pixel-ratio.integration.cpp").read_text().replace("mbgl::", engine_namespace + "::").replace("<mbgl/", "<" + engine_namespace + "/")
+    directory, namespace = layout(SOURCE)
+    regression = (REPOSITORY / "test/cataqui/uniform-pixel-ratio.integration.cpp").read_text().replace("mbgl::", namespace + "::").replace("<mbgl/", "<" + directory + "/")
     (WORKSPACE / "uniform.cpp").write_text(regression)
-    command(["c++", "-std=c++20", "-O2", "-DMLN_RENDER_BACKEND_OPENGL=1", "-Iinclude", "-Ivendor/rapidjson/include", str(WORKSPACE / "uniform.cpp"), f"src/{engine_namespace}/shaders/program_parameters.cpp", f"src/{engine_namespace}/util/string.cpp", "-o", str(WORKSPACE / "uniform")], cwd=SOURCE, log=log)
+    command(["c++", "-std=c++20", "-O2", "-DMLN_RENDER_BACKEND_OPENGL=1", "-Iinclude", "-Ivendor/rapidjson/include", str(WORKSPACE / "uniform.cpp"), f"src/{directory}/shaders/program_parameters.cpp", f"src/{directory}/util/string.cpp", "-o", str(WORKSPACE / "uniform")], cwd=SOURCE, log=log)
     command([str(WORKSPACE / "uniform")], log=log)
     tests = SOURCE / "platform/node/test/cataqui"
     tests.mkdir(parents=True, exist_ok=True)
@@ -85,6 +85,7 @@ if __name__ == "__main__":
     output.mkdir(parents=True, exist_ok=True)
     command(["python3", str(TOOLS / "test_run_versions.py")])
     _clone_repository(REPOSITORY, SOURCE)
+    command(["python3", str(TOOLS / "test_prepare_version.py")])
     display = subprocess.Popen(["Xvfb", ":99", "-screen", "0", "2048x4096x24", "-ac", "-nolisten", "tcp"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     try:
         for attempt in range(100):

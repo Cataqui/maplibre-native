@@ -7,6 +7,13 @@ from pathlib import Path
 BASE = "d4bde4c93eb15650d0ddb6822d24351f792ea649"
 CAPABILITIES = "20d120303397d4cce27918768ffe626863e533fb"
 
+def layout(source):
+    source = Path(source)
+    directory = "mln" if (source / "src/mln").is_dir() else "mbgl"
+    renderer = (source / f"src/{directory}/renderer/renderer.cpp").read_text()
+    namespace = "mln" if "namespace mln" in renderer else "mbgl"
+    return directory, namespace
+
 def prepare(repository, source):
     repository = Path(repository)
     source = Path(source)
@@ -14,8 +21,8 @@ def prepare(repository, source):
         "git", "-C", str(repository), "diff", BASE, CAPABILITIES, "--", "include", "src", "shaders",
         "platform/node/src", "platform/node/index.d.ts", "platform/default",
     ], text=True)
-    renamed_paths = (source / "src/mln").is_dir()
-    namespace = "mln" if "namespace mln" in (source / ("src/mln" if renamed_paths else "src/mbgl") / "renderer/renderer.cpp").read_text() else "mbgl"
+    directory, namespace = layout(source)
+    renamed_paths = directory == "mln"
     if renamed_paths:
         patch = patch.replace("/mbgl/", "/mln/").replace("<mbgl/", "<mln/")
     if namespace == "mln":
@@ -62,7 +69,7 @@ def prepare(repository, source):
             if "invalidatePreparedPlacement();" not in value[value.index(anchor):value.index(anchor)+200]:
                 value = value.replace(anchor, anchor + "    invalidatePreparedPlacement();\n")
             for header in ["renderer/renderer_observer.hpp", "util/exception.hpp"]:
-                include = f"#include <{namespace}/{header}>\n"
+                include = f"#include <{directory}/{header}>\n"
                 if include not in value:
                     value = include + value
         target.write_text(value)

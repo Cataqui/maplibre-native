@@ -5,7 +5,7 @@ on:
       mode:
         type: choice
         description: Pilot endpoint or complete fixed version sweep
-        options: [pilot, sweep, finalists]
+        options: [pilot, sweep, finalists, retry]
         default: pilot
 permissions:
   contents: read
@@ -25,7 +25,7 @@ jobs:
           python3 - <<'PY'
           import json, os
           groups=json.load(open('benchmark/cataqui/groups.json'))
-          selected=[os.environ['MODE']] if os.environ['MODE'] in ['pilot','finalists'] else [x for x in groups if x.startswith('sweep-')]
+          selected=[os.environ['MODE']] if os.environ['MODE'] in ['pilot','finalists','retry'] else [x for x in groups if x.startswith('sweep-')]
           with open(os.environ['GITHUB_OUTPUT'],'a') as output:
               output.write('value='+json.dumps(selected)+'\n')
           PY

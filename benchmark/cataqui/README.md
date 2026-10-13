@@ -20,6 +20,8 @@ Each group builds a baseline on the same runner and measures four control passes
 
 Dispatch `.github/workflows/native-versions.yml` in `pilot` mode to qualify the latest port, then `sweep` for the frozen inventory. `finalists` uses the explicit shortlist in groups.json, increases block counts and retains annotated PNG outputs for visual review. The initial shortlist contains the newest endpoint; update it with sweep leaders before final selection. The workflow runs native placement/source-update tests and the real OpenGL shader-density regression before any candidate measurement. Build, test or fixture failures disqualify that candidate until resolved; they are not performance results.
 
+`retry` reruns only the explicit failed-version list in groups.json. Put retry artifacts beside sweep artifacts for analysis: a successful retry supersedes its build failure while preserving that failure in the report. Analyze independent measured repeats separately rather than overwriting or pooling them silently.
+
 Results are short-lived workflow artifacts containing build logs, controls and candidate raw measurements. They do not publish packages or deploy services. Review visual differences and remeasure finalists before updating the fork's main branch or the backend commit pin.
 
 After downloading results, `analyze.py` produces paired timing summaries and `coverage.py` accounts for every frozen version. For finalist artifacts, `visual_compare.py --results <artifact-directory> --output <report.json>` uses Pillow and NumPy to quantify image differences against four baseline control passes. These measurements inform visual review; observed baseline variation is not an automatic correctness tolerance.

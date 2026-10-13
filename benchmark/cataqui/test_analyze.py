@@ -1,5 +1,5 @@
 import unittest
-from analyze import _compare
+from analyze import _compare, _resolved
 
 class PairedMeasurements(unittest.TestCase):
     def _samples(self, factor):
@@ -18,6 +18,17 @@ class PairedMeasurements(unittest.TestCase):
     def test_missing_workloads_are_rejected_instead_of_looking_faster(self):
         with self.assertRaises(ValueError):
             _compare(self._samples(1), [{"case": "fixture", "phases": {"cold": 1}}])
+    def test_successful_retry_resolves_failure_regardless_of_file_order(self):
+        for reverse in (False, True):
+            failed = {"sha": "version", "status": "failed", "error": "build"}
+            measured = {"sha": "version", "status": "measured", "scoreRatio": 1}
+            result = _resolved([failed, measured] if not reverse else [measured, failed])
+            self.assertEqual(len(result), 1)
+            self.assertEqual(result[0]["status"], "measured")
+            self.assertEqual(result[0]["previousFailures"], [failed])
+    def test_independent_repeats_cannot_silently_overwrite_measurements(self):
+        with self.assertRaisesRegex(ValueError, "independent measured"):
+            _resolved([{"sha": "version", "status": "measured"}, {"sha": "version", "status": "measured"}])
 
 if __name__ == "__main__":
     unittest.main()
