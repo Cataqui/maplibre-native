@@ -2,7 +2,7 @@
 
 This repository owns Cataquí's native rendering engine changes. The backend Maps service owns provider integrations, map style and assets, geographic data, API contracts, privacy policy and deployment.
 
-- Maintain `main` as the Cataquí branch. The qualified engine base is upstream commit `a34723ff4a53d9622f7e42fc3f10197d5acb94bd` (Native Node 6.5.0-pre.1), selected by the 2026-10-13 performance comparison.
+- Maintain `main` as the Cataquí branch. Consumers follow main; do not maintain Cataquí release versions, tags or manually pinned engine snapshots.
 - Qualify Linux x64, Node.js 24.20.0 / ABI 137, OpenGL and Mesa software rendering. Other platform source is retained for upstream compatibility.
 - Preserve prepared-tree ownership, invalidation on scene mutations, single consumption, cancellation and GeoJSON binding validation.
 - Shader changes must update both GLSL source under `shaders/` and generated OpenGL headers under `include/mbgl/shaders/gl/`.
