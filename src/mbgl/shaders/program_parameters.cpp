@@ -8,10 +8,16 @@
 
 namespace mbgl {
 
-ProgramParameters::ProgramParameters(const float pixelRatio, const bool overdraw)
+ProgramParameters::ProgramParameters([[maybe_unused]] const float pixelRatio, const bool overdraw)
     : defines(2),
       overdrawInspector(overdraw) {
+#if defined(MLN_RENDER_BACKEND_OPENGL) && !defined(MLN_RENDER_BACKEND_METAL) && \
+    !defined(MLN_RENDER_BACKEND_VULKAN) && !defined(MLN_RENDER_BACKEND_WEBGPU)
+    // OpenGL receives the actual ratio through GlobalPaintParamsUBO; keep shader families ratio-independent.
+    defines["DEVICE_PIXEL_RATIO"] = "u_pixel_ratio";
+#else
     defines["DEVICE_PIXEL_RATIO"] = util::toString(pixelRatio, true);
+#endif
     if (overdraw) {
         defines["OVERDRAW_INSPECTOR"] = std::string();
     }
