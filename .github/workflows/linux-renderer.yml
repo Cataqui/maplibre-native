@@ -1,0 +1,22 @@
+name: Cataqui Linux renderer
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: linux-renderer-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  native:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          submodules: recursive
+          persist-credentials: false
+      - name: Compile the Linux addon and run native regressions
+        run: docker build --platform linux/amd64 -f docker/cataqui/Dockerfile --tag cataqui-maplibre-native:test .

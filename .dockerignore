@@ -1,0 +1,9 @@
+# Local outputs are never inputs to the native build.
+.git
+**/.git
+node_modules
+**/node_modules
+build
+build-*
+platform/node/lib
+coverage

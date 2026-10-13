@@ -1,4 +1,9 @@
-# Fork
+# Cataquí fork
+
+Cataquí maintains the Linux Node renderer on `main`, starting from MapLibre Native commit `d4bde4c93eb15650d0ddb6822d24351f792ea649` (Node 6.4.1). Our changes expose GeoJSON source updates, separate static placement from drawing, and use runtime pixel density in OpenGL shaders. See [README.md](README.md) for the supported build.
+
+## Upstream history
+
 
 MapLibre Native is a community led fork derived from [mapbox-gl-native](https://github.com/mapbox/mapbox-gl-native) prior to their switch to a non-OSS license. The fork also includes Maps SDK for iOS and MacOS (forked from [mapbox-gl-native-ios](https://github.com/mapbox/mapbox-gl-native-ios)) and Android SDK (forked from [mapbox-gl-native-android](https://github.com/mapbox/mapbox-gl-native-android)). These platform-specific SDKs were merged under platform directory and they reference mapbox-gl-native directly, not as a submodule.
 
