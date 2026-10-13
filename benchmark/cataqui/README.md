@@ -22,6 +22,8 @@ Dispatch `.github/workflows/native-versions.yml` in `pilot` mode to qualify the 
 
 `retry` reruns only the explicit failed-version list in groups.json. Put retry artifacts beside sweep artifacts for analysis: a successful retry supersedes its build failure while preserving that failure in the report. Analyze independent measured repeats separately rather than overwriting or pooling them silently.
 
+When `finalists-*` groups exist, finalist dispatch runs those groups in parallel. The second qualification stage repeats additional close contenders alongside the first stage's leader on each runner. This supplies direct comparisons on the same runner as well as each version's paired original-baseline measurement.
+
 Results are short-lived workflow artifacts containing build logs, controls and candidate raw measurements. They do not publish packages or deploy services. Review visual differences and remeasure finalists before updating the fork's main branch or the backend commit pin.
 
 After downloading results, `analyze.py` produces paired timing summaries and `coverage.py` accounts for every frozen version. For finalist artifacts, `visual_compare.py --results <artifact-directory> --output <report.json>` uses Pillow and NumPy to quantify image differences against four baseline control passes. These measurements inform visual review; observed baseline variation is not an automatic correctness tolerance.

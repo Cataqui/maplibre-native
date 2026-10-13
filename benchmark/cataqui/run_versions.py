@@ -93,7 +93,7 @@ if __name__ == "__main__":
             time.sleep(0.05)
         else: raise RuntimeError("Xvfb did not become ready")
         baseline = build(CAPABILITIES, output)
-        control_files = [measure(baseline, output, f"control-{i}", arguments.blocks, frames=arguments.group == "finalists") for i in range(4)]
+        control_files = [measure(baseline, output, f"control-{i}", arguments.blocks, frames=arguments.group.startswith("finalists")) for i in range(4)]
         groups = json.loads((TOOLS / "groups.json").read_text())
         candidates = groups[arguments.group]
         report = {"baseline": CAPABILITIES, "group": arguments.group, "controls": control_files, "candidates": [], "cpu": Path("/proc/cpuinfo").read_text().split("model name", 1)[-1].split("\n", 1)[0], "node": "v24.20.0", "limits": {"cpus": 2, "memoryGiB": 8}, "blocksPerPass": arguments.blocks}
@@ -105,7 +105,7 @@ if __name__ == "__main__":
                 entry["binarySha256"] = hashlib.sha256((addon / "lib/node-v137/mbgl.node").read_bytes()).hexdigest()
                 entry["passes"] = []
                 for index, kind in enumerate(["baseline", "candidate", "candidate", "baseline"]):
-                    file = measure(baseline if kind == "baseline" else addon, output, f"{sha[:12]}-{index}-{kind}", arguments.blocks, frames=arguments.group == "finalists" and index < 2)
+                    file = measure(baseline if kind == "baseline" else addon, output, f"{sha[:12]}-{index}-{kind}", arguments.blocks, frames=arguments.group.startswith("finalists") and index < 2)
                     entry["passes"].append({"kind": kind, "file": file})
                 entry["status"] = "measured"
             except Exception as error:
