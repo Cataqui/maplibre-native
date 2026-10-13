@@ -92,7 +92,19 @@ void main() {
     v_width = outset;
 }
 )";
-    static constexpr const char* fragment = R"(layout (std140) uniform FillEvaluatedPropsUBO {
+    static constexpr const char* fragment = R"(layout (std140) uniform GlobalPaintParamsUBO {
+    highp vec2 u_pattern_atlas_texsize;
+    highp vec2 u_units_to_pixels;
+    highp vec2 u_world_size;
+    highp float u_camera_to_center_distance;
+    highp float u_symbol_fade_change;
+    highp float u_aspect_ratio;
+    highp float u_pixel_ratio;
+    highp float u_map_zoom;
+    lowp float global_pad1;
+};
+
+layout (std140) uniform FillEvaluatedPropsUBO {
     highp vec4 u_color;
     highp vec4 u_outline_color;
     highp float u_opacity;

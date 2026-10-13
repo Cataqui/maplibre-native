@@ -200,7 +200,19 @@ lowp float halo_blur = u_halo_blur;
     v_data1 = vec3(gamma_scale, size, interpolated_fade_opacity);
 }
 )";
-    static constexpr const char* fragment = R"(#define SDF_PX 8.0
+    static constexpr const char* fragment = R"(layout (std140) uniform GlobalPaintParamsUBO {
+    highp vec2 u_pattern_atlas_texsize;
+    highp vec2 u_units_to_pixels;
+    highp vec2 u_world_size;
+    highp float u_camera_to_center_distance;
+    highp float u_symbol_fade_change;
+    highp float u_aspect_ratio;
+    highp float u_pixel_ratio;
+    highp float u_map_zoom;
+    lowp float global_pad1;
+};
+
+#define SDF_PX 8.0
 
 layout (std140) uniform SymbolTilePropsUBO {
     bool u_is_text;
