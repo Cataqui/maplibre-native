@@ -24,7 +24,7 @@ def command(arguments, *, cwd=None, log=None, timeout=1800):
 def _clone_repository(repository, source):
     command(["git", "config", "--global", "--add", "safe.directory", str(repository)])
     command(["git", "config", "--global", "--add", "safe.directory", str(repository / ".git")])
-    command(["git", "clone", "--shared", "--no-checkout", str(repository), str(source)])
+    command(["git", "clone", "--no-local", "--no-checkout", str(repository), str(source)])
 
 def build(sha, output):
     log = output / f"build-{sha[:12]}.log"

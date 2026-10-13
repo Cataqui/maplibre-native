@@ -45,8 +45,8 @@ jobs:
           persist-credentials: false
       - name: Fetch the fixed upstream history
         run: |
-          git fetch --depth=1 origin 20d120303397d4cce27918768ffe626863e533fb
-          git fetch --depth=300 https://github.com/maplibre/maplibre-native.git 49537ef244ba08d730cf707c67f16da06956f3ee
+          git fetch --depth=1 origin 20d120303397d4cce27918768ffe626863e533fb:refs/heads/benchmark-baseline
+          git fetch --depth=300 https://github.com/maplibre/maplibre-native.git 49537ef244ba08d730cf707c67f16da06956f3ee:refs/heads/benchmark-upstream
       - name: Build the benchmark environment
         run: docker build -f benchmark/cataqui/runner.Dockerfile -t cataqui-native-benchmark .
       - name: Measure paired baseline and candidate runs
