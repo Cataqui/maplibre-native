@@ -24,6 +24,8 @@ Dispatch `.github/workflows/native-versions.yml` in `pilot` mode to qualify the 
 
 When `finalists-*` groups exist, finalist dispatch runs those groups in parallel. The second qualification stage repeats additional close contenders alongside the first stage's leader on each runner. This supplies direct comparisons on the same runner as well as each version's paired original-baseline measurement.
 
+Second-stage artifacts include precomputed visual differences and control variation, raw timing samples and frame hashes, and the new contender's paired PNGs. Repeated leader and control PNGs are removed only after the visual report is computed, keeping artifact storage focused on the new evidence. First-stage artifacts retain those images for review.
+
 Results are short-lived workflow artifacts containing build logs, controls and candidate raw measurements. They do not publish packages or deploy services. Review visual differences and remeasure finalists before updating the fork's main branch or the backend commit pin.
 
 After downloading results, `analyze.py` produces paired timing summaries and `coverage.py` accounts for every frozen version. For finalist artifacts, `visual_compare.py --results <artifact-directory> --output <report.json>` uses Pillow and NumPy to quantify image differences against four baseline control passes. These measurements inform visual review; observed baseline variation is not an automatic correctness tolerance.

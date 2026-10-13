@@ -114,5 +114,14 @@ if __name__ == "__main__":
             report["candidates"].append(entry)
             (output / "report.json").write_text(json.dumps(report, indent=2) + "\n")
             print("Candidate", sha, entry["status"], flush=True)
+        if arguments.group.startswith("finalists-"):
+            command(["python3", str(TOOLS / "visual_compare.py"), "--results", str(output), "--output", str(output / "visual-comparison.json")])
+            # Preserve numeric control variation, hashes and the new contender's
+            # paired PNGs; avoid uploading repeated leader/control PNGs six times.
+            discarded = control_files + [item["file"] for item in report["candidates"][0].get("passes", [])]
+            for filename in discarded:
+                directory = output / (Path(filename).stem + "-frames")
+                if directory.is_dir():
+                    shutil.rmtree(directory)
     finally:
         display.terminate()
