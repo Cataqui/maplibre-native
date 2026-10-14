@@ -1016,7 +1016,9 @@ set(SHAPE_TARGETS, "")
 list(APPEND
     SRC_FILES
         # Base text shaping files, which are always included. They don't depend on HarfBuzz if MLN_TEXT_SHAPING_HARFBUZZ is OFF.
-        ${PROJECT_SOURCE_DIR}/src/mbgl/text/harfbuzz.cpp
+        ${PROJECT_SOURCE_DIR}/src/mbgl/text/font_text.cpp
+    ${PROJECT_SOURCE_DIR}/src/mbgl/text/font_text.hpp
+    ${PROJECT_SOURCE_DIR}/src/mbgl/text/harfbuzz.cpp
         ${PROJECT_SOURCE_DIR}/src/mbgl/text/harfbuzz.hpp
 )
 if (MLN_TEXT_SHAPING_HARFBUZZ)
@@ -1030,7 +1032,7 @@ if (MLN_TEXT_SHAPING_HARFBUZZ)
     )
     target_compile_definitions(
         mbgl-core
-        PRIVATE MLN_TEXT_SHAPING_HARFBUZZ=1
+        PUBLIC MLN_TEXT_SHAPING_HARFBUZZ=1
     )
     include(${PROJECT_SOURCE_DIR}/vendor/freetype.cmake)
     include(${PROJECT_SOURCE_DIR}/vendor/harfbuzz.cmake)
@@ -1294,3 +1296,10 @@ add_subdirectory(${PROJECT_SOURCE_DIR}/benchmark)
 add_subdirectory(${PROJECT_SOURCE_DIR}/render-test)
 
 include(cmake/mbgl-core-deps.cmake)
+
+if(MLN_WITH_NODE)
+    add_executable(cataqui-font-coverage test/cataqui/font-coverage.integration.cpp)
+    target_include_directories(cataqui-font-coverage PRIVATE src)
+    target_compile_options(cataqui-font-coverage PRIVATE -UNDEBUG)
+    target_link_libraries(cataqui-font-coverage PRIVATE mbgl-core)
+endif()

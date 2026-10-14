@@ -48,6 +48,7 @@ struct SectionOptions {
 
     int32_t startIndex;
     bool keySection = true;
+    std::size_t logicalStart = 0;
 
     std::optional<std::string> imageID;
 
@@ -92,7 +93,29 @@ struct TaggedString {
 
     char16_t getCharCodeAt(std::size_t index) const { return styledText.first[index]; }
 
+    const HBShapeAdjust* getAdjust(std::size_t index) const {
+        if (!resolvedAdjustments.empty()) return resolvedAdjustments.at(index) ? &*resolvedAdjustments.at(index) : nullptr;
+        const auto& section = getSection(index);
+        if (!section.adjusts || section.startIndex < 0 || index < static_cast<std::size_t>(section.startIndex)) return nullptr;
+        const auto at = index - static_cast<std::size_t>(section.startIndex);
+        return at < section.adjusts->size() ? &section.adjusts->at(at) : nullptr;
+    }
+
+    char32_t getCodepoint(std::size_t index) const {
+        const auto* adjust = getAdjust(index);
+        return adjust && adjust->codepoint ? adjust->codepoint : getCharCodeAt(index);
+    }
+
     const std::u16string& rawText() const { return styledText.first; }
+    const std::u16string& logicalText() const { return originalText; }
+    void setLogicalText(std::u16string text) { originalText = std::move(text); }
+    std::size_t logicalPosition(std::size_t index) const {
+        if (!logicalPositions.empty()) return logicalPositions.at(index);
+        const auto& section = getSection(index);
+        const auto* adjust = getAdjust(index);
+        return section.logicalStart + (adjust ? adjust->cluster : index - static_cast<std::size_t>(section.startIndex));
+    }
+    TaggedString reordered(const std::vector<std::size_t>& indices) const;
 
     const StyledText& getStyledText() const { return styledText; }
 
@@ -101,7 +124,8 @@ struct TaggedString {
                         const FontStack& fontStack,
                         GlyphIDType type,
                         bool keySection = true,
-                        std::optional<Color> textColor_ = std::nullopt);
+                        std::optional<Color> textColor_ = std::nullopt,
+                        std::size_t logicalStart = 0);
 
     void addTextSection(const std::u16string& text,
                         double scale,
@@ -109,7 +133,8 @@ struct TaggedString {
                         GlyphIDType type,
                         std::shared_ptr<std::vector<HBShapeAdjust>>& adjusts,
                         bool keySection = true,
-                        std::optional<Color> textColor_ = std::nullopt);
+                        std::optional<Color> textColor_ = std::nullopt,
+                        std::size_t logicalStart = 0);
 
     void addImageSection(const std::string& imageID);
 
@@ -135,6 +160,9 @@ private:
     std::optional<char16_t> getNextImageSectionCharCode();
 
 private:
+    std::u16string originalText;
+    std::vector<std::optional<HBShapeAdjust>> resolvedAdjustments;
+    std::vector<std::size_t> logicalPositions;
     StyledText styledText;
     std::vector<SectionOptions> sections;
     std::optional<bool> supportsVerticalWritingMode;

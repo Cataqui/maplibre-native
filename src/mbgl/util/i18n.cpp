@@ -348,7 +348,7 @@ namespace mbgl {
 namespace util {
 namespace i18n {
 
-bool allowsWordBreaking(char16_t chr) {
+bool allowsWordBreaking(char32_t chr) {
     return (chr == 0x0a      /* newline */
             || chr == 0x20   /* space */
             || chr == 0x26   /* ampersand */
@@ -383,7 +383,9 @@ bool allowsIdeographicBreaking(const std::u16string& string) {
     return true;
 }
 
-bool allowsIdeographicBreaking(char16_t chr) {
+bool allowsIdeographicBreaking(char32_t chr) {
+    if (chr >= 0x20000 && chr <= 0x323af) return true;
+    if (chr > 0xffff) return false;
     // Allow U+2027 "Interpunct" for hyphenation of Chinese words
     if (chr == 0x2027) return true;
 
@@ -678,7 +680,7 @@ bool isCharInComplexShapingScript(char16_t chr) {
            isInArabicPresentationFormsA(chr) || isInArabicPresentationFormsB(chr);
 }
 
-bool isWhitespace(char16_t chr) {
+bool isWhitespace(char32_t chr) {
     return chr == u' ' || chr == u'\t' || chr == u'\n' || chr == u'\v' || chr == u'\f' || chr == u'\r';
 }
 

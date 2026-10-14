@@ -1,6 +1,7 @@
 #include "harfbuzz_impl.hpp"
 
 #include <hb-ft.h>
+#include <unicode/utf16.h>
 
 namespace mbgl {
 
@@ -32,6 +33,7 @@ HBShaper::Impl::Impl(GlyphIDType type_, const std::string &fontFileData, const F
     if (!face.isValid()) return;
 
     font = hb_ft_font_create(face.getFace(), NULL);
+    hb_ft_font_set_load_flags(font, FT_LOAD_NO_HINTING);
     buffer = hb_buffer_create();
 
     hb_buffer_allocation_successful(buffer);
@@ -52,33 +54,33 @@ void HBShaper::Impl::createComplexGlyphIDs(const std::u16string &text,
     struct TextPart {
         std::u16string text;
         hb_script_t script;
+        uint32_t start = 0;
     };
 
     std::vector<TextPart> textParts;
     textParts.emplace_back();
     auto *lastTextPart = &textParts.back();
-    lastTextPart->text = text[0];
-    lastTextPart->script = getUnicodeScript(text[0]);
-
-    for (std::size_t i = 1; i < text.size(); ++i) {
-        auto ch = text[i];
-        auto script = getUnicodeScript(text[i]);
-
-        if (lastTextPart->script == script || script == HB_SCRIPT_INHERITED) {
-            lastTextPart->text += (ch);
-        } else {
+    lastTextPart->script = HB_SCRIPT_UNKNOWN;
+    for (int32_t i = 0; i < static_cast<int32_t>(text.size());) {
+        const auto begin = i;
+        UChar32 codepoint;
+        U16_NEXT(text.data(), i, static_cast<int32_t>(text.size()), codepoint);
+        const auto script = getUnicodeScript(static_cast<hb_codepoint_t>(codepoint));
+        if (lastTextPart->text.empty()) lastTextPart->script = script;
+        if (lastTextPart->script != script && script != HB_SCRIPT_INHERITED && script != HB_SCRIPT_COMMON) {
             textParts.emplace_back();
             lastTextPart = &textParts.back();
-            lastTextPart->text = (ch);
             lastTextPart->script = script;
+            lastTextPart->start = static_cast<uint32_t>(begin);
         }
+        lastTextPart->text.append(text, static_cast<std::size_t>(begin), static_cast<std::size_t>(i - begin));
     }
 
     for (auto &textPart : textParts) {
         // Setup harfbuzz
         hb_buffer_reset(buffer);
 
-        hb_buffer_set_direction(buffer, HB_DIRECTION_LTR);
+        hb_buffer_set_direction(buffer, hb_script_get_horizontal_direction(textPart.script));
         hb_buffer_set_script(buffer, textPart.script);
         hb_buffer_set_language(buffer, getDefaultLanguage());
         size_t length = textPart.text.size();
@@ -103,7 +105,11 @@ void HBShaper::Impl::createComplexGlyphIDs(const std::u16string &text,
             float x_offset = static_cast<float>(glyphPos[i].x_offset / 64.0f);
             float y_offset = static_cast<float>(-glyphPos[i].y_offset / 64.0f);
 
-            adjusts.emplace_back(x_offset, y_offset, x_advance);
+            int32_t cluster = static_cast<int32_t>(glyphInfo[i].cluster);
+            UChar32 codepoint;
+            U16_NEXT(textPart.text.data(), cluster, static_cast<int32_t>(textPart.text.size()), codepoint);
+            const bool clusterEnd = i + 1 == glyphCount || glyphInfo[i + 1].cluster != glyphInfo[i].cluster;
+            adjusts.emplace_back(x_offset, y_offset, x_advance, static_cast<char32_t>(codepoint), clusterEnd, textPart.start + glyphInfo[i].cluster);
         }
     }
 }

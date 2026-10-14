@@ -1,3 +1,7 @@
+#include <mbgl/text/font_text.hpp>
+#include <unicode/utf16.h>
+#include <unicode/uchar.h>
+#include <unicode/uscript.h>
 #include <algorithm>
 #include <mbgl/layout/symbol_layout.hpp>
 #include <mbgl/layout/merge_lines.hpp>
@@ -85,10 +89,11 @@ inline Immutable<style::SymbolLayoutProperties::PossiblyEvaluated> createLayout(
     return layout;
 }
 
-GlyphIDType getCharGlyphIDType(char16_t ch,
+GlyphIDType getCharGlyphIDType(char32_t ch,
                                const FontStack& stack,
                                std::shared_ptr<FontFaces> faces,
-                               GlyphIDType lastCharType) {
+                               GlyphIDType lastCharType,
+                               const std::string& locale) {
     if (!faces) {
         return GlyphIDType::FontPBF;
     }
@@ -97,17 +102,13 @@ GlyphIDType getCharGlyphIDType(char16_t ch,
         return lastCharType;
     }
 
-    for (const auto& name : stack) {
-        for (auto& face : *faces) {
-            if (face.name == name) {
-                for (auto& range : face.ranges) {
-                    if (ch >= range.first && ch <= range.second) return face.type;
-                }
-            }
-        }
+    const auto category = u_charType(static_cast<UChar32>(ch));
+    if (lastCharType != GlyphIDType::FontPBF &&
+        (category == U_NON_SPACING_MARK || category == U_COMBINING_SPACING_MARK ||
+         category == U_ENCLOSING_MARK || category == U_FORMAT_CHAR)) {
+        return lastCharType;
     }
-
-    return GlyphIDType::FontPBF;
+    return faces->resolve(stack, ch, locale);
 }
 
 } // namespace mbgl
@@ -168,6 +169,7 @@ SymbolLayout::SymbolLayout(const BucketParameters& parameters,
 
     // Determine glyph dependencies
     const size_t featureCount = sourceLayer->featureCount();
+    bool coverageGapReported = false;
     for (size_t i = 0; i < featureCount; ++i) {
         auto feature = sourceLayer->getFeature(i);
         if (!leader.filter(expression::EvaluationContext(this->zoom, feature.get())
@@ -198,56 +200,83 @@ SymbolLayout::SymbolLayout(const BucketParameters& parameters,
                             u8string = platform::lowercase(u8string);
                         }
 
-                        auto u16String = applyArabicShaping(util::convertUTF8ToUTF16(u8string));
-                        const char16_t* u16Char = u16String.data();
-                        std::u16string subString;
-                        auto sectionScale = section.fontScale ? *section.fontScale : 1.0;
-                        auto sectionFontStack = section.fontStack ? *section.fontStack : baseFontStack;
-
-                        GlyphIDType subStringtype = getCharGlyphIDType(
-                            *u16Char, sectionFontStack, layoutParameters.fontFaces, GlyphIDType::FontPBF);
-
-                        while (*u16Char) {
-                            const auto chType = getCharGlyphIDType(
-                                *u16Char, sectionFontStack, layoutParameters.fontFaces, subStringtype);
-                            if (chType != subStringtype) {
-                                if (subString.length()) {
-                                    ft.formattedText->addTextSection(subString,
-                                                                     sectionScale,
-                                                                     sectionFontStack,
-                                                                     subStringtype,
-                                                                     false,
-                                                                     section.textColor);
-                                    sectionTable[ft.formattedText->getSections().size() - 1] = sectionIndex;
-                                    if (subStringtype != GlyphIDType::FontPBF) {
-                                        layoutParameters.glyphDependencies
-                                            .shapes[section.fontStack ? *section.fontStack : baseFontStack]
-                                                   [subStringtype]
-                                            .insert(subString);
-                                    }
-                                }
-
-                                subString.clear();
-                                subStringtype = chType;
+                        auto u16String = util::convertUTF8ToUTF16(u8string);
+                        // HarfBuzz needs logical Arabic letters, not ICU presentation forms.
+                        if (!layoutParameters.fontFaces) u16String = applyArabicShaping(u16String);
+                        // A missing character affects this text label, never the map or its icon.
+                        bool supported = !layoutParameters.fontFaces || fontTextSupported(u16String, *layoutParameters.fontFaces);
+                        if (!supported) {
+                            const auto alternative = renderableSourceName(ft.getProperties(), *layoutParameters.fontFaces);
+                            if (alternative) {
+                                auto name = *alternative;
+                                if (textTransform == TextTransformType::Uppercase) name = platform::uppercase(name);
+                                else if (textTransform == TextTransformType::Lowercase) name = platform::lowercase(name);
+                                u16String = util::convertUTF8ToUTF16(name);
+                                supported = fontTextSupported(u16String, *layoutParameters.fontFaces);
                             }
-
-                            subString += *u16Char;
-
-                            ++u16Char;
                         }
-
-                        if (subString.length()) {
-                            ft.formattedText->addTextSection(subString,
-                                                             section.fontScale ? *section.fontScale : 1.0,
-                                                             section.fontStack ? *section.fontStack : baseFontStack,
-                                                             subStringtype,
-                                                             true,
-                                                             section.textColor);
-                            sectionTable[ft.formattedText->getSections().size() - 1] = sectionIndex;
-                            if (subStringtype != GlyphIDType::FontPBF) {
-                                layoutParameters.glyphDependencies
-                                    .shapes[section.fontStack ? *section.fontStack : baseFontStack][subStringtype]
-                                    .insert(subString);
+                        if (!supported) {
+                            if (!coverageGapReported) {
+                                Log::Warning(Event::Style, "Cataqui omitted unrenderable label text; map geometry and icons retained");
+                                coverageGapReported = true;
+                            }
+                            continue;
+                        }
+                        const auto sectionScale = section.fontScale ? *section.fontScale : 1.0;
+                        const auto sectionFontStack = section.fontStack ? *section.fontStack : baseFontStack;
+                        std::string locale = layoutParameters.fontFaces ? layoutParameters.fontFaces->locale : "";
+                        for (int32_t textIndex = 0; textIndex < static_cast<int32_t>(u16String.size());) {
+                            UChar32 codepoint;
+                            U16_NEXT(u16String.data(), textIndex, static_cast<int32_t>(u16String.size()), codepoint);
+                            const auto script = u_getIntPropertyValue(codepoint, UCHAR_SCRIPT);
+                            if (script == USCRIPT_HIRAGANA || script == USCRIPT_KATAKANA) { locale = "ja"; break; }
+                            if (script == USCRIPT_HANGUL) locale = "ko";
+                        }
+                        bool fallback = false;
+                        if (layoutParameters.fontFaces) {
+                            for (int32_t textIndex = 0; textIndex < static_cast<int32_t>(u16String.size());) {
+                                UChar32 codepoint;
+                                U16_NEXT(u16String.data(), textIndex, static_cast<int32_t>(u16String.size()), codepoint);
+                                if (layoutParameters.fontFaces->resolve(sectionFontStack, static_cast<char32_t>(codepoint), locale) != GlyphIDType::FontPBF) {
+                                    fallback = true;
+                                    break;
+                                }
+                            }
+                        }
+                        const auto logicalStart = ft.formattedText->logicalText().empty() ? ft.formattedText->length() : ft.formattedText->logicalText().size();
+                        if (fallback || !ft.formattedText->logicalText().empty()) {
+                            auto original = ft.formattedText->logicalText().empty() ? ft.formattedText->rawText() : ft.formattedText->logicalText();
+                            original += u16String;
+                            ft.formattedText->setLogicalText(std::move(original));
+                        }
+                        const auto runs = fallback ? fontTextRuns(u16String) : std::vector<FontTextRun>{{u16String, false}};
+                        for (const auto& run : runs) {
+                            struct Part { std::u16string text; GlyphIDType type; std::size_t offset; };
+                            std::vector<Part> parts;
+                            GlyphIDType previous = GlyphIDType::FontPBF;
+                            for (int32_t textIndex = 0; textIndex < static_cast<int32_t>(run.text.size());) {
+                                const auto begin = textIndex;
+                                UChar32 codepoint;
+                                U16_NEXT(run.text.data(), textIndex, static_cast<int32_t>(run.text.size()), codepoint);
+                                const auto type = getCharGlyphIDType(static_cast<char32_t>(codepoint), sectionFontStack,
+                                                                     layoutParameters.fontFaces, previous, locale);
+                                if (parts.empty() || parts.back().type != type) parts.push_back({{}, type, static_cast<std::size_t>(begin)});
+                                if (run.rtl && type == GlyphIDType::FontPBF && codepoint <= 0xffff) {
+                                    parts.back().text += static_cast<char16_t>(u_charMirror(codepoint));
+                                } else {
+                                    parts.back().text.append(run.text, static_cast<std::size_t>(begin), static_cast<std::size_t>(textIndex - begin));
+                                }
+                                previous = type;
+                            }
+                            if (run.rtl) std::reverse(parts.begin(), parts.end());
+                            for (std::size_t partIndex = 0; partIndex < parts.size(); ++partIndex) {
+                                const auto& part = parts[partIndex];
+                                ft.formattedText->addTextSection(part.text, sectionScale, sectionFontStack, part.type,
+                                                                 partIndex + 1 == parts.size(), section.textColor, logicalStart + run.offset + part.offset);
+                                sectionTable[ft.formattedText->getSections().size() - 1] = sectionIndex;
+                                if (part.type != GlyphIDType::FontPBF) {
+                                    layoutParameters.glyphDependencies.shapes[sectionFontStack][part.type].insert(part.text);
+                                }
                             }
                         }
                     } catch (...) {
@@ -317,6 +346,7 @@ SymbolLayout::SymbolLayout(const BucketParameters& parameters,
 }
 
 void SymbolLayout::finalizeSymbols(HBShapeResults& results) {
+    bool shapingGapReported = false;
     for (auto& feature : features) {
         if (feature.geometry.empty()) {
             continue;
@@ -325,11 +355,13 @@ void SymbolLayout::finalizeSymbols(HBShapeResults& results) {
         if (feature.formattedText && feature.formattedText->hasNeedHBShapeText() &&
             !feature.formattedText->hbShaped()) {
             auto shapedString = TaggedString();
+            shapedString.setLogicalText(feature.formattedText->logicalText());
 
             const auto& sections = feature.formattedText->getSections();
             const auto& styleText = feature.formattedText->getStyledText();
 
             std::u16string subString;
+            bool supported = true;
             auto sectionIndex = styleText.second[0];
             auto strLen = styleText.first.length();
 
@@ -342,11 +374,12 @@ void SymbolLayout::finalizeSymbols(HBShapeResults& results) {
                                                     section.fontStack,
                                                     section.type,
                                                     section.keySection,
-                                                    section.textColor);
+                                                    section.textColor, section.logicalStart);
                     } else {
                         auto& fontstackResults = results[section.fontStack];
                         auto& typeResults = fontstackResults[section.type];
                         auto& result = typeResults[subString];
+                        if (result.str.find(char16_t(0)) != std::u16string::npos) supported = false;
 
                         shapedString.addTextSection(result.str,
                                                     section.scale,
@@ -354,7 +387,7 @@ void SymbolLayout::finalizeSymbols(HBShapeResults& results) {
                                                     section.type,
                                                     result.adjusts,
                                                     section.keySection,
-                                                    section.textColor);
+                                                    section.textColor, section.logicalStart);
                     }
                 }
             };
@@ -375,6 +408,13 @@ void SymbolLayout::finalizeSymbols(HBShapeResults& results) {
 
             applySubString();
 
+            if (!supported) {
+                shapedString = TaggedString();
+                if (!shapingGapReported) {
+                    Log::Warning(Event::Style, "Cataqui omitted unrenderable shaped label text; map geometry and icons retained");
+                    shapingGapReported = true;
+                }
+            }
             shapedString.setHBShaped(true);
             feature.formattedText = shapedString;
 

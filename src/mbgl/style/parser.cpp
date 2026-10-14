@@ -204,6 +204,19 @@ StyleParseResult Parser::parse(const std::string& json) {
                     Log::Warning(Event::ParseStyle, "font-face must be an object or array");
                 }
             }
+            if (document.HasMember("cataqui-font-coverage") && document["cataqui-font-coverage"].IsArray()) {
+                for (const auto& range : document["cataqui-font-coverage"].GetArray()) {
+                    if (!range.IsArray() || range.Size() != 2 || !range[0].IsUint() || !range[1].IsUint()) continue;
+                    if (range[0].GetUint() <= range[1].GetUint() && range[1].GetUint() <= 0x10ffff) {
+                        fontFaces->supportedRanges.emplace_back(range[0].GetUint(), range[1].GetUint());
+                    }
+                }
+                std::sort(fontFaces->supportedRanges.begin(), fontFaces->supportedRanges.end());
+            }
+            if (document.HasMember("cataqui-font-locale") && document["cataqui-font-locale"].IsString()) {
+                fontFaces->locale = document["cataqui-font-locale"].GetString();
+            }
+            fontFaces->compile();
         };
     }
 #endif

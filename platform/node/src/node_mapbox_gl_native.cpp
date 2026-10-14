@@ -32,6 +32,7 @@ void RegisterModule(v8::Local<v8::Object> target, v8::Local<v8::Object> module) 
     nodeRunLoop.stop();
 
     Nan::SetMethod(target, "setBackendType", SetBackendType);
+    Nan::Set(target, Nan::New("fontFallbackVersion").ToLocalChecked(), Nan::New(1));
 
     node_mbgl::NodeMap::Init(target);
     node_mbgl::NodeRequest::Init(target);

@@ -28,6 +28,7 @@ const columns = [process.version, '-', '-', '-', '-', '-', '-', '-', process.ver
 writeFileSync('build/headers/node/index.tab', 'version\tdate\tfiles\tnpm\tv8\tuv\tzlib\topenssl\tmodules\tlts\tsecurity\n' + columns.join('\t') + '\n');
 JS
 cmake --preset linux-opengl-node -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER_LAUNCHER= -DBUILD_TESTING=OFF
-cmake --build build --target mbgl-node.abi-137 --parallel 2
+cmake --build build --target mbgl-node.abi-137 cataqui-font-coverage --parallel 2
+./build/cataqui-font-coverage
 xvfb-run -a node --test platform/node/test/cataqui/static-placement.test.cjs
 SH

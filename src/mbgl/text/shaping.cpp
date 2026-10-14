@@ -1,4 +1,5 @@
 #include <mbgl/text/shaping.hpp>
+#include <mbgl/text/font_text.hpp>
 #include <mbgl/util/constants.hpp>
 #include <mbgl/util/i18n.hpp>
 #include <mbgl/layout/symbol_feature.hpp>
@@ -7,6 +8,7 @@
 
 #include <algorithm>
 #include <list>
+#include <numeric>
 #include <cmath>
 
 namespace {
@@ -215,13 +217,15 @@ float getGlyphAdvance(char16_t codePoint,
                       const GlyphMap& glyphMap,
                       const ImagePositions& imagePositions,
                       float layoutTextSize,
-                      float spacing) {
+                      float spacing,
+                      const HBShapeAdjust* adjust = nullptr) {
+    if (adjust) return adjust->advance * static_cast<float>(section.scale) + (adjust->advance > 0 ? spacing : 0);
     if (!section.imageID) {
         auto glyphs = glyphMap.find(section.fontStackHash);
         if (glyphs == glyphMap.end()) {
             return 0.0f;
         }
-        auto it = glyphs->second.find(codePoint);
+        auto it = glyphs->second.find(GlyphID(codePoint, section.type));
         if (it == glyphs->second.end() || !it->second) {
             return 0.0f;
         }
@@ -246,11 +250,8 @@ float determineAverageLineWidth(const TaggedString& logicalInput,
 
     for (std::size_t i = 0; i < logicalInput.length(); i++) {
         const SectionOptions& section = logicalInput.getSection(i);
-        if (section.type != GlyphIDType::FontPBF) {
-            continue;
-        }
         char16_t codePoint = logicalInput.getCharCodeAt(i);
-        totalWidth += getGlyphAdvance(codePoint, section, glyphMap, imagePositions, layoutTextSize, spacing);
+        totalWidth += getGlyphAdvance(codePoint, section, glyphMap, imagePositions, layoutTextSize, spacing, logicalInput.getAdjust(i));
     }
 
     auto targetLineCount = static_cast<int32_t>(::fmax(1, std::ceil(totalWidth / maxWidth)));
@@ -273,7 +274,7 @@ float calculateBadness(const float lineWidth, const float targetWidth, const flo
     return raggedness + penalty * penalty;
 }
 
-float calculatePenalty(char16_t codePoint, char16_t nextCodePoint, bool penalizableIdeographicBreak) {
+float calculatePenalty(char32_t codePoint, char32_t nextCodePoint, bool penalizableIdeographicBreak) {
     float penalty = 0;
     // Force break on newline
     if (codePoint == 0x0a) {
@@ -376,16 +377,17 @@ std::set<std::size_t> determineLineBreaks(const TaggedString& logicalInput,
 
     for (std::size_t i = 0; i < logicalInput.length(); i++) {
         const SectionOptions& section = logicalInput.getSection(i);
-        char16_t codePoint = logicalInput.getCharCodeAt(i);
+        const auto codePoint = logicalInput.getCodepoint(i);
         if (!util::i18n::isWhitespace(codePoint)) {
-            currentX += getGlyphAdvance(codePoint, section, glyphMap, imagePositions, layoutTextSize, spacing);
+            currentX += getGlyphAdvance(logicalInput.getCharCodeAt(i), section, glyphMap, imagePositions, layoutTextSize, spacing, logicalInput.getAdjust(i));
         }
 
         // Ideographic characters, spaces, and word-breaking punctuation that
         // often appear without surrounding spaces.
         if (i < logicalInput.length() - 1) {
             const bool allowsIdeographicBreak = util::i18n::allowsIdeographicBreaking(codePoint);
-            if (section.imageID || allowsIdeographicBreak || util::i18n::allowsWordBreaking(codePoint)) {
+            if ((section.imageID || allowsIdeographicBreak || util::i18n::allowsWordBreaking(codePoint)) &&
+                (!logicalInput.getAdjust(i) || logicalInput.getAdjust(i)->clusterEnd)) {
                 const bool penalizableIdeographicBreak = allowsIdeographicBreak && hasServerSuggestedBreaks;
                 const std::size_t nextIndex = i + 1;
                 potentialBreaks.push_back(evaluateBreak(
@@ -393,7 +395,7 @@ std::set<std::size_t> determineLineBreaks(const TaggedString& logicalInput,
                     currentX,
                     targetWidth,
                     potentialBreaks,
-                    calculatePenalty(codePoint, logicalInput.getCharCodeAt(nextIndex), penalizableIdeographicBreak),
+                    calculatePenalty(codePoint, logicalInput.getCodepoint(nextIndex), penalizableIdeographicBreak),
                     false));
             }
         }
@@ -443,13 +445,7 @@ void shapeLines(Shaping& shaping,
         for (std::size_t i = 0; i < line.length(); i++) {
             const std::size_t sectionIndex = line.getSectionIndex(i);
             const SectionOptions& section = line.sectionAt(sectionIndex);
-            const HBShapeAdjust* adjust = nullptr;
-            if (section.adjusts) {
-                assert(section.startIndex >= 0);
-                if (i >= (std::size_t)section.startIndex && i - section.startIndex < section.adjusts->size()) {
-                    adjust = &((*section.adjusts)[i - section.startIndex]);
-                }
-            }
+            const HBShapeAdjust* adjust = line.getAdjust(i);
             GlyphID codePoint(line.getCharCodeAt(i), section.type);
 
             double baselineOffset = 0.0;
@@ -626,7 +622,73 @@ Shaping getShaping(const TaggedString& formattedString,
     assert(layoutTextSize);
     std::vector<TaggedString> reorderedLines;
     if (formattedString.rawText().length()) {
-        if (formattedString.sectionCount() == 1) {
+        if (formattedString.hbShaped() && !formattedString.logicalText().empty()) {
+            // Glyph IDs are already shaped. Wrap their clusters in source order, then resolve bidi per line.
+            std::vector<std::size_t> indices(formattedString.length());
+            std::iota(indices.begin(), indices.end(), 0);
+            std::stable_sort(indices.begin(), indices.end(), [&](std::size_t left, std::size_t right) {
+                return formattedString.logicalPosition(left) < formattedString.logicalPosition(right);
+            });
+            const auto logical = formattedString.reordered(indices);
+            auto breaks = determineLineBreaks(logical, spacing, maxWidth, glyphMap, imagePositions, layoutTextSize);
+            for (std::size_t index = 0; index < logical.length(); ++index) {
+                if (logical.getCodepoint(index) == 0x0a) breaks.insert(index + 1);
+            }
+            breaks.insert(logical.length());
+            std::size_t begin = 0;
+            for (const auto end : breaks) {
+                if (begin == end) continue;
+                const auto sourceBegin = logical.logicalPosition(begin);
+                const auto sourceEnd = end == logical.length() ? logical.logicalText().size() : logical.logicalPosition(end);
+                std::vector<std::size_t> visual;
+                for (const auto& run : fontTextLineRuns(logical.logicalText(), sourceBegin, sourceEnd)) {
+                    std::vector<std::pair<std::size_t, std::size_t>> clusters;
+                    for (auto index = begin; index < end;) {
+                        const auto position = logical.logicalPosition(index);
+                        auto next = index + 1;
+                        while (next < end && logical.logicalPosition(next) == position) ++next;
+                        if (position >= run.offset && position < run.offset + run.text.size()) clusters.emplace_back(index, next);
+                        index = next;
+                    }
+                    if (run.rtl) std::reverse(clusters.begin(), clusters.end());
+                    for (const auto& cluster : clusters) {
+                        for (auto index = cluster.first; index < cluster.second; ++index) visual.push_back(index);
+                    }
+                }
+                reorderedLines.push_back(logical.reordered(visual));
+                begin = end;
+            }
+        } else if (formattedString.hbShaped()) {
+            auto breaks = determineLineBreaks(formattedString, spacing, maxWidth, glyphMap, imagePositions, layoutTextSize);
+            for (std::size_t i = 0; i < formattedString.length(); ++i) {
+                if (formattedString.getCodepoint(i) == 0x0a) breaks.insert(i + 1);
+            }
+            breaks.insert(formattedString.length());
+            std::size_t begin = 0;
+            for (const auto end : breaks) {
+                TaggedString line;
+                for (auto at = begin; at < end;) {
+                    const auto sectionIndex = formattedString.getSectionIndex(at);
+                    const auto& section = formattedString.getSection(at);
+                    auto next = at + 1;
+                    while (next < end && formattedString.getSectionIndex(next) == sectionIndex) ++next;
+                    auto text = formattedString.rawText().substr(at, next - at);
+                    if (section.adjusts) {
+                        const auto offset = at - static_cast<std::size_t>(section.startIndex);
+                        auto adjusts = std::make_shared<std::vector<HBShapeAdjust>>(section.adjusts->begin() + static_cast<std::ptrdiff_t>(offset),
+                                                                                  section.adjusts->begin() + static_cast<std::ptrdiff_t>(offset + next - at));
+                        line.addTextSection(text, section.scale, section.fontStack, section.type, adjusts, section.keySection, section.textColor);
+                    } else if (section.imageID) {
+                        line.addImageSection(*section.imageID);
+                    } else {
+                        line.addTextSection(text, section.scale, section.fontStack, section.type, section.keySection, section.textColor);
+                    }
+                    at = next;
+                }
+                reorderedLines.push_back(std::move(line));
+                begin = end;
+            }
+        } else if (formattedString.sectionCount() == 1) {
             if (formattedString.getSection(0).type != GlyphIDType::FontPBF) {
                 reorderedLines.emplace_back(formattedString);
             } else {

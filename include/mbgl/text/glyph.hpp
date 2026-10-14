@@ -188,7 +188,16 @@ struct FontFace {
     auto valid() const -> bool { return !name.empty() && !url.empty() && !ranges.empty(); }
 };
 
-using FontFaces = std::vector<FontFace>;
+// Compiled once per immutable style; label layout never scans the font collection.
+struct FontFaces : std::vector<FontFace> {
+    void compile();
+    GlyphIDType resolve(const FontStack&, char32_t, const std::string& locale = {}) const;
+    std::string locale;
+    bool supports(char32_t) const;
+    std::vector<FontFace::Range> supportedRanges;
+    struct Span { uint32_t first; uint32_t last; GlyphIDType type; };
+    std::map<std::string, std::vector<Span>> coverage;
+};
 
 struct HBShapeRequest {
     std::u16string str;

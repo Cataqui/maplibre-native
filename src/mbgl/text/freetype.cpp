@@ -50,19 +50,14 @@ FreeTypeFace::~FreeTypeFace() {
 }
 
 int FreeTypeFace::force_ucs2_charmap(FT_Face ftf) {
-    for (int i = 0; i < ftf->num_charmaps; i++) {
-        if (((ftf->charmaps[i]->platform_id == 0) && (ftf->charmaps[i]->encoding_id == 3)) ||
-            ((ftf->charmaps[i]->platform_id == 3) && (ftf->charmaps[i]->encoding_id == 1))) {
-            return FT_Set_Charmap(ftf, ftf->charmaps[i]);
-        }
-    }
-    return -1;
+    // Prefer a Unicode charmap covering supplementary planes when the font supplies one.
+    return FT_Select_Charmap(ftf, FT_ENCODING_UNICODE);
 }
 
 Glyph FreeTypeFace::rasterizeGlyph(const GlyphID &glyph) {
     Glyph fixedMetrics;
 
-    FT_Int32 flags = FT_LOAD_DEFAULT;
+    FT_Int32 flags = FT_LOAD_NO_HINTING;
 
     FT_Load_Glyph(face,
                   (FT_UInt)glyph.complex.code, // the glyph_index in the font file
@@ -77,10 +72,10 @@ Glyph FreeTypeFace::rasterizeGlyph(const GlyphID &glyph) {
 
     Size size(ftBitmap.width + Glyph::borderSize * 2, ftBitmap.rows + Glyph::borderSize * 2);
 
-    fixedMetrics.metrics.width = size.width;
-    fixedMetrics.metrics.height = size.height;
+    fixedMetrics.metrics.width = ftBitmap.width;
+    fixedMetrics.metrics.height = ftBitmap.rows;
     fixedMetrics.metrics.left = slot->bitmap_left;
-    fixedMetrics.metrics.top = slot->bitmap_top - SDF_FONT_SIZE - Glyph::borderSize;
+    fixedMetrics.metrics.top = slot->bitmap_top - 25;
     fixedMetrics.metrics.advance = (uint32_t)(slot->metrics.horiAdvance / 64);
 
     // Copy alpha values from RGBA bitmap into the AlphaImage output

@@ -8,7 +8,7 @@ namespace i18n {
 
 /** Returns whether a line break can be inserted after the character indicated
     by the given Unicode codepoint due to word breaking. */
-bool allowsWordBreaking(char16_t chr);
+bool allowsWordBreaking(char32_t chr);
 
 /** Returns whether the given string can be displayed with letter-spacing.
     False for Arabic scripts, where letter-spacing will break ligatures. */
@@ -21,7 +21,7 @@ bool allowsIdeographicBreaking(const std::u16string& string);
 
 /** Returns whether a line break can be inserted after the character indicated
     by the given Unicode codepoint due to ideographic breaking. */
-bool allowsIdeographicBreaking(char16_t chr);
+bool allowsIdeographicBreaking(char32_t chr);
 
 /** Conservative set of characters expected to have relatively fixed sizes and
     advances */
@@ -81,7 +81,7 @@ bool isStringInSupportedScript(const std::string& input);
 
 bool isCharInComplexShapingScript(char16_t chr);
 
-bool isWhitespace(char16_t chr);
+bool isWhitespace(char32_t chr);
 
 bool isVariationSelector1(char16_t chr);
 

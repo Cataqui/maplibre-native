@@ -17,11 +17,14 @@ struct HBShapeAdjust {
     float y_offset;
 
     float advance; // advanceX
+    char32_t codepoint = 0;
+    bool clusterEnd = true;
+    uint32_t cluster = 0;
 
-    HBShapeAdjust(float x, float y, float a)
+    HBShapeAdjust(float x, float y, float a, char32_t codepoint_ = 0, bool clusterEnd_ = true, uint32_t cluster_ = 0)
         : x_offset(x),
           y_offset(y),
-          advance(a) {}
+          advance(a), codepoint(codepoint_), clusterEnd(clusterEnd_), cluster(cluster_) {}
 };
 
 class HBShaper {
